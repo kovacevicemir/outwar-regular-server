@@ -2,6 +2,19 @@
   {
     "Name": "Monster 1",
     "Attack": 1,
-    "Hp": 10
+    "Hp": 10,
+    "Exp": 1
+  },
+  {
+    "Name": "Monster 2",
+    "Attack": 2,
+    "Hp": 12,
+    "Exp": 2
+  },
+  {
+    "Name": "Monster 3",
+    "Attack": 3,
+    "Hp": 15,
+    "Exp": 3
   }
 ]

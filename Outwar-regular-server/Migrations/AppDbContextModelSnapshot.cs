@@ -41,6 +41,10 @@ namespace Outwar_regular_server.Migrations
                         .IsRequired()
                         .HasColumnType("integer[]");
 
+                    b.Property<string>("Type")
+                        .IsRequired()
+                        .HasColumnType("text");
+
                     b.Property<int>("UpgradeLevel")
                         .HasColumnType("integer");
 
@@ -54,6 +58,46 @@ namespace Outwar_regular_server.Migrations
                     b.ToTable("Items");
                 });
 
+            modelBuilder.Entity("Outwar_regular_server.Models.Quest", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("Exp")
+                        .HasColumnType("integer");
+
+                    b.PrimitiveCollection<string[]>("ItemRewardNames")
+                        .IsRequired()
+                        .HasColumnType("text[]");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.PrimitiveCollection<int[]>("Progress")
+                        .IsRequired()
+                        .HasColumnType("integer[]");
+
+                    b.PrimitiveCollection<int[]>("Requirements")
+                        .IsRequired()
+                        .HasColumnType("integer[]");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Quests");
+                });
+
             modelBuilder.Entity("Outwar_regular_server.Models.User", b =>
                 {
                     b.Property<int>("Id")
@@ -62,9 +106,29 @@ namespace Outwar_regular_server.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
+                    b.PrimitiveCollection<int[]>("EquipedItemsId")
+                        .IsRequired()
+                        .HasColumnType("integer[]");
+
+                    b.Property<int>("Experience")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("Level")
+                        .HasColumnType("integer");
+
+                    b.PrimitiveCollection<int[]>("Location")
+                        .IsRequired()
+                        .HasColumnType("integer[]");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("text");
+
+                    b.Property<int>("Rage")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("RagePerHour")
+                        .HasColumnType("integer");
 
                     b.HasKey("Id");
 
@@ -82,9 +146,22 @@ namespace Outwar_regular_server.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("Outwar_regular_server.Models.Quest", b =>
+                {
+                    b.HasOne("Outwar_regular_server.Models.User", "User")
+                        .WithMany("Quests")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("Outwar_regular_server.Models.User", b =>
                 {
                     b.Navigation("Items");
+
+                    b.Navigation("Quests");
                 });
 #pragma warning restore 612, 618
         }

@@ -8,7 +8,7 @@ public static class CreateUserEndpoint
     {
         app.MapPost("/create-user", async (AppDbContext context, string username) =>
             {
-                var user = new Models.User() { Name = username, };
+                var user = new Models.User() { Name = username, EquipedItemsId = []};
                 context.Users.Add(user);
                 await context.SaveChangesAsync(); 
         

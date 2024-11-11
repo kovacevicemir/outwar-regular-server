@@ -3,12 +3,14 @@
     "Name": "Head-Gear of Champions",
     "Stats": [0, 150, 0, 20, 20, 4, 0, 0],
     "SetBonus": [35, 245],
-    "UpgradeLevel": 0
+    "UpgradeLevel": 0,
+    "type": "head"
   },
   {
     "Name": "Sweaty Towel of Champions",
     "Stats": [0, 150, 0, 35, 10, 0, 5, 0],
     "SetBonus": [35, 245],
-    "UpgradeLevel": 0
+    "UpgradeLevel": 0,
+    "type": "neck"
   }
 ]

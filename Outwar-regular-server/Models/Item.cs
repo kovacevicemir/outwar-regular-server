@@ -21,6 +21,7 @@ public class Item
     public int[] SetBonus { get; set; } = new int[2];
     
     public int UpgradeLevel { get; set; } = 0;
+    public string Type { get; set; }
 
     // Navigation property to related User
     public User User { get; set; }

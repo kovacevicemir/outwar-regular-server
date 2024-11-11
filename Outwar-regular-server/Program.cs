@@ -30,6 +30,13 @@ app.UseHttpsRedirection();
 //Protect this api somehow, cant just pass monster ID etc. it needs to be server (or redis) to client <- encrypted
 //attack mob key phrase or something so nobody can use postman to attack...
 
+// ** IMPORTANT: DONT EVEN THINK ABOUT ADDINT COMBAT SYSTEM ETC WASTE TIME...
+// WE WANT 1. SHOW 2. 1 CLICK KILL 3. GET REWARD SO EVERYTHING TO WORK MOCK / MVP
+// DONT BOTHER WITH SMALL DETAILS MAKE IT WORKING AND STRONG!
+
+// ** Performance? Do we need to read json everytime on endpoints? can we cache it or load/read once?
+// ** Performance? Any similar load/reads etc... its well worth it! memory/cpu/bugs 
+
 //Quest system suggestion... temporary table with quests... once finished delete it, and add
 //FinishedQuests or something userID, questID... easier for db and cleaner to lookup... maintainable...
 
@@ -38,7 +45,7 @@ app.UseHttpsRedirection();
 
 //Add Room/world system
 
-//shncdn & angular create [simple & mobile] clean AF! 
+//shncdn & react create [simple & mobile] clean AF! 
 // ---- top bar----
 // |menu| action...
 
@@ -50,5 +57,10 @@ app.MapDeleteUserByUsername();
 app.MapAddItemToUserEndpoint();
 app.MapDeleteITemFromUserEndpoint();
 app.MapUpgradeItemLevelByItemId();
+app.MapGetUserByUsername();
+app.MapIncreaseExp();
+app.MapAttackMonsterByName();
+app.MapEquipItemEndpoint();
+app.MapUnequipItemEndpoint();
 
 app.Run();
