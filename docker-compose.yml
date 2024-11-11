@@ -1,0 +1,15 @@
+﻿services:
+#  outwar-regular-server:
+#    image: outwar-regular-server
+#    build:
+#      context: .
+#      dockerfile: Outwar-regular-server/Dockerfile
+
+  db:
+    image: postgres:17.0
+    restart: always
+    shm_size: 128mb
+    environment:
+      POSTGRES_PASSWORD: admin
+    ports:
+      - "5432:5432"
