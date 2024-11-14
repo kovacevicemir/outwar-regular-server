@@ -40,7 +40,7 @@ public static class AttackMonsterByNameEndpoint
                     return Results.NotFound("Monster not found. Please check the monster name.");
                 }
 
-                // call increase Exp endpoint here
+                // call increase Exp endpoint here && call quest progress TODO
                 using (var client = new HttpClient())
                 {
                     var user = await context.Users

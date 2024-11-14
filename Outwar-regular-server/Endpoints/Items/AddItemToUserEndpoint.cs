@@ -58,8 +58,7 @@ public static class AddItemToUserEndpoint
                 Name = findItem.Name,
                 SetBonus = findItem.SetBonus,
                 Stats = findItem.Stats,
-                UpgradeLevel = findItem.UpgradeLevel,
-                User = user
+                UpgradeLevel = findItem.UpgradeLevel
             };
 
             user.Items.Add(newItem);

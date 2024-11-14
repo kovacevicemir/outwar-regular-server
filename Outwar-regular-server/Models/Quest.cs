@@ -16,6 +16,10 @@ public class Quest
     public int Id { get; set; }  // Unique identifier for the quest
     public string Name { get; set; }  // Name of the quest
     public int Status { get; set; }  // Quest status (0Started, 1Completed, )
+    public int GotReward { get; set; } = 0;  // Did user take reward? 0 = no | 1 = yes
+    
+    // Which monsters to be killed for quests
+    public ICollection<int> MonsterIds { get; set; }  
     
     // List of quest requirements
     // for example [10,10,10] it means it needs to kill or collect 10 monsters/items
@@ -26,8 +30,4 @@ public class Quest
     
     public int Exp { get; set; }  // Experience points as reward
     public ICollection<string> ItemRewardNames { get; set; }  // Items awarded as a reward
-    
-    // Navigation property to related User
-    public User User { get; set; }
-    
 }

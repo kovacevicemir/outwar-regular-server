@@ -22,23 +22,22 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-//Login system with maintainable JWT / refresh tokens and similar... / Email confirmation / simple but strong!
-//1. send login request -> 2. return token or keep session or something (LEARN) 3. consume other api's 4. protect apis
-
-//Add monsters.json
-//Simple attack api (just attack - def, attack - def return true or false for now)
-//Protect this api somehow, cant just pass monster ID etc. it needs to be server (or redis) to client <- encrypted
-//attack mob key phrase or something so nobody can use postman to attack...
-
 // ** IMPORTANT: DONT EVEN THINK ABOUT ADDINT COMBAT SYSTEM ETC WASTE TIME...
 // WE WANT 1. SHOW 2. 1 CLICK KILL 3. GET REWARD SO EVERYTHING TO WORK MOCK / MVP
 // DONT BOTHER WITH SMALL DETAILS MAKE IT WORKING AND STRONG!
 
-// ** Performance? Do we need to read json everytime on endpoints? can we cache it or load/read once?
-// ** Performance? Any similar load/reads etc... its well worth it! memory/cpu/bugs 
+//LEAVE AT THE END
+//Login system with maintainable JWT / refresh tokens and similar... / Email confirmation / simple but strong!
+//1. send login request -> 2. return token or keep session or something (LEARN) 3. consume other api's 4. protect apis
 
+//Protect apis - eg attack api somehow, cant just pass monster ID etc. it needs to be server (or redis) to client <- encrypted
+//attack mob key phrase or something so nobody can use postman to attack...
+
+// ** Performance ** Section
+//  Any similar load/reads etc... its well worth it! memory/cpu/bugs 
 //Quest system suggestion... temporary table with quests... once finished delete it, and add
 //FinishedQuests or something userID, questID... easier for db and cleaner to lookup... maintainable...
+//--------------------------------------------------------------------------------------------------------
 
 //At this points start to add script or end to end testing API -> call APi -> call API--> validate...
 //Example: create user, add items, upgrade item, add quest, attack monster, finish quest, check exp, item reward etc.
@@ -52,15 +51,23 @@ app.UseHttpsRedirection();
 //LESS FUNCTIONALITY AND FEATURES & MORE STRONG / STABLE AND NEAT CODE!
 
 
+
 app.MapCreateUser();
 app.MapDeleteUserByUsername();
+app.MapGetUserByUsername();
+app.MapIncreaseExp();
+
 app.MapAddItemToUserEndpoint();
 app.MapDeleteITemFromUserEndpoint();
 app.MapUpgradeItemLevelByItemId();
-app.MapGetUserByUsername();
-app.MapIncreaseExp();
-app.MapAttackMonsterByName();
 app.MapEquipItemEndpoint();
 app.MapUnequipItemEndpoint();
+
+app.MapAttackMonsterByName();
+
+app.MapStartQuestEndpoint();
+app.MapGetAllUserQuestsEndpoint();
+app.MapAddQuestProgressEndpoint();
+app.MapGetQuestRewardEndpoint();
 
 app.Run();

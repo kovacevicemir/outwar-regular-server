@@ -1,8 +1,12 @@
 ﻿[
   {
-    "name": "Casino Manager",
+    "Name": "Casino Manager",
     "Description": "Start: Talk to the CASINO MANAGER, he is in the CASINO.\nHe will ask you to bring him, FAT TONY'S HEAD",
     "Solution": "Solution: Spawn and kill FAT TONY in the NIGHTCLUB until you receive FAT TONY'S HEAD\ngo back and talk to CASINO MANAGER",
-    "Reward": "Sweaty Towel of Champions"
+    "MonsterIds": [1,2],
+    "Requirements": [5,5],
+    "Progress": [0,0],
+    "ItemRewardNames": ["Sweaty Towel of Champions"],
+    "Exp": 10
   }
 ]

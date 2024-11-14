@@ -9,16 +9,35 @@ public static class GetUserByUsernameEndpoint
     {
         app.MapGet("/get-user-by-username", async (AppDbContext context, string username) =>
             {
+                // Fetch the user along with their Items and Quests
                 var user = await context.Users
-                    .Include(u => u.Items) // Eagerly load the user's Items collection
+                    .Include(u => u.Items)      // Include the user's Items
+                    .Include(u => u.Quests)     // Include the user's Quests
                     .FirstOrDefaultAsync(u => u.Name == username);
-                
+
                 if (user == null)
                 {
-                    return Results.NotFound($"User {username} not found.");
+                    return Results.NotFound("User not found.");
                 }
-        
-                return Results.Ok(user);
+
+                // Combine all MonsterIds from all Quests into a single list
+                var allMonsterIds = user.Quests
+                    .SelectMany(quest => quest.MonsterIds)  // Flatten the collection of MonsterIds
+                    .Distinct()                             // Remove duplicates, if needed
+                    .ToList();                              // Convert to a list
+
+                // You can now return the user along with the combined list of MonsterIds
+                var userWithMonsterIds = new
+                {
+                    user.Id,
+                    user.Name,
+                    user.Level,
+                    user.Experience,
+                    user.Items,
+                    QuestMonsterIds = allMonsterIds // Return the combined list of MonsterIds
+                };
+
+                return Results.Ok(userWithMonsterIds);
             })
             .WithName("GetUserByUsername")
             .WithOpenApi();
