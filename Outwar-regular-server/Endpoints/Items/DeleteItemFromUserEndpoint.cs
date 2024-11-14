@@ -5,7 +5,7 @@ namespace Outwar_regular_server.Endpoints.Items;
 
 public static class DeleteItemFromUserEndpoint
 {
-    public static IEndpointRouteBuilder MapDeleteITemFromUserEndpoint(this IEndpointRouteBuilder app)
+    public static IEndpointRouteBuilder MapDeleteItemFromUserEndpoint(this IEndpointRouteBuilder app)
     {
         app.MapPost("/delete-item-from-user-by-item-id", async (AppDbContext context, string username, int itemId) =>
             {

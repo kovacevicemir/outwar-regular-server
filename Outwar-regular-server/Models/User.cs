@@ -18,13 +18,13 @@ public class User
     public int Rage { get; set; } = 2000;
     
     // Represent some kind of coordinates in world
-    public int[] Location { get; set; } = new int[2];
+    public int[] Location { get; set; } = new int[2] { 4, 0 };
 
     // Navigation property to related items
     public ICollection<Item> Items { get; set; }
     
     // Represent some kind of coordinates in world
-    public ICollection<int> EquipedItemsId { get; set; }
+    public ICollection<int>? EquipedItemsId { get; set; }
     
     // Navigation property to related quests
     public ICollection<Quest> Quests { get; set; }

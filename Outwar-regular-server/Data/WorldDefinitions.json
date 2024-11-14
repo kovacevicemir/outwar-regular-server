@@ -1,0 +1,622 @@
+﻿[
+  {
+    "id": 1,
+    "name": "Shadow Path",
+    "monsters": [
+      "Monster 1"
+    ],
+    "npcs": [
+      "NPC 1"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Training Grounds",
+    "monsters": [
+      "Monster 2"
+    ],
+    "npcs": [
+      "NPC 2"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Wastelands",
+    "monsters": [
+      "Monster 3"
+    ],
+    "npcs": [
+      "NPC 3"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Diamond City Gates",
+    "monsters": [
+      "Monster 4"
+    ],
+    "npcs": [
+      "NPC 4"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Dusty Glass Tavern",
+    "monsters": [
+      "Monster 5"
+    ],
+    "npcs": [
+      "NPC 5"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Main Street",
+    "monsters": [
+      "Monster 6"
+    ],
+    "npcs": [
+      "NPC 6"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Intersection Main/Angelio",
+    "monsters": [
+      "Monster 7"
+    ],
+    "npcs": [
+      "NPC 7"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Angelio Street",
+    "monsters": [
+      "Monster 8"
+    ],
+    "npcs": [
+      "NPC 8"
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Dominic's Restaurant",
+    "monsters": [
+      "Monster 9"
+    ],
+    "npcs": [
+      "NPC 9"
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Rancid's Wasteland Camp",
+    "monsters": [
+      "Monster 10"
+    ],
+    "npcs": [
+      "NPC 10"
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Broadway Street",
+    "monsters": [
+      "Monster 11"
+    ],
+    "npcs": [
+      "NPC 11"
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Hospital Waiting Room",
+    "monsters": [
+      "Monster 12"
+    ],
+    "npcs": [
+      "NPC 12"
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Emergency Room",
+    "monsters": [
+      "Monster 13"
+    ],
+    "npcs": [
+      "NPC 13"
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Carmine Street",
+    "monsters": [
+      "Monster 14"
+    ],
+    "npcs": [
+      "NPC 14"
+    ]
+  },
+  {
+    "id": 15,
+    "name": "City Hall",
+    "monsters": [
+      "Monster 15"
+    ],
+    "npcs": [
+      "NPC 15"
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Beldam Street",
+    "monsters": [
+      "Monster 16"
+    ],
+    "npcs": [
+      "NPC 16"
+    ]
+  },
+  {
+    "id": 17,
+    "name": "The Foundry",
+    "monsters": [
+      "Monster 17"
+    ],
+    "npcs": [
+      "NPC 17"
+    ]
+  },
+  {
+    "id": 18,
+    "name": "Blackheart's Bank",
+    "monsters": [
+      "Monster 18"
+    ],
+    "npcs": [
+      "NPC 18"
+    ]
+  },
+  {
+    "id": 19,
+    "name": "DC Enforcers",
+    "monsters": [
+      "Monster 19"
+    ],
+    "npcs": [
+      "NPC 19"
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Subway to Industrial Way",
+    "monsters": [
+      "Monster 20"
+    ],
+    "npcs": [
+      "NPC 20"
+    ]
+  },
+  {
+    "id": 21,
+    "name": "Holy Cathedral",
+    "monsters": [
+      "Monster 21"
+    ],
+    "npcs": [
+      "NPC 21"
+    ]
+  },
+  {
+    "id": 22,
+    "name": "Soundweaver Academy",
+    "monsters": [
+      "Monster 22"
+    ],
+    "npcs": [
+      "NPC 22"
+    ]
+  },
+  {
+    "id": 23,
+    "name": "Binding Avenue",
+    "monsters": [
+      "Monster 23"
+    ],
+    "npcs": [
+      "NPC 23"
+    ]
+  },
+  {
+    "id": 24,
+    "name": "Binding Drive",
+    "monsters": [
+      "Monster 24"
+    ],
+    "npcs": [
+      "NPC 24"
+    ]
+  },
+  {
+    "id": 25,
+    "name": "Anger Blvd",
+    "monsters": [
+      "Monster 25"
+    ],
+    "npcs": [
+      "NPC 25"
+    ]
+  },
+  {
+    "id": 26,
+    "name": "Reel Theatre",
+    "monsters": [
+      "Monster 26"
+    ],
+    "npcs": [
+      "NPC 26"
+    ]
+  },
+  {
+    "id": 27,
+    "name": "South Main Street",
+    "monsters": [
+      "Monster 27"
+    ],
+    "npcs": [
+      "NPC 27"
+    ]
+  },
+  {
+    "id": 28,
+    "name": "40s and 9s",
+    "monsters": [
+      "Monster 28"
+    ],
+    "npcs": [
+      "NPC 28"
+    ]
+  },
+  {
+    "id": 29,
+    "name": "S. Main St. Alley",
+    "monsters": [
+      "Monster 29"
+    ],
+    "npcs": [
+      "NPC 29"
+    ]
+  },
+  {
+    "id": 30,
+    "name": "Diamond City Colesium",
+    "monsters": [
+      "Monster 30"
+    ],
+    "npcs": [
+      "NPC 30"
+    ]
+  },
+  {
+    "id": 31,
+    "name": "Loomis Ave",
+    "monsters": [
+      "Monster 31"
+    ],
+    "npcs": [
+      "NPC 31"
+    ]
+  },
+  {
+    "id": 32,
+    "name": "Underground Casino",
+    "monsters": [
+      "Monster 32"
+    ],
+    "npcs": [
+      "NPC 32"
+    ]
+  },
+  {
+    "id": 33,
+    "name": "Red Light Square",
+    "monsters": [
+      "Monster 33"
+    ],
+    "npcs": [
+      "NPC 33"
+    ]
+  },
+  {
+    "id": 34,
+    "name": "Fat Tony's Night Club",
+    "monsters": [
+      "Monster 34"
+    ],
+    "npcs": [
+      "NPC 34"
+    ]
+  },
+  {
+    "id": 35,
+    "name": "Fight Arena",
+    "monsters": [
+      "Monster 35"
+    ],
+    "npcs": [
+      "NPC 35"
+    ]
+  },
+  {
+    "id": 36,
+    "name": "Parson's Lane",
+    "monsters": [
+      "Monster 36"
+    ],
+    "npcs": [
+      "NPC 36"
+    ]
+  },
+  {
+    "id": 37,
+    "name": "Construction Site",
+    "monsters": [
+      "Monster 37"
+    ],
+    "npcs": [
+      "NPC 37"
+    ]
+  },
+  {
+    "id": 38,
+    "name": "Industrial Way",
+    "monsters": [
+      "Monster 38"
+    ],
+    "npcs": [
+      "NPC 38"
+    ]
+  },
+  {
+    "id": 39,
+    "name": "Synge Destruction Area",
+    "monsters": [
+      "Monster 39"
+    ],
+    "npcs": [
+      "NPC 39"
+    ]
+  },
+  {
+    "id": 40,
+    "name": "Subway to West Broadway Street",
+    "monsters": [
+      "Monster 40"
+    ],
+    "npcs": [
+      "NPC 40"
+    ]
+  },
+  {
+    "id": 41,
+    "name": "Morgan's Way",
+    "monsters": [
+      "Monster 41"
+    ],
+    "npcs": [
+      "NPC 41"
+    ]
+  },
+  {
+    "id": 42,
+    "name": "The Bowery",
+    "monsters": [
+      "Monster 42"
+    ],
+    "npcs": [
+      "NPC 42"
+    ]
+  },
+  {
+    "id": 43,
+    "name": "Chuggers Palace Bar",
+    "monsters": [
+      "Monster 43"
+    ],
+    "npcs": [
+      "NPC 43"
+    ]
+  },
+  {
+    "id": 44,
+    "name": "Subway Trains",
+    "monsters": [
+      "Monster 44"
+    ],
+    "npcs": [
+      "NPC 44"
+    ]
+  },
+  {
+    "id": 45,
+    "name": "TechSound Drive",
+    "monsters": ["Monster 45"],
+    "npcs": ["NPC 45"]
+  },
+  {
+    "id": 46,
+    "name": "Sound Laboratory",
+    "monsters": ["Monster 46"],
+    "npcs": ["NPC 46"]
+  },
+  {
+    "id": 47,
+    "name": "Concert Hall",
+    "monsters": ["Monster 47"],
+    "npcs": ["NPC 47"]
+  },
+  {
+    "id": 48,
+    "name": "Nihilim Road",
+    "monsters": ["Monster 48"],
+    "npcs": ["NPC 48"]
+  },
+  {
+    "id": 49,
+    "name": "Cement Block Company",
+    "monsters": ["Monster 49"],
+    "npcs": ["NPC 49"]
+  },
+  {
+    "id": 50,
+    "name": "Popular Street",
+    "monsters": ["Monster 50"],
+    "npcs": ["NPC 50"]
+  },
+  {
+    "id": 51,
+    "name": "Statue of Terrance",
+    "monsters": ["Monster 51"],
+    "npcs": ["NPC 51"]
+  },
+  {
+    "id": 52,
+    "name": "Hall of Fame",
+    "monsters": ["Monster 52"],
+    "npcs": ["NPC 52"]
+  },
+  {
+    "id": 53,
+    "name": "The Drunken Clam",
+    "monsters": ["Monster 53"],
+    "npcs": ["NPC 53"]
+  },
+  {
+    "id": 54,
+    "name": "Tremolo Way",
+    "monsters": ["Monster 54"],
+    "npcs": ["NPC 54"]
+  },
+  {
+    "id": 55,
+    "name": "Warehouse",
+    "monsters": ["Monster 55"],
+    "npcs": ["NPC 55"]
+  },
+  {
+    "id": 56,
+    "name": "Docks",
+    "monsters": ["Monster 56"],
+    "npcs": ["NPC 56"]
+  },
+  {
+    "id": 57,
+    "name": "Pier 1 Rallis",
+    "monsters": ["Monster 57"],
+    "npcs": ["NPC 57"]
+  },
+  {
+    "id": 58,
+    "name": "Sunken Boat",
+    "monsters": ["Monster 58"],
+    "npcs": ["NPC 58"]
+  },
+  {
+    "id": 59,
+    "name": "Boat House",
+    "monsters": ["Monster 59"],
+    "npcs": ["NPC 59"]
+  },
+  {
+    "id": 60,
+    "name": "Pier 2 Rallis",
+    "monsters": ["Monster 60"],
+    "npcs": ["NPC 60"]
+  },
+  {
+    "id": 61,
+    "name": "Pier 3 Rallis",
+    "monsters": ["Monster 61"],
+    "npcs": ["NPC 61"]
+  },
+  {
+    "id": 62,
+    "name": "Gunsmoke's Boat",
+    "monsters": ["Monster 62"],
+    "npcs": ["NPC 62"]
+  },
+  {
+    "id": 63,
+    "name": "Transport Boat/Rallis W",
+    "monsters": ["Monster 63"],
+    "npcs": ["NPC 63"]
+  },
+  {
+    "id": 64,
+    "name": "Pier 1 Stizzy",
+    "monsters": ["Monster 64"],
+    "npcs": ["NPC 64"]
+  },
+  {
+    "id": 65,
+    "name": "Docks",
+    "monsters": ["Monster 65"],
+    "npcs": ["NPC 65"]
+  },
+  {
+    "id": 66,
+    "name": "Hard Iron Salon",
+    "monsters": ["Monster 66"],
+    "npcs": ["NPC 66"]
+  },
+  {
+    "id": 67,
+    "name": "Pier 2 Stizzy",
+    "monsters": ["Monster 67"],
+    "npcs": ["NPC 67"]
+  },
+  {
+    "id": 68,
+    "name": "Iron Edge Street",
+    "monsters": ["Monster 68"],
+    "npcs": ["NPC 68"]
+  },
+  {
+    "id": 69,
+    "name": "The Mystical Forge",
+    "monsters": ["Monster 69"],
+    "npcs": ["NPC 69"]
+  },
+  {
+    "id": 70,
+    "name": "Deadzone Ave",
+    "monsters": ["Monster 70"],
+    "npcs": ["NPC 70"]
+  },
+  {
+    "id": 71,
+    "name": "The Dead Ends",
+    "monsters": ["Monster 71"],
+    "npcs": ["NPC 71"]
+  },
+  {
+    "id": 72,
+    "name": "Sewers",
+    "monsters": ["Monster 72"],
+    "npcs": ["NPC 72"]
+  },
+  {
+    "id": 73,
+    "name": "Mysterious Portal",
+    "monsters": ["Monster 73"],
+    "npcs": ["NPC 73"]
+  },
+  {
+    "id": 74,
+    "name": "Stizzy Waterway Keep",
+    "monsters": ["Monster 74"],
+    "npcs": ["NPC 74"]
+  }
+]

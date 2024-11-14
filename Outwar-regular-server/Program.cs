@@ -52,22 +52,30 @@ app.UseHttpsRedirection();
 
 
 
+//User api's
 app.MapCreateUser();
 app.MapDeleteUserByUsername();
 app.MapGetUserByUsername();
 app.MapIncreaseExp();
 
+//Item api's
 app.MapAddItemToUserEndpoint();
-app.MapDeleteITemFromUserEndpoint();
+app.MapDeleteItemFromUserEndpoint();
 app.MapUpgradeItemLevelByItemId();
 app.MapEquipItemEndpoint();
 app.MapUnequipItemEndpoint();
+app.MapGetUserLocation();
 
+//Monster api's
 app.MapAttackMonsterByName();
 
+//Quest api's
 app.MapStartQuestEndpoint();
 app.MapGetAllUserQuestsEndpoint();
 app.MapAddQuestProgressEndpoint();
 app.MapGetQuestRewardEndpoint();
+
+//World api's
+app.MapChangePlayerLocation();
 
 app.Run();
