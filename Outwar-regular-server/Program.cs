@@ -11,6 +11,17 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<AppDbContext>(options => options.UseNpgsql(builder.Configuration.GetConnectionString("PostgreSqlConnectionString")));
 
+// Add CORS policy
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAngularDev", policy =>
+    {
+        policy.WithOrigins("http://localhost:4200") // Angular development server
+            .AllowAnyHeader()
+            .AllowAnyMethod();
+    });
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -21,6 +32,9 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+// Use the CORS policy
+app.UseCors("AllowAngularDev");
 
 // ** IMPORTANT: DONT EVEN THINK ABOUT ADDINT COMBAT SYSTEM ETC WASTE TIME...
 // WE WANT 1. SHOW 2. 1 CLICK KILL 3. GET REWARD SO EVERYTHING TO WORK MOCK / MVP
@@ -42,8 +56,6 @@ app.UseHttpsRedirection();
 //At this points start to add script or end to end testing API -> call APi -> call API--> validate...
 //Example: create user, add items, upgrade item, add quest, attack monster, finish quest, check exp, item reward etc.
 
-//Add Room/world system
-
 //shncdn & react create [simple & mobile] clean AF! 
 // ---- top bar----
 // |menu| action...
@@ -57,6 +69,7 @@ app.MapCreateUser();
 app.MapDeleteUserByUsername();
 app.MapGetUserByUsername();
 app.MapIncreaseExp();
+app.MapGetRanking();
 
 //Item api's
 app.MapAddItemToUserEndpoint();

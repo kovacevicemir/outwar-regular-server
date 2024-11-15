@@ -34,23 +34,16 @@ public static class EquipItemEndpoint
                 
                 //Check if item of same type (eg boots) is already equiped
                 var itemToEquip = user.Items.FirstOrDefault((item) => item.Id == itemId);
-                var alreadyEquipedSameType = user.Items.FirstOrDefault(item => item.Type == itemToEquip.Type && user.EquipedItemsId.Any(equipedItem => equipedItem == itemToEquip.Id));
+                var alreadyEquippedSameType = user.Items
+                    .Where(item => item.Type == itemToEquip.Type && user.EquipedItemsId.Contains(item.Id))
+                    .ToList();
                
-                if (alreadyEquipedSameType != null)
+                //If item of same type eg boots is already equiped, simply unequip it
+                if (alreadyEquippedSameType.Count > 0)
                 {
-                    using (var client = new HttpClient())
-                    {
-                        var unequipItemUrl = $"https://localhost:44338/unequip-item?username={user.Name}&itemId={itemToEquip.Id}";
-                        var response = await client.PostAsync(unequipItemUrl, null);
-
-                        if (!response.IsSuccessStatusCode)
-                        {
-                            return Results.BadRequest("Error requesting unequip item inside EquipItemEndpoint.");
-                        }
-                    }
+                    user.EquipedItemsId.Remove(alreadyEquippedSameType[0].Id);
                 }
 
-                
                 user.EquipedItemsId.Add(itemId);
                 await context.SaveChangesAsync(); 
 

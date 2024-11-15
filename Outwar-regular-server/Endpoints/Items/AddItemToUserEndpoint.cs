@@ -58,7 +58,8 @@ public static class AddItemToUserEndpoint
                 Name = findItem.Name,
                 SetBonus = findItem.SetBonus,
                 Stats = findItem.Stats,
-                UpgradeLevel = findItem.UpgradeLevel
+                UpgradeLevel = findItem.UpgradeLevel,
+                Type = findItem.Type
             };
 
             user.Items.Add(newItem);
@@ -66,7 +67,7 @@ public static class AddItemToUserEndpoint
             // Save changes to the database
             await context.SaveChangesAsync();
 
-            return Results.Ok($"Item {findItem.Name} added to: {username}");
+            return Results.Ok($"Item {findItem.Name} added to: {username} - item id: {newItem.Id}");
             })
             .WithName("AddItemToUser")
             .WithOpenApi();

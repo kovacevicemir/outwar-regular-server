@@ -24,7 +24,7 @@ public class User
     public ICollection<Item> Items { get; set; }
     
     // Represent some kind of coordinates in world
-    public ICollection<int>? EquipedItemsId { get; set; }
+    public ICollection<int> EquipedItemsId { get; set; } = [];
     
     // Navigation property to related quests
     public ICollection<Quest> Quests { get; set; }

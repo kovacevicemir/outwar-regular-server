@@ -34,6 +34,7 @@ public static class GetUserByUsernameEndpoint
                     user.Level,
                     user.Experience,
                     user.Items,
+                    user.EquipedItemsId,
                     QuestMonsterIds = allMonsterIds // Return the combined list of MonsterIds
                 };
 

@@ -4,13 +4,21 @@
     "Stats": [0, 150, 0, 20, 20, 4, 0, 0],
     "SetBonus": [35, 245],
     "UpgradeLevel": 0,
-    "type": "head"
+    "Type": "head"
   },
   {
     "Name": "Sweaty Towel of Champions",
-    "Stats": [0, 150, 0, 35, 10, 0, 5, 0],
+    "Stats": [0, 150, 0, 35, 10, 3, 5, 0],
     "SetBonus": [35, 245],
     "UpgradeLevel": 0,
-    "type": "neck"
+    "Type": "neck"
+  },
+
+  {
+    "Name": "Scimitar of Flame",
+    "Stats": [160, 0, 0, 45, 45, 0, 8, 0],
+    "SetBonus": [0, 0],
+    "UpgradeLevel": 0,
+    "Type": "weapon"
   }
 ]

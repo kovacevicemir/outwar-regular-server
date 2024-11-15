@@ -7,7 +7,7 @@ public static class ChangeUserLocationEndpoint
 {
     public static IEndpointRouteBuilder MapChangePlayerLocation(this IEndpointRouteBuilder app)
     {
-        app.MapGet("/change-user-location", async (AppDbContext context, string username, string direction) =>
+        app.MapPost("/change-user-location", async (AppDbContext context, string username, string direction) =>
             {
                 
                 int[] PlayerLocation = { 0, 0 };
