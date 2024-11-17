@@ -13,7 +13,48 @@
     "UpgradeLevel": 0,
     "Type": "neck"
   },
-
+  {
+    "Name": "Precision Glove of Champions",
+    "Stats": [85, 0, 500, 32, 15, 0, 4, 0],
+    "SetBonus": [35, 245],
+    "UpgradeLevel": 0,
+    "Type": "weapon"
+  },
+  {
+    "Name": "Silken Shroud of Champions",
+    "Stats": [0, 155, 500, 23, 17, 0, 5, 0],
+    "SetBonus": [35, 245],
+    "UpgradeLevel": 0,
+    "Type": "armor"
+  },
+  {
+    "Name": "Power Glove of Champions",
+    "Stats": [0, 150, 400, 15, 23, 0, 4, 7],
+    "SetBonus": [35, 245],
+    "UpgradeLevel": 0,
+    "Type": "shield"
+  },
+  {
+    "Name": "Title Belt of Champions",
+    "Stats": [0, 150, 0, 0, 25, 5, 5, 0],
+    "SetBonus": [35, 245],
+    "UpgradeLevel": 0,
+    "Type": "belt"
+  },
+  {
+    "Name": "Sneakers of Champions",
+    "Stats": [0, 150, 0, 15, 25, 4, 0, 0],
+    "SetBonus": [35, 245],
+    "UpgradeLevel": 0,
+    "Type": "shoes"
+  },
+  {
+    "Name": "Medical Tape of Champions",
+    "Stats": [0, 0, 0, 22, 22, 0, 4, 0],
+    "SetBonus": [35, 245],
+    "UpgradeLevel": 0,
+    "Type": "ring"
+  },
   {
     "Name": "Scimitar of Flame",
     "Stats": [160, 0, 0, 45, 45, 0, 8, 0],
