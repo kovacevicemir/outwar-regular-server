@@ -7,7 +7,7 @@ namespace Outwar_regular_server.Endpoints.User;
 
 public static class IncreaseExpEndpoint
 {
-    private static Dictionary<int, int>? experienceList;
+    private static List<ExperienceListItem> experienceList;
     private static bool experienceListLoaded = false;
     public static IEndpointRouteBuilder MapIncreaseExp(this IEndpointRouteBuilder app)
     {
@@ -20,8 +20,8 @@ public static class IncreaseExpEndpoint
                     try
                     {
                         using var stream = new FileStream(jsonFilePath, FileMode.Open, FileAccess.Read);
-                        experienceList = await JsonSerializer.DeserializeAsync<Dictionary<int, int>>(stream) ?? new Dictionary<int, int>();
-                        experienceListLoaded = true; // Set flag to prevent reloading
+                        experienceList = await JsonSerializer.DeserializeAsync<List<ExperienceListItem>>(stream) ?? new List<ExperienceListItem>();
+                        experienceListLoaded = true; // Set flag to prevent reloading ExperienceListItem
                     }
                     catch (Exception ex)
                     {
@@ -48,11 +48,22 @@ public static class IncreaseExpEndpoint
 
                 // Check if the user levels up
                 bool isLevelUp = false;
-                if (experienceList.TryGetValue(user.Level + 1, out int expNeededForLevel) && user.Experience >= expNeededForLevel)
+
+                var nextLevel = experienceList[user.Level];
+                if (nextLevel != null)
                 {
-                    user.Level += 1;
-                    isLevelUp = true;
+                    if (user.Experience >= nextLevel.Experience)
+                    {
+                        user.Level += 1;
+                        isLevelUp = true;
+                    }
                 }
+                
+                // if (experienceList.TryGetValue(user.Level + 1, out int expNeededForLevel) && user.Experience >= expNeededForLevel)
+                // {
+                //     user.Level += 1;
+                //     isLevelUp = true;
+                // }
 
                 await context.SaveChangesAsync();
 

@@ -1,20 +1,740 @@
 ﻿[
   {
-    "Name": "Monster 1",
-    "Attack": 1,
-    "Hp": 10,
+    "Name": "Acidic Primate",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 84
+  },
+  {
+    "Name": "Acidic Spider",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 18
+  },
+  {
+    "Name": "Addicted Doctor",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 83
+  },
+  {
+    "Name": "Aefron",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 43
+  },
+  {
+    "Name": "Agony Knight",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 67
+  },
+  {
+    "Name": "Agothyn the Mutant Warlord",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 32
+  },
+  {
+    "Name": "Alsayic Goliath",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 43
+  },
+  {
+    "Name": "Ambulance Driver",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 17
+  },
+  {
+    "Name": "Ancient Deserter",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 98
+  },
+  {
+    "Name": "Apparitional Veteran",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 14
+  },
+  {
+    "Name": "Aracnite",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 96
+  },
+  {
+    "Name": "Aracnor",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 48
+  },
+  {
+    "Name": "Arcane Elemental Keeper",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 37
+  },
+  {
+    "Name": "Armed Cannoneer",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 31
+  },
+  {
+    "Name": "Armored Battleborg",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 38
+  },
+  {
+    "Name": "Armored Spartan",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 58
+  },
+  {
+    "Name": "Astral Necromancer",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 61
+  },
+  {
+    "Name": "Astro Warden",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 70
+  },
+  {
+    "Name": "Avatar of Nar Zhul",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 52
+  },
+  {
+    "Name": "Deranged Ogre",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 46
+  },
+  {
+    "Name": "Desert Lion",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 88
+  },
+  {
+    "Name": "Devoted Evocator",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 13
+  },
+  {
+    "Name": "Diabolic Wraith",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 15
+  },
+  {
+    "Name": "Dingo",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 15
+  },
+  {
+    "Name": "Dirt Crawler",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 40
+  },
+  {
+    "Name": "Diseased Jaxalo",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 10
+  },
+  {
+    "Name": "Diseased Kraw",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 15
+  },
+  {
+    "Name": "Diseased Mongrel",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 17
+  },
+  {
+    "Name": "Diseased Sandworm",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 84
+  },
+  {
+    "Name": "Disfigured Brute",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 17
+  },
+  {
+    "Name": "Disorderly Fiend",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 90
+  },
+  {
+    "Name": "Disturbed Zombie",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 26
+  },
+  {
+    "Name": "Dominic Saprano",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 18
+  },
+  {
+    "Name": "Dorstox the Kinetic Slicer",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 93
+  },
+  {
+    "Name": "Dothraki Warrior",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 66
+  },
+  {
+    "Name": "Dried Up Alien",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 55
+  },
+  {
+    "Name": "Duowolf",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 37
+  },
+  {
+    "Name": "Dusk Imp",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 57
+  },
+  {
+    "Name": "Earth Troll",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 65
+  },
+  {
+    "Name": "Emblazed Serpent",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 70
+  },
+  {
+    "Name": "Empowered Lich",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 100
+  },
+  {
+    "Name": "Enforcer Captain",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 76
+  },
+  {
+    "Name": "Engulfed Undead",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 50
+  },
+  {
+    "Name": "Enraged Centaur",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 69
+  },
+  {
+    "Name": "Enraged Grizzly",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 48
+  },
+  {
+    "Name": "Enraged Warewolf",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 55
+  },
+  {
+    "Name": "Enthusiast",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 36
+  },
+  {
+    "Name": "Enveloped Ibis",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 37
+  },
+  {
+    "Name": "Ergon the Headhunter",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 86
+  },
+  {
+    "Name": "Ether Overseer",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 20
+  },
+  {
+    "Name": "Baneful Battlemage",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 60
+  },
+  {
+    "Name": "Banished Energy",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 71
+  },
+  {
+    "Name": "Barkangel",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 90
+  },
+  {
+    "Name": "Battle Rat",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 51
+  },
+  {
+    "Name": "Bewildered Ghost",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 7
+  },
+  {
+    "Name": "Beyalon",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 12
+  },
+  {
+    "Name": "Bipedor",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 20
+  },
+  {
+    "Name": "Blackheart Security",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 40
+  },
+  {
+    "Name": "Blacksmith of Agony",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 5
+  },
+  {
+    "Name": "Blasphemous Creation",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 28
+  },
+  {
+    "Name": "Blaze Wyvern",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 64
+  },
+  {
+    "Name": "Blazed Humanoid",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 15
+  },
+  {
+    "Name": "Blighted Soundchaser",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 69
+  },
+  {
+    "Name": "Blinded Ghoul",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 56
+  },
+  {
+    "Name": "Blistered Swine",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 81
+  },
+  {
+    "Name": "Blood Drinker",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 11
+  },
+  {
+    "Name": "Blood Leech",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 19
+  },
+  {
+    "Name": "Blood Witch",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 67
+  },
+  {
+    "Name": "Brainy Conspirator",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 43
+  },
+  {
+    "Name": "Brash Triggerman",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 59
+  },
+  {
+    "Name": "Brute Fanatic",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 38
+  },
+  {
+    "Name": "Cabal Knight",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 93
+  },
+  {
+    "Name": "Carrion Vulture",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 38
+  },
+  {
+    "Name": "Centaur Shaman",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 43
+  },
+  {
+    "Name": "Champion of Nar Zhul",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 23
+  },
+  {
+    "Name": "Daemon Skeleton",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 96
+  },
+  {
+    "Name": "Dark Seeded Rockstar",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 15
+  },
+  {
+    "Name": "Darkened Battler",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 30
+  },
+  {
+    "Name": "Darksteel Soldier",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 30
+  },
+  {
+    "Name": "DC Enforcer",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 85
+  },
+  {
+    "Name": "Deadly Spider",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 70
+  },
+  {
+    "Name": "Death Mollusk",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 17
+  },
+  {
+    "Name": "Deathbringer",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 34
+  },
+  {
+    "Name": "Deluged Chaos Golem",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 88
+  },
+  {
+    "Name": "Demi Warrior",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 55
+  },
+  {
+    "Name": "Demolition Ogre",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 68
+  },
+  {
+    "Name": "Demon Ape",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 60
+  },
+  {
+    "Name": "Demon Ripper",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 44
+  },
+  {
+    "Name": "Demonic Spider",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 95
+  },
+  {
+    "Name": "Demopod",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 11
+  },
+  {
+    "Name": "Deranged Ghoul",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 29
+  },
+  {
+    "Name": "Hacksaw Nurse",
+    "Attack": 10,
+    "Hp": 100,
     "Exp": 1
   },
   {
-    "Name": "Monster 2",
-    "Attack": 2,
-    "Hp": 12,
-    "Exp": 2
+    "Name": "Handy Giant",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 29
   },
   {
-    "Name": "Monster 3",
-    "Attack": 3,
-    "Hp": 15,
-    "Exp": 3
+    "Name": "Hardened Criminal",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 79
+  },
+  {
+    "Name": "Harmonic Sorcerer",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 98
+  },
+  {
+    "Name": "Hate Weaver",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 42
+  },
+  {
+    "Name": "Haunted Elemental",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 75
+  },
+  {
+    "Name": "Headhunter Rider",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 32
+  },
+  {
+    "Name": "Heat Hound",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 69
+  },
+  {
+    "Name": "Heinous Hag",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 45
+  },
+  {
+    "Name": "Hellbeast",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 44
+  },
+  {
+    "Name": "Hellish Gnoll",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 4
+  },
+  {
+    "Name": "Ghoul Elf",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 68
+  },
+  {
+    "Name": "Ghoul Fiend",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 55
+  },
+  {
+    "Name": "Ghoulish Drake",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 94
+  },
+  {
+    "Name": "Giant Mosquito",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 82
+  },
+  {
+    "Name": "Gigantic Dust Mite",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 21
+  },
+  {
+    "Name": "Gloombringer",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 74
+  },
+  {
+    "Name": "Glorious Demon",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 98
+  },
+  {
+    "Name": "Gnathsomold",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 92
+  },
+  {
+    "Name": "Gnawing Hellbat",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 23
+  },
+  {
+    "Name": "Goilkun",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 10
+  },
+  {
+    "Name": "Factioned Warrior",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 35
+  },
+  {
+    "Name": "Famous Popstar",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 33
+  },
+  {
+    "Name": "Fantasm",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 5
+  },
+  {
+    "Name": "Fattened Owl",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 71
+  },
+  {
+    "Name": "Feral Hydra",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 33
+  },
+  {
+    "Name": "Fiery Bull",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 28
+  },
+  {
+    "Name": "Fire Elemental Keeper",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 40
+  },
+  {
+    "Name": "Flame Goliath",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 41
+  },
+  {
+    "Name": "Flare Whelp",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 63
+  },
+  {
+    "Name": "Foreign Monk",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 16
+  },
+  {
+    "Name": "Forgotten Warrior",
+    "Attack": 10,
+    "Hp": 100,
+    "Exp": 50
   }
 ]
