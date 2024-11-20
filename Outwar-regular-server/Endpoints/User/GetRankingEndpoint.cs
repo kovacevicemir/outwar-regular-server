@@ -16,6 +16,7 @@ public static class GetRankingEndpoint
                         u.Level,
                         u.Experience
                     })
+                    .OrderByDescending(u => u.Experience)
                     .ToListAsync();
 
                 if (users == null)
