@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using Outwar_regular_server.Data;
 using Outwar_regular_server.Endpoints.Items;
 using Outwar_regular_server.Endpoints.User;
+using StackExchange.Redis;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +11,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<AppDbContext>(options => options.UseNpgsql(builder.Configuration.GetConnectionString("PostgreSqlConnectionString")));
+builder.Services.AddSingleton<IConnectionMultiplexer>(sp =>
+    ConnectionMultiplexer.Connect(builder.Configuration.GetConnectionString("RedisConnectionString")));
 
 // Add CORS policy
 builder.Services.AddCors(options =>
@@ -94,5 +97,10 @@ app.MapChangePlayerLocation();
 //Crew api's
 app.MapCreateCrewEndpoint();
 app.MapGetCrewEndpoint();
+
+//Redis api's ---REDIS---
+app.MapCreateRaidEndpoint();
+app.MapGetRaidDetailsEndpoint();
+app.MapAttackRaidEndpoint();
 
 app.Run();
