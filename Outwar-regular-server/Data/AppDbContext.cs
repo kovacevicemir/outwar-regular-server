@@ -19,4 +19,5 @@ public class AppDbContext : DbContext
     public DbSet<User> Users { get; set; }
     public DbSet<Item> Items { get; set; }
     public DbSet<Quest> Quests { get; set; }
+    public DbSet<Crew> Crews { get; set; }
 }

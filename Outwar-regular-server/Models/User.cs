@@ -28,4 +28,6 @@ public class User
     
     // Navigation property to related quests
     public ICollection<Quest> Quests { get; set; }
+    
+    public string? CrewName { get; set; }
 }

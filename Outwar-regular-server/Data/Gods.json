@@ -1,0 +1,82 @@
+﻿[
+  {
+    "Name": "Synge",
+    "LevelRequirement": 20,
+    "Attack": 10,
+    "Hp": 50000,
+    "Drops":["Boots of Invulnerability", "Ring of Splendid Wealth","Circlet of Power","Charred Band","Shield of Righteousness","Plate of the Crimson Sky","Wrath of the Gods"],
+    "DropsChance":[8,8,8,8,8,8,8]
+  },
+  {
+    "Name": "Rancid",
+    "LevelRequirement": 21,
+    "Attack": 10,
+    "Hp": 50000,
+    "Drops":["Blood-Soaked Moccasins","Ring of Hatred","Blade of Dark Power"],
+    "DropsChance":[8,8,8]
+  },
+  {
+    "Name": "Terrance",
+    "LevelRequirement": 22,
+    "Attack": 10,
+    "Hp": 50000,
+    "Drops":["Ring of the Cunning","Manacle of Clairvoyent Thought","Blade of Disruption","Mask of Confusion"],
+    "DropsChance":[8,8,8,8]
+  },
+  {
+    "Name": "Zertan",
+    "LevelRequirement": 23,
+    "Attack": 10,
+    "Hp": 50000,
+    "Drops":["Longsword of War","Draconic Shield of Terror","Plate Mail of Discordance"],
+    "DropsChance":[8,8,8]
+  },
+  {
+    "Name": "Quiver",
+    "LevelRequirement": 24,
+    "Attack": 10,
+    "Hp": 50000,
+    "Drops":["Boots of Strategy","Ring of Eternal Power","Crown of the Cerebral","Breastplate of Chaos","Breastplate of Vengence","Aegis of Energy","Scimitar of Flame"],
+    "DropsChance":[8,8,8,8,8,8,8]
+  },
+  {
+    "Name": "Garland",
+    "LevelRequirement": 24,
+    "Attack": 10,
+    "Hp": 50000,
+    "Drops":["Top-Hat of Insanity","Belt of Safety","Kite Shield of Fixation","Wicked Gorget of Force","Animated Boots of Valor"],
+    "DropsChance":[8,8,8,8,8]
+  },
+  {
+    "Name": "Tylos",
+    "LevelRequirement": 24,
+    "Attack": 10,
+    "Hp": 50000,
+    "Drops":["Runic Shield of Spectral Warding","Belt of Popstar Flesh","Ring of Profusion"],
+    "DropsChance":[8,8,8]
+  },
+  {
+    "Name": "Threk",
+    "LevelRequirement": 24,
+    "Attack": 10,
+    "Hp": 50000,
+    "Drops":["Warlord's Belt of Battle","Breastplate of Slaughter","Gatling Gun of Compassion","Medallion of Eradication"],
+    "DropsChance":[8,8,8,8]
+  },
+  {
+    "Name": "Jazzmin",
+    "LevelRequirement": 24,
+    "Attack": 10,
+    "Hp": 50000,
+    "Drops":["Belt of Glamour","Beaded Necklace of Affluence","Cap of Supernal Force","Shoes of Nimbility"],
+    "DropsChance":[8,8,8,8]
+  },
+  {
+    "Name": "Sigil",
+    "LevelRequirement": 24,
+    "Attack": 10,
+    "Hp": 50000,
+    "Drops":["Amulet of Gazing Dread","Great Blade of Ferocity","Ring of Pulsing Energy","Breastplate of Vigilant Combat"],
+    "DropsChance":[8,8,8,8]
+  }
+]

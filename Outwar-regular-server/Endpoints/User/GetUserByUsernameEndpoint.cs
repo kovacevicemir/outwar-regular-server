@@ -38,7 +38,8 @@ public static class GetUserByUsernameEndpoint
                     user.Items,
                     user.EquipedItemsId,
                     user.Location,
-                    QuestMonsterIds = allMonsterIds // Return the combined list of MonsterIds
+                    QuestMonsterIds = allMonsterIds, // Return the combined list of MonsterIds
+                    user.CrewName
                 };
 
                 return Results.Ok(userWithMonsterIds);

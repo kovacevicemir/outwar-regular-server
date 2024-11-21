@@ -91,4 +91,8 @@ app.MapGetQuestRewardEndpoint();
 //World api's
 app.MapChangePlayerLocation();
 
+//Crew api's
+app.MapCreateCrewEndpoint();
+app.MapGetCrewEndpoint();
+
 app.Run();
