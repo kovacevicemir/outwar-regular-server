@@ -1,5 +1,609 @@
 ﻿[
   {
+    "Name": "Pimp Hat",
+    "Stats": [0, 10, 0, 10, 5, 0, 1, 0],
+    "SetBonus": [10, 25],
+    "UpgradeLevel": 0,
+    "Type": "head"
+  },{
+    "Name": "Pimp Suit",
+    "Stats": [0, 20, 100, 12, 5, 0, 0, 0],
+    "SetBonus": [10, 25],
+    "UpgradeLevel": 0,
+    "Type": "armor"
+  },{
+    "Name": "Pimp Cane",
+    "Stats": [15, 0, 0, 3, 0, 0, 3, 0],
+    "SetBonus": [10, 25],
+    "UpgradeLevel": 0,
+    "Type": "weapon"
+  },{
+    "Name": "Pimp Cup",
+    "Stats": [0, 15, 0, 3, 4, 0, 0, 3],
+    "SetBonus": [10, 25],
+    "UpgradeLevel": 0,
+    "Type": "shield"
+  },{
+    "Name": "Pimp Shoes",
+    "Stats": [0, 12, 50, 5, 3, 0, 1, 0],
+    "SetBonus": [10, 25],
+    "UpgradeLevel": 0,
+    "Type": "shoes"
+  },{
+    "Name": "Pimp Ring",
+    "Stats": [0, 10, 50, 0, 0, 0, 2, 0],
+    "SetBonus": [10, 25],
+    "UpgradeLevel": 0,
+    "Type": "ring"
+  },
+  {
+    "Name": "Construction Hat",
+    "Stats": [0, 15, 0, 10, 5, 0, 1, 0],
+    "SetBonus": [15, 40],
+    "UpgradeLevel": 0,
+    "Type": "head"
+  },
+  {
+  "Name": "Construction Vest",
+  "Stats": [0, 25, 100, 12, 5, 0, 0, 0],
+  "SetBonus": [15, 40],
+  "UpgradeLevel": 0,
+  "Type": "armor"
+  },
+  {
+  "Name": "Construction Jackhammer",
+  "Stats": [22, 0, 0, 4, 0, 0, 3, 0],
+  "SetBonus": [15, 40],
+  "UpgradeLevel": 0,
+  "Type": "weapon"
+},
+  {
+  "Name": "Construction Sign",
+  "Stats": [0, 15, 0, 5, 5, 0, 0, 3],
+  "SetBonus": [15, 40],
+  "UpgradeLevel": 0,
+  "Type": "shield"
+},{
+  "Name": "Construction Boots",
+  "Stats": [0, 15, 75, 5, 3, 0, 2, 0],
+  "SetBonus": [15, 40],
+  "UpgradeLevel": 0,
+  "Type": "shoes"
+},{
+  "Name": "Construction Lunchpale",
+  "Stats": [0, 15, 50, 0, 0, 0, 2, 0],
+  "SetBonus": [15, 40],
+  "UpgradeLevel": 0,
+  "Type": "belt"
+},
+
+  {
+    "Name": "Roman Helmet",
+    "Stats": [0, 25, 0, 15, 5, 0, 2, 0],
+    "SetBonus": [25, 50],
+    "UpgradeLevel": 0,
+    "Type": "head"
+  },{
+  "Name": "Roman Armour",
+  "Stats": [0, 50, 150, 15, 7, 0, 0, 0],
+  "SetBonus": [25, 50],
+  "UpgradeLevel": 0,
+  "Type": "armor"
+},{
+  "Name": "Roman Sword",
+  "Stats": [30, 0, 0, 10, 0, 0, 3, 0],
+  "SetBonus": [25, 50],
+  "UpgradeLevel": 0,
+  "Type": "weapon"
+},{
+  "Name": "Roman Shield",
+  "Stats": [0, 40, 0, 8, 8, 0, 0, 3],
+  "SetBonus": [25, 50],
+  "UpgradeLevel": 0,
+  "Type": "shield"
+},{
+  "Name": "Roman Sandals",
+  "Stats": [0, 20, 75, 10, 5, 0, 2, 0],
+  "SetBonus": [25, 50],
+  "UpgradeLevel": 0,
+  "Type": "shoes"
+},{
+  "Name": "Roman Ring",
+  "Stats": [0, 20, 50, 0, 0, 0, 2, 0],
+  "SetBonus": [25, 50],
+  "UpgradeLevel": 0,
+  "Type": "ring"
+},
+
+  {
+    "Name": "Battle Helmet of Dissimulation",
+    "Stats": [0, 30, 0, 15, 5, 0, 2, 0],
+    "SetBonus": [30, 55],
+    "UpgradeLevel": 0,
+    "Type": "head"
+  },{
+  "Name": "Bullet Proof Vest of Dissimulation",
+  "Stats": [0, 55, 150, 15, 7, 0, 0, 0],
+  "SetBonus": [30, 55],
+  "UpgradeLevel": 0,
+  "Type": "armor"
+},{
+  "Name": "Rifle of Dissimulation",
+  "Stats": [25, 0, 0, 10, 0, 1, 3, 0],
+  "SetBonus": [30, 55],
+  "UpgradeLevel": 0,
+  "Type": "weapon"
+},{
+  "Name": "Sandbag of Dissimulation",
+  "Stats": [0, 40, 0, 8, 8, 0, 0, 4],
+  "SetBonus": [30, 55],
+  "UpgradeLevel": 0,
+  "Type": "shield"
+},{
+  "Name": "Army Boots of Dissimulation",
+  "Stats": [0, 30, 75, 10, 5, 0, 2, 0],
+  "SetBonus": [30, 55],
+  "UpgradeLevel": 0,
+  "Type": "shoes"
+},{
+  "Name": "Ring of Dissimulation",
+  "Stats": [0, 20, 100, 0, 0, 0, 2, 0],
+  "SetBonus": [30, 55],
+  "UpgradeLevel": 0,
+  "Type": "ring"
+},{
+  "Name": "Army Belt of Dissimulation",
+  "Stats": [0, 20, 0, 5, 0, 0, 1, 0],
+  "SetBonus": [30, 55],
+  "UpgradeLevel": 0,
+  "Type": "belt"
+},{
+  "Name": "Dog-Tag of Dissimulation",
+  "Stats": [0, 20, 50, 5, 0, 0, 1, 0],
+  "SetBonus": [30, 55],
+  "UpgradeLevel": 0,
+  "Type": "neck"
+},
+
+  {
+    "Name": "Spiked Helmet of the Cobalt",
+    "Stats": [0, 50, 0, 6, 5, 0, 0, 0],
+    "SetBonus": [10, 50],
+    "UpgradeLevel": 0,
+    "Type": "head"
+  },{
+  "Name": "Breastplate of the Cobalt",
+  "Stats": [0, 55, 200, 10, 10, 1, 0, 0],
+  "SetBonus": [10, 50],
+  "UpgradeLevel": 0,
+  "Type": "armor"
+},{
+  "Name": "Flail of the Cobalt",
+  "Stats": [40, 0, 0, 8, 1, 1, 0, 0],
+  "SetBonus": [10, 50],
+  "UpgradeLevel": 0,
+  "Type": "weapon"
+},{
+  "Name": "Tower Shield of the Cobalt",
+  "Stats": [0, 50, 0, 5, 4, 0, 0, 4],
+  "SetBonus": [10, 50],
+  "UpgradeLevel": 0,
+  "Type": "shield"
+},{
+  "Name": "Sollerets of the Cobalt",
+  "Stats": [0, 50, 0, 10, 5, 0, 2, 0],
+  "SetBonus": [10, 50],
+  "UpgradeLevel": 0,
+  "Type": "shoes"
+},{
+  "Name": "Ring of the Cobalt",
+  "Stats": [0, 0, 100, 0, 6, 0, 1, 0],
+  "SetBonus": [10, 50],
+  "UpgradeLevel": 0,
+  "Type": "ring"
+},{
+  "Name": "Belt of the Cobalt",
+  "Stats": [0, 50, 0, 5, 0, 0, 0, 0],
+  "SetBonus": [10, 50],
+  "UpgradeLevel": 0,
+  "Type": "belt"
+},{
+  "Name": "Spiked Collar of the Cobalt",
+  "Stats": [0, 50, 50, 5, 0, 0, 2, 0],
+  "SetBonus": [10, 50],
+  "UpgradeLevel": 0,
+  "Type": "neck"
+},
+
+  {
+    "Name": "Beanie of Extremity",
+    "Stats": [0, 75, 200, 7, 0, 1, 0, 0],
+    "SetBonus": [15, 75],
+    "UpgradeLevel": 0,
+    "Type": "head"
+  },{
+  "Name": "Hoodie of Extremity",
+  "Stats": [0, 75, 0, 10, 13, 1, 3, 0],
+  "SetBonus": [15, 75],
+  "UpgradeLevel": 0,
+  "Type": "armor"
+},{
+  "Name": "Truck-tool of Extremity",
+  "Stats": [45, 0, 0, 15, 1, 3, 3, 0],
+  "SetBonus": [15, 75],
+  "UpgradeLevel": 0,
+  "Type": "weapon"
+},{
+  "Name": "Board of Extremity",
+  "Stats": [0, 70, 0, 5, 12, 3, 0, 5],
+  "SetBonus": [15, 75],
+  "UpgradeLevel": 0,
+  "Type": "shield"
+},{
+  "Name": "Skate Shoes of Extremity",
+  "Stats": [0, 70, 0, 15, 7, 0, 1, 0],
+  "SetBonus": [15, 75],
+  "UpgradeLevel": 0,
+  "Type": "shoes"
+},{
+  "Name": "Ball Barring of Extremity",
+  "Stats": [0, 0, 150, 0, 9, 0, 5, 0],
+  "SetBonus": [15, 75],
+  "UpgradeLevel": 0,
+  "Type": "ring"
+},{
+  "Name": "Strap of Extremity",
+  "Stats": [0, 70, 0, 15, 0, 2, 2, 0],
+  "SetBonus": [15, 75],
+  "UpgradeLevel": 0,
+  "Type": "belt"
+},{
+  "Name": "Glowing Chain of Extremity",
+  "Stats": [0, 70, 0, 0, 11, 2, 2, 0],
+  "SetBonus": [15, 75],
+  "UpgradeLevel": 0,
+  "Type": "neck"
+},
+
+  {
+    "Name": "Fedora of the Gangland",
+    "Stats": [0, 90, 200, 7, 0, 1, 0, 0],
+    "SetBonus": [20, 100],
+    "UpgradeLevel": 0,
+    "Type": "head"
+  },{
+  "Name": "Trench Coat of the Gangland",
+  "Stats": [0, 95, 0, 10, 13, 1, 3, 0],
+  "SetBonus": [20, 100],
+  "UpgradeLevel": 0,
+  "Type": "armor"
+},{
+  "Name": "Piano Wire of the Gangland",
+  "Stats": [50, 0, 50, 15, 1, 3, 3, 0],
+  "SetBonus": [20, 100],
+  "UpgradeLevel": 0,
+  "Type": "weapon"
+},{
+  "Name": "Shield of the Gangland",
+  "Stats": [0, 90, 0, 5, 12, 3, 0, 5],
+  "SetBonus": [20, 100],
+  "UpgradeLevel": 0,
+  "Type": "shield"
+},{
+  "Name": "Wing Tips of the Gangland",
+  "Stats": [0, 90, 0, 15, 7, 0, 1, 0],
+  "SetBonus": [20, 100],
+  "UpgradeLevel": 0,
+  "Type": "shoes"
+},{
+  "Name": "Ring of the Gangland",
+  "Stats": [0, 0, 150, 5, 9, 0, 5, 0],
+  "SetBonus": [20, 100],
+  "UpgradeLevel": 0,
+  "Type": "ring"
+},{
+  "Name": "Waistband of the Gangland",
+  "Stats": [0, 80, 150, 15, 0, 2, 2, 0],
+  "SetBonus": [20, 100],
+  "UpgradeLevel": 0,
+  "Type": "belt"
+},{
+  "Name": "Pendant of the Gangland",
+  "Stats": [0, 90, 150, 4, 10, 2, 2, 0],
+  "SetBonus": [20, 100],
+  "UpgradeLevel": 0,
+  "Type": "neck"
+},
+
+  {
+    "Name": "Octave Helmet",
+    "Stats": [0, 110, 250, 7, 0, 1, 0, 0],
+    "SetBonus": [22, 120],
+    "UpgradeLevel": 0,
+    "Type": "head"
+  },{
+  "Name": "Octave Breastplate",
+  "Stats": [0, 115, 0, 13, 13, 5, 3, 0],
+  "SetBonus": [22, 120],
+  "UpgradeLevel": 0,
+  "Type": "armor"
+},{
+  "Name": "Octave Machine Gun",
+  "Stats": [55, 0, 100, 15, 12, 0, 4, 0],
+  "SetBonus": [22, 120],
+  "UpgradeLevel": 0,
+  "Type": "weapon"
+},{
+  "Name": "Octave Energy Blade",
+  "Stats": [0, 110, 350, 13, 9, 3, 0, 5],
+  "SetBonus": [22, 120],
+  "UpgradeLevel": 0,
+  "Type": "shield"
+},{
+  "Name": "Octave Boots",
+  "Stats": [0, 110, 200, 0, 10, 0, 3, 0],
+  "SetBonus": [22, 120],
+  "UpgradeLevel": 0,
+  "Type": "shoes"
+},{
+  "Name": "Octave Ring",
+  "Stats": [0, 0, 300, 0, 12, 0, 3, 0],
+  "SetBonus": [22, 120],
+  "UpgradeLevel": 0,
+  "Type": "ring"
+},{
+  "Name": "Octave Belt",
+  "Stats": [0, 110, 300, 0, 10, 1, 0, 0],
+  "SetBonus": [22, 120],
+  "UpgradeLevel": 0,
+  "Type": "belt"
+},{
+  "Name": "Octave Energy Collar",
+  "Stats": [0, 110, 100, 7, 10, 0, 4, 0],
+  "SetBonus": [22, 120],
+  "UpgradeLevel": 0,
+  "Type": "neck"
+},
+
+  {
+    "Name": "Headband of Symphony",
+    "Stats": [0, 130, 250, 7, 0, 1, 0, 0],
+    "SetBonus": [25, 150],
+    "UpgradeLevel": 0,
+    "Type": "head"
+  },{
+  "Name": "Robe of Symphony",
+  "Stats": [0, 135, 400, 13, 13, 5, 3, 0],
+  "SetBonus": [25, 150],
+  "UpgradeLevel": 0,
+  "Type": "armor"
+},{
+  "Name": "Guitar of Symphony",
+  "Stats": [61, 0, 400, 15, 3, 2, 3, 0],
+  "SetBonus": [25, 150],
+  "UpgradeLevel": 0,
+  "Type": "weapon"
+},{
+  "Name": "Shield of Symphony",
+  "Stats": [0, 130, 350, 10, 4, 3, 0, 5],
+  "SetBonus": [25, 150],
+  "UpgradeLevel": 0,
+  "Type": "shield"
+},{
+  "Name": "Shoes of Symphony",
+  "Stats": [0, 130, 200, 13, 7, 0, 2, 0],
+  "SetBonus": [25, 150],
+  "UpgradeLevel": 0,
+  "Type": "shoes"
+},{
+  "Name": "Ring of Symphony",
+  "Stats": [0, 0, 350, 10, 10, 0, 2, 0],
+  "SetBonus": [25, 150],
+  "UpgradeLevel": 0,
+  "Type": "ring"
+},{
+  "Name": "Sash of Symphony",
+  "Stats": [0, 130, 300, 7, 11, 1, 2, 0],
+  "SetBonus": [25, 150],
+  "UpgradeLevel": 0,
+  "Type": "belt"
+},{
+  "Name": "Charm of Symphony",
+  "Stats": [0, 130, 300, 10, 10, 0, 0, 0],
+  "SetBonus": [25, 150],
+  "UpgradeLevel": 0,
+  "Type": "neck"
+},
+
+  {
+    "Name": "Government Issued Hat",
+    "Stats": [0, 145, 450, 20, 12, 2, 0, 0],
+    "SetBonus": [30, 195],
+    "UpgradeLevel": 0,
+    "Type": "head"
+  },{
+  "Name": "Government Issued Blazer",
+  "Stats": [0, 150, 425, 20, 20, 0, 4, 0],
+  "SetBonus": [30, 195],
+  "UpgradeLevel": 0,
+  "Type": "armor"
+},{
+  "Name": "Government Issued .45",
+  "Stats": [70, 0, 400, 23, 8, 2, 0, 0],
+  "SetBonus": [30, 195],
+  "UpgradeLevel": 0,
+  "Type": "weapon"
+},{
+  "Name": "Government Issued ID Badge",
+  "Stats": [0, 145, 300, 18, 20, 0, 0, 7],
+  "SetBonus": [30, 195],
+  "UpgradeLevel": 0,
+  "Type": "shield"
+},{
+  "Name": "Government Issued Shoes",
+  "Stats": [0, 145, 300, 13, 20, 0, 0, 0],
+  "SetBonus": [30, 195],
+  "UpgradeLevel": 0,
+  "Type": "shoes"
+},{
+  "Name": "Government Issued Ring",
+  "Stats": [0, 0, 400, 4, 16, 0, 4, 0],
+  "SetBonus": [30, 195],
+  "UpgradeLevel": 0,
+  "Type": "ring"
+},{
+  "Name": "Government Issued Belt",
+  "Stats": [0, 145, 400, 13, 13, 1, 4, 0],
+  "SetBonus": [30, 195],
+  "UpgradeLevel": 0,
+  "Type": "belt"
+},{
+  "Name": "Government Issued Necktie",
+  "Stats": [0, 145, 400, 15, 20, 0, 4, 0],
+  "SetBonus": [30, 195],
+  "UpgradeLevel": 0,
+  "Type": "neck"
+},
+
+  {
+    "Name": "Shades of the Elements",
+    "Stats": [0, 155, 200, 20, 20, 3, 0, 0],
+    "SetBonus": [33, 220],
+    "UpgradeLevel": 0,
+    "Type": "head"
+  },{
+  "Name": "Armor of the Elements",
+  "Stats": [0, 160, 500, 25, 15, 4, 0, 0],
+  "SetBonus": [33, 220],
+  "UpgradeLevel": 0,
+  "Type": "armor"
+},{
+  "Name": "Sword of the Elements",
+  "Stats": [80, 0, 500, 30, 10, 2, 0, 0],
+  "SetBonus": [33, 220],
+  "UpgradeLevel": 0,
+  "Type": "weapon"
+},{
+  "Name": "Shield of the Elements",
+  "Stats": [0, 155, 100, 20, 20, 0, 0, 8],
+  "SetBonus": [33, 220],
+  "UpgradeLevel": 0,
+  "Type": "shield"
+},{
+  "Name": "Sollerets of the Elements",
+  "Stats": [0, 155, 0, 10, 25, 3, 0, 0],
+  "SetBonus": [33, 220],
+  "UpgradeLevel": 0,
+  "Type": "shoes"
+},{
+  "Name": "Ring of the Elements",
+  "Stats": [0, 0, 400, 20, 20, 0, 1, 0],
+  "SetBonus": [33, 220],
+  "UpgradeLevel": 0,
+  "Type": "ring"
+},{
+  "Name": "Girdle of the Elements",
+  "Stats": [0, 155, 500, 30, 10, 0, 5, 0],
+  "SetBonus": [33, 220],
+  "UpgradeLevel": 0,
+  "Type": "belt"
+},{
+  "Name": "Choker of the Elements",
+  "Stats": [0, 155, 200, 0, 35, 2, 5, 0],
+  "SetBonus": [33, 220],
+  "UpgradeLevel": 0,
+  "Type": "neck"
+},
+
+  {
+    "Name": "Face Guard of Decay",
+    "Stats": [0, 160, 200, 23, 23, 5, 1, 0],
+    "SetBonus": [38, 260],
+    "UpgradeLevel": 0,
+    "Type": "head"
+  },{
+  "Name": "Breastplate of Decay",
+  "Stats": [0, 165, 0, 30, 20, 5, 6, 0],
+  "SetBonus": [38, 260],
+  "UpgradeLevel": 0,
+  "Type": "armor"
+},{
+  "Name": "Obsidian Dagger of Decay",
+  "Stats": [90, 0, 0, 33, 18, 5, 5, 0],
+  "SetBonus": [38, 260],
+  "UpgradeLevel": 0,
+  "Type": "weapon"
+},{
+  "Name": "Skull Shield of Decay",
+  "Stats": [0, 160, 300, 20, 25, 5, 5, 0],
+  "SetBonus": [38, 260],
+  "UpgradeLevel": 0,
+  "Type": "shield"
+},{
+  "Name": "Sollerets of Decay",
+  "Stats": [0, 160, 550, 25, 25, 5, 0, 0],
+  "SetBonus": [38, 260],
+  "UpgradeLevel": 0,
+  "Type": "shoes"
+},{
+  "Name": "Bloodstone Ring of Decay",
+  "Stats": [0, 0, 500, 25, 25, 0, 5, 0],
+  "SetBonus": [38, 260],
+  "UpgradeLevel": 0,
+  "Type": "ring"
+},{
+  "Name": "Studded Belt of Decay",
+  "Stats": [0, 160, 500, 15, 30, 0, 4, 0],
+  "SetBonus": [38, 260],
+  "UpgradeLevel": 0,
+  "Type": "belt"
+},{
+  "Name": "Tooth Necklace of Decay",
+  "Stats": [0, 160, 500, 0, 25, 5, 5, 0],
+  "SetBonus": [38, 260],
+  "UpgradeLevel": 0,
+  "Type": "neck"
+},
+
+  {
+    "Name": "Noc Hood of Shadows",
+    "Stats": [0, 170, 600, 27, 27, 6, 2, 0],
+    "SetBonus": [42, 300],
+    "UpgradeLevel": 0,
+    "Type": "head"
+  },{
+  "Name": "Noc Uniform of Shadows",
+  "Stats": [0, 175, 0, 25, 35, 7, 7, 0],
+  "SetBonus": [42, 300],
+  "UpgradeLevel": 0,
+  "Type": "armor"
+},{
+  "Name": "Noc Sword of Shadows",
+  "Stats": [98, 0, 0, 40, 25, 6, 6, 0],
+  "SetBonus": [42, 300],
+  "UpgradeLevel": 0,
+  "Type": "weapon"
+},{
+  "Name": "Noc Shuko of Shadows",
+  "Stats": [0, 170, 600, 30, 30, 0, 6, 0],
+  "SetBonus": [42, 300],
+  "UpgradeLevel": 0,
+  "Type": "shield"
+},{
+  "Name": "Noc Tabi Boots of Shadows",
+  "Stats": [0, 170, 0, 30, 30, 0, 5, 0],
+  "SetBonus": [42, 300],
+  "UpgradeLevel": 0,
+  "Type": "shoes"
+},{
+  "Name": "Noc Star-ring of Shadows",
+  "Stats": [0, 0, 600, 30, 30, 0, 4, 0],
+  "SetBonus": [42, 300],
+  "UpgradeLevel": 0,
+  "Type": "ring"
+},
+  
+  {
     "Name": "Head-Gear of Champions",
     "Stats": [0, 150, 0, 20, 20, 4, 0, 0],
     "SetBonus": [35, 245],
