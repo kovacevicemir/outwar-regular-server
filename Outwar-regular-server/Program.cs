@@ -102,5 +102,6 @@ app.MapGetCrewEndpoint();
 app.MapCreateRaidEndpoint();
 app.MapGetRaidDetailsEndpoint();
 app.MapAttackRaidEndpoint();
+app.MapCrewRaidsEndpoint();
 
 app.Run();
