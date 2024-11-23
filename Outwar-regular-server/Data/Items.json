@@ -665,5 +665,306 @@
     "SetBonus": [0, 0],
     "UpgradeLevel": 0,
     "Type": "weapon"
+  },
+  {
+    "Name": "Boots of Invulnerability",
+    "Stats": [0, 185, 200, 27, 27, 0, 0, 0],
+    "SetBonus": [0, 0],
+    "UpgradeLevel": 0,
+    "Type": "shoes"
+  },
+  {
+    "Name": "Ring of Splendid Wealth",
+    "Stats": [0, 0, 600, 27, 27, 0, 5, 0],
+    "SetBonus": [0, 0],
+    "UpgradeLevel": 0,
+    "Type": "ring"
+  },
+  {
+    "Name": "Circlet of Power",
+    "Stats": [0, 185, 300, 15, 40, 0, 0, 0],
+    "SetBonus": [0, 0],
+    "UpgradeLevel": 0,
+    "Type": "head"
+  },
+  {
+    "Name": "Charred Band",
+    "Stats": [0, 185, 300, 30, 15, 0, 5, 0],
+    "SetBonus": [0, 0],
+    "UpgradeLevel": 0,
+    "Type": "belt"
+  },
+  {
+    "Name": "Shield of Righteousness",
+    "Stats": [0, 189, 300, 25, 25, 0, 0, 9],
+    "SetBonus": [0, 0],
+    "UpgradeLevel": 0,
+    "Type": "shield"
+  },
+  {
+    "Name": "Plate of the Crimson Sky",
+    "Stats": [0, 190, 600, 30, 20, 0, 0, 0],
+    "SetBonus": [0, 0],
+    "UpgradeLevel": 0,
+    "Type": "armor"
+  },
+  {
+    "Name": "Wrath of the Gods",
+    "Stats": [0, 100, 300, 40, 0, 6, 0, 0],
+    "SetBonus": [0, 0],
+    "UpgradeLevel": 0,
+    "Type": "weapon"
+  },
+  {
+    "Name": "Blood-Soaked Moccasins",
+    "Stats": [0, 152, 500, 30, 25, 0, 0, 0],
+    "SetBonus": [0, 0],
+    "UpgradeLevel": 0,
+    "Type": "shoes"
+  },
+  {
+    "Name": "Ring of Hatred",
+    "Stats": [0, 0, 300, 35, 0, 7, 0, 0],
+    "SetBonus": [0, 0],
+    "UpgradeLevel": 0,
+    "Type": "ring"
+  },
+  {
+    "Name": "Blade of Dark Power",
+    "Stats": [120, 0, 0, 25, 30, 0, 7, 0],
+    "SetBonus": [0, 0],
+    "UpgradeLevel": 0,
+    "Type": "weapon"
+  },
+  {
+    "Name": "Ring of the Cunning",
+    "Stats": [0, 0, 400, 15, 0, 0, 8, 0],
+    "SetBonus": [0, 0],
+    "UpgradeLevel": 0,
+    "Type": "ring"
+  },
+  {
+    "Name": "Manacle of Clairvoyent Thought",
+    "Stats": [0, 0, 500, 10, 10, 7, 0, 0],
+    "SetBonus": [0, 0],
+    "UpgradeLevel": 0,
+    "Type": "head"
+  },
+  {
+    "Name": "Blade of Disruption",
+    "Stats": [130, 0, 650, 44, 30, 0, 0, 0],
+    "SetBonus": [0, 0],
+    "UpgradeLevel": 0,
+    "Type": "weapon"
+  },
+  {
+    "Name": "Mask of Confusion",
+    "Stats": [0, 200, 0, 30, 30, 0, 0, 0],
+    "SetBonus": [0, 0],
+    "UpgradeLevel": 0,
+    "Type": "head"
+  },
+  {
+    "Name": "Longsword of War",
+    "Stats": [140, 0, 0, 58, 0, 9, 8, 0],
+    "SetBonus": [0, 0],
+    "UpgradeLevel": 0,
+    "Type": "weapon"
+  },
+  {
+    "Name": "Draconic Shield of Terror",
+    "Stats": [0, 175, 400, 37, 37, 5, 0, 10],
+    "SetBonus": [0, 0],
+    "UpgradeLevel": 0,
+    "Type": "shield"
+  },
+  {
+    "Name": "Plate Mail of Discordance",
+    "Stats": [0, 205, 650, 0, 58, 0, 8, 0],
+    "SetBonus": [0, 0],
+    "UpgradeLevel": 0,
+    "Type": "armor"
+  },
+  {
+    "Name": "Boots of Strategy",
+    "Stats": [0, 224, 650, 40, 40, 6, 6, 0],
+    "SetBonus": [0, 0],
+    "UpgradeLevel": 0,
+    "Type": "shoes"
+  },
+  {
+    "Name": "Ring of Eternal Power",
+    "Stats": [0, 225, 750, 0, 73, 5, 6, 0],
+    "SetBonus": [0, 0],
+    "UpgradeLevel": 0,
+    "Type": "ring"
+  },
+  {
+    "Name": "Crown of the Cerebral",
+    "Stats": [0, 219, 1000, 0, 73, 0, 6, 0],
+    "SetBonus": [0, 0],
+    "UpgradeLevel": 0,
+    "Type": "head"
+  },
+  {
+    "Name": "Breastplate of Chaos",
+    "Stats": [0, 215, 1000, 55, 30, 0, 6, 0],
+    "SetBonus": [0, 0],
+    "UpgradeLevel": 0,
+    "Type": "armor"
+  },
+  {
+    "Name": "Breastplate of Vengence",
+    "Stats": [0, 235, 200, 73, 0, 13, 10, 0],
+    "SetBonus": [0, 0],
+    "UpgradeLevel": 0,
+    "Type": "armor"
+  },
+  {
+    "Name": "Aegis of Energy",
+    "Stats": [0, 220, 300, 55, 33, 0, 5, 11],
+    "SetBonus": [0, 0],
+    "UpgradeLevel": 0,
+    "Type": "shield"
+  },
+  {
+    "Name": "Top-Hat of Insanity",
+    "Stats": [0, 195, 400, 10, 45, 5, 0, 0],
+    "SetBonus": [0, 0],
+    "UpgradeLevel": 0,
+    "Type": "head"
+  },
+  {
+    "Name": "Belt of Safety",
+    "Stats": [0, 185, 600, 30, 0, 5, 0, 0],
+    "SetBonus": [0, 0],
+    "UpgradeLevel": 0,
+    "Type": "belt"
+  },
+  {
+    "Name": "Kite Shield of Fixation",
+    "Stats": [0, 190, 500, 25, 10, 0, 0, 7],
+    "SetBonus": [0, 0],
+    "UpgradeLevel": 0,
+    "Type": "shield"
+  },
+  {
+    "Name": "Wicked Gorget of Force",
+    "Stats": [0, 195, 600, 40, 0, 6, 6, 0],
+    "SetBonus": [0, 0],
+    "UpgradeLevel": 0,
+    "Type": "neck"
+  },
+  {
+    "Name": "Animated Boots of Valor",
+    "Stats": [0, 180, 500, 10, 30, 0, 5, 0],
+    "SetBonus": [0, 0],
+    "UpgradeLevel": 0,
+    "Type": "shoes"
+  },
+  {
+    "Name": "Runic Shield of Spectral Warding",
+    "Stats": [0, 200, 400, 10, 45, 5, 0, 12],
+    "SetBonus": [0, 0],
+    "UpgradeLevel": 0,
+    "Type": "shield"
+  },
+  {
+    "Name": "Belt of Popstar Flesh",
+    "Stats": [0, 195, 1000, 25, 25, 0, 0, 0],
+    "SetBonus": [0, 0],
+    "UpgradeLevel": 0,
+    "Type": "belt"
+  },
+  {
+    "Name": "Ring of Profusion",
+    "Stats": [0, 0, 800, 0, 40, 0, 6, 0],
+    "SetBonus": [0, 0],
+    "UpgradeLevel": 0,
+    "Type": "ring"
+  },
+  {
+    "Name": "Warlord's Belt of Battle",
+    "Stats": [0, 200, 0, 30, 30, 7, 7, 0],
+    "SetBonus": [0, 0],
+    "UpgradeLevel": 0,
+    "Type": "belt"
+  },
+  {
+    "Name": "Breastplate of Slaughter",
+    "Stats": [0, 225, 0, 25, 55, 7, 7, 0],
+    "SetBonus": [0, 0],
+    "UpgradeLevel": 0,
+    "Type": "armor"
+  },
+  {
+    "Name": "Gatling Gun of Compassion",
+    "Stats": [120, 0, 800, 45, 0, 7, 6, 0],
+    "SetBonus": [0, 0],
+    "UpgradeLevel": 0,
+    "Type": "weapon"
+  },
+  {
+    "Name": "Medallion of Eradication",
+    "Stats": [0, 200, 0, 25, 30, 0, 6, 0],
+    "SetBonus": [0, 0],
+    "UpgradeLevel": 0,
+    "Type": "neck"
+  },
+  {
+    "Name": "Belt of Glamour",
+    "Stats": [0, 210, 1000, 50, 10, 0, 0, 0],
+    "SetBonus": [0, 0],
+    "UpgradeLevel": 0,
+    "Type": "belt"
+  },
+  {
+    "Name": "Beaded Necklace of Affluence",
+    "Stats": [0, 220, 750, 65, 0, 8, 8, 0],
+    "SetBonus": [0, 0],
+    "UpgradeLevel": 0,
+    "Type": "neck"
+  },
+  {
+    "Name": "Cap of Supernal Force",
+    "Stats": [0, 225, 800, 0, 60, 8, 8, 0],
+    "SetBonus": [0, 0],
+    "UpgradeLevel": 0,
+    "Type": "head"
+  },
+  {
+    "Name": "Shoes of Nimbility",
+    "Stats": [0, 210, 0, 0, 36, 8, 8, 0],
+    "SetBonus": [0, 0],
+    "UpgradeLevel": 0,
+    "Type": "shoes"
+  },
+  {
+    "Name": "Amulet of Gazing Dread",
+    "Stats": [0, 230, 350, 50, 50, 0, 9, 0],
+    "SetBonus": [0, 0],
+    "UpgradeLevel": 0,
+    "Type": "neck"
+  },
+  {
+    "Name": "Great Blade of Ferocity",
+    "Stats": [170, 0, 1000, 80, 0, 9, 9, 0],
+    "SetBonus": [0, 0],
+    "UpgradeLevel": 0,
+    "Type": "weapon"
+  },
+  {
+    "Name": "Ring of Pulsing Energy",
+    "Stats": [0, 0, 1000, 20, 0, 10, 10, 0],
+    "SetBonus": [0, 0],
+    "UpgradeLevel": 0,
+    "Type": "ring"
+  },
+  {
+    "Name": "Breastplate of Vigilant Combat",
+    "Stats": [0, 250, 1000, 73, 73, 0, 10, 0],
+    "SetBonus": [0, 0],
+    "UpgradeLevel": 0,
+    "Type": "armor"
   }
 ]
