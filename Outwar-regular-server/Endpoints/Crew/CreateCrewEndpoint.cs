@@ -22,7 +22,7 @@ public static class CreateCrewEndpoint
             {
                 Name = crewName,
                 CrewLeaderId = crewLeaderId,
-                Members = [user],
+                Members = new List<Models.User> { user },
                 VaultItems = [],
                 CrewUpgrades = [0,0,0,0,0,0]
             };
