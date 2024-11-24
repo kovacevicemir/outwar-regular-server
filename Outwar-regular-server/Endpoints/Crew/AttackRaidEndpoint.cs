@@ -9,10 +9,39 @@ namespace Outwar_regular_server.Endpoints.Items;
 
 public static class AttackRaidEndpoint
 {
+    private static List<God>? gods;
+    private static bool godsLoaded = false;
     public static IEndpointRouteBuilder MapAttackRaidEndpoint(this IEndpointRouteBuilder app)
     {
         app.MapPost("/attack-raid", async (AppDbContext context, IConnectionMultiplexer redis, string crewName, string raidName) =>
             {
+                
+                if (!godsLoaded)
+                {
+                    var jsonFilePath = @"Data\Gods.json";
+                    try
+                    {
+                        using var stream = new FileStream(jsonFilePath, FileMode.Open, FileAccess.Read);
+                        gods = await JsonSerializer.DeserializeAsync<List<God>>(stream) ?? new List<God>();
+                        godsLoaded = true; // Set the flag to indicate items are loaded
+
+                    }
+                    catch (Exception ex)
+                    {
+                        return Results.BadRequest($"Error reading the Gods.json file: {ex.Message}");
+                    }
+                }
+                
+                if (gods == null || !gods.Any())
+                {
+                    return Results.NotFound("Gods not found or the file is empty.");
+                }
+                
+                var god = gods.SingleOrDefault(g => g.Name == raidName);
+                if (god == null)
+                {
+                    return Results.NotFound($"God - {raidName} not found or the file is empty.");
+                }
 
                 var db = redis.GetDatabase();
                 var jsonValue = await db.StringGetAsync($"raid-{crewName}-{raidName}");
@@ -25,20 +54,20 @@ public static class AttackRaidEndpoint
                 deserializedRaid.HpLeft = deserializedRaid.HpLeft - 10000; //decrease 10k hp hard coded... to do later
 
                 var message = $"Attack {raidName} done! ";
-                
+
                 // Check if raid is done - hardcoded for now Rancid
                 if(deserializedRaid.HpLeft <= 0)
                 {
                     using (var client = new HttpClient()){
-                        var god = new God()
-                        {
-                            Name = "Rancid",
-                            LevelRequirement = 21,
-                            Attack = 10,
-                            Hp = 50000,
-                            Drops = ["Blood-Soaked Moccasins", "Ring of Hatred", "Blade of Dark Power"],
-                            DropsChance = [15, 15, 15]
-                        };
+                        // var god = new God()
+                        // {
+                        //     Name = "Rancid",
+                        //     LevelRequirement = 21,
+                        //     Attack = 10,
+                        //     Hp = 50000,
+                        //     Drops = ["Blood-Soaked Moccasins", "Ring of Hatred", "Blade of Dark Power"],
+                        //     DropsChance = [15, 15, 15]
+                        // };
                     
                         var dropBags = DetermineDrops(god);
                         
@@ -47,7 +76,7 @@ public static class AttackRaidEndpoint
                                 var tasks = dropBags.Select(item =>
                                 {
                                     // Add items to player asynchronously
-                                    var addItemUrl = $"https://localhost:44338/add-item-to-user?username={deserializedRaid.CreatedBy}&itemName={item}";
+                                    var addItemUrl = $"https://localhost:44338/add-item-to-user?username={deserializedRaid.CreatedBy.Name}&itemName={item}";
                                     return client.PostAsync(addItemUrl, null); // Returns a Task
                                 });
                                 

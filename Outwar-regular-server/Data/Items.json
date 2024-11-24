@@ -2,77 +2,77 @@
   {
     "Name": "Pimp Hat",
     "Stats": [0, 10, 0, 10, 5, 0, 1, 0],
-    "SetBonus": [10, 25],
+    "SetBonus": [15, 35],
     "UpgradeLevel": 0,
     "Type": "head"
   },{
     "Name": "Pimp Suit",
     "Stats": [0, 20, 100, 12, 5, 0, 0, 0],
-    "SetBonus": [10, 25],
+    "SetBonus": [15, 35],
     "UpgradeLevel": 0,
     "Type": "armor"
   },{
     "Name": "Pimp Cane",
     "Stats": [15, 0, 0, 3, 0, 0, 3, 0],
-    "SetBonus": [10, 25],
+    "SetBonus": [15, 35],
     "UpgradeLevel": 0,
     "Type": "weapon"
   },{
     "Name": "Pimp Cup",
     "Stats": [0, 15, 0, 3, 4, 0, 0, 3],
-    "SetBonus": [10, 25],
+    "SetBonus": [15, 35],
     "UpgradeLevel": 0,
     "Type": "shield"
   },{
     "Name": "Pimp Shoes",
     "Stats": [0, 12, 50, 5, 3, 0, 1, 0],
-    "SetBonus": [10, 25],
+    "SetBonus": [15, 35],
     "UpgradeLevel": 0,
     "Type": "shoes"
   },{
     "Name": "Pimp Ring",
     "Stats": [0, 10, 50, 0, 0, 0, 2, 0],
-    "SetBonus": [10, 25],
+    "SetBonus": [15, 35],
     "UpgradeLevel": 0,
     "Type": "ring"
   },
   {
     "Name": "Construction Hat",
     "Stats": [0, 15, 0, 10, 5, 0, 1, 0],
-    "SetBonus": [15, 40],
+    "SetBonus": [20, 50],
     "UpgradeLevel": 0,
     "Type": "head"
   },
   {
   "Name": "Construction Vest",
   "Stats": [0, 25, 100, 12, 5, 0, 0, 0],
-  "SetBonus": [15, 40],
+  "SetBonus": [20, 50],
   "UpgradeLevel": 0,
   "Type": "armor"
   },
   {
   "Name": "Construction Jackhammer",
   "Stats": [22, 0, 0, 4, 0, 0, 3, 0],
-  "SetBonus": [15, 40],
+  "SetBonus": [20, 50],
   "UpgradeLevel": 0,
   "Type": "weapon"
 },
   {
   "Name": "Construction Sign",
   "Stats": [0, 15, 0, 5, 5, 0, 0, 3],
-  "SetBonus": [15, 40],
+  "SetBonus": [20, 50],
   "UpgradeLevel": 0,
   "Type": "shield"
 },{
   "Name": "Construction Boots",
   "Stats": [0, 15, 75, 5, 3, 0, 2, 0],
-  "SetBonus": [15, 40],
+  "SetBonus": [20, 50],
   "UpgradeLevel": 0,
   "Type": "shoes"
 },{
   "Name": "Construction Lunchpale",
   "Stats": [0, 15, 50, 0, 0, 0, 2, 0],
-  "SetBonus": [15, 40],
+  "SetBonus": [20, 50],
   "UpgradeLevel": 0,
   "Type": "belt"
 },
@@ -80,37 +80,37 @@
   {
     "Name": "Roman Helmet",
     "Stats": [0, 25, 0, 15, 5, 0, 2, 0],
-    "SetBonus": [25, 50],
+    "SetBonus": [35, 65],
     "UpgradeLevel": 0,
     "Type": "head"
   },{
   "Name": "Roman Armour",
   "Stats": [0, 50, 150, 15, 7, 0, 0, 0],
-  "SetBonus": [25, 50],
+  "SetBonus": [35, 65],
   "UpgradeLevel": 0,
   "Type": "armor"
 },{
   "Name": "Roman Sword",
   "Stats": [30, 0, 0, 10, 0, 0, 3, 0],
-  "SetBonus": [25, 50],
+  "SetBonus": [35, 65],
   "UpgradeLevel": 0,
   "Type": "weapon"
 },{
   "Name": "Roman Shield",
   "Stats": [0, 40, 0, 8, 8, 0, 0, 3],
-  "SetBonus": [25, 50],
+  "SetBonus": [35, 65],
   "UpgradeLevel": 0,
   "Type": "shield"
 },{
   "Name": "Roman Sandals",
   "Stats": [0, 20, 75, 10, 5, 0, 2, 0],
-  "SetBonus": [25, 50],
+  "SetBonus": [35, 65],
   "UpgradeLevel": 0,
   "Type": "shoes"
 },{
   "Name": "Roman Ring",
   "Stats": [0, 20, 50, 0, 0, 0, 2, 0],
-  "SetBonus": [25, 50],
+  "SetBonus": [35, 65],
   "UpgradeLevel": 0,
   "Type": "ring"
 },
@@ -164,6 +164,63 @@
   "UpgradeLevel": 0,
   "Type": "neck"
 },
+
+  {
+  "Name": "Vertebrae Amulet of Osteology",
+  "Stats": [0, 135, 0, 17, 12, 5, 3, 0],
+  "SetBonus": [28, 170],
+  "UpgradeLevel": 0,
+  "Type": "neck"
+},
+  {
+    "Name": "Skeletal Arm of Osteology",
+    "Stats": [65, 0, 0, 15, 0, 2, 5, 0],
+    "SetBonus": [28, 170],
+    "UpgradeLevel": 0,
+    "Type": "weapon"
+  },
+  {
+    "Name": "Rib-Cage of Osteology",
+    "Stats": [0, 140, 300, 17, 17, 0, 4, 0],
+    "SetBonus": [28, 170],
+    "UpgradeLevel": 0,
+    "Type": "armor"
+  },
+  {
+    "Name": "Carpal Shield of Osteology",
+    "Stats": [0, 135, 300, 15, 15, 5, 0, 7],
+    "SetBonus": [28, 170],
+    "UpgradeLevel": 0,
+    "Type": "shield"
+  },
+  {
+    "Name": "Pelvis Bone of Osteology",
+    "Stats": [0, 135, 350, 0, 10, 4, 0, 0],
+    "SetBonus": [28, 170],
+    "UpgradeLevel": 0,
+    "Type": "belt"
+  },
+  {
+    "Name": "Phalange Ring of Osteology",
+    "Stats": [0, 0, 0, 0, 14, 14, 0, 0],
+    "SetBonus": [28, 170],
+    "UpgradeLevel": 0,
+    "Type": "ring"
+  },
+  {
+    "Name": "Skeletal Boots of Osteology",
+    "Stats": [0, 135, 300, 20, 13, 0, 0, 0],
+    "SetBonus": [28, 170],
+    "UpgradeLevel": 0,
+    "Type": "shoes"
+  },
+  {
+    "Name": "Ancient Skull of Osteology",
+    "Stats": [0, 135, 150, 18, 17, 0, 2, 0],
+    "SetBonus": [28, 170],
+    "UpgradeLevel": 0,
+    "Type": "head"
+  },
 
   {
     "Name": "Spiked Helmet of the Cobalt",
@@ -568,37 +625,37 @@
   {
     "Name": "Noc Hood of Shadows",
     "Stats": [0, 170, 600, 27, 27, 6, 2, 0],
-    "SetBonus": [42, 300],
+    "SetBonus": [80, 380],
     "UpgradeLevel": 0,
     "Type": "head"
   },{
   "Name": "Noc Uniform of Shadows",
   "Stats": [0, 175, 0, 25, 35, 7, 7, 0],
-  "SetBonus": [42, 300],
+  "SetBonus": [80, 380],
   "UpgradeLevel": 0,
   "Type": "armor"
 },{
   "Name": "Noc Sword of Shadows",
   "Stats": [98, 0, 0, 40, 25, 6, 6, 0],
-  "SetBonus": [42, 300],
+  "SetBonus": [80, 380],
   "UpgradeLevel": 0,
   "Type": "weapon"
 },{
   "Name": "Noc Shuko of Shadows",
   "Stats": [0, 170, 600, 30, 30, 0, 6, 0],
-  "SetBonus": [42, 300],
+  "SetBonus": [80, 380],
   "UpgradeLevel": 0,
   "Type": "shield"
 },{
   "Name": "Noc Tabi Boots of Shadows",
   "Stats": [0, 170, 0, 30, 30, 0, 5, 0],
-  "SetBonus": [42, 300],
+  "SetBonus": [80, 380],
   "UpgradeLevel": 0,
   "Type": "shoes"
 },{
   "Name": "Noc Star-ring of Shadows",
   "Stats": [0, 0, 600, 30, 30, 0, 4, 0],
-  "SetBonus": [42, 300],
+  "SetBonus": [80, 380],
   "UpgradeLevel": 0,
   "Type": "ring"
 },
