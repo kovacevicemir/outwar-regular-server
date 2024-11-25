@@ -30,4 +30,6 @@ public class User
     public ICollection<Quest> Quests { get; set; }
     
     public string? CrewName { get; set; }
+
+    public int Points { get; set; } = 0;
 }
