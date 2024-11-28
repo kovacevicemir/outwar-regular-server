@@ -75,6 +75,19 @@ public static class AttackRaidEndpoint
                             
                                 message += $" Drops: {string.Join(", ", dropBags)}";
                             }
+                            else //Reward some points to user who created raid - if no drops
+                            {
+                                Random rnd = new Random();
+                                var pointsToAdd = rnd.Next(1, 10); 
+                                
+                                var user = context.Users.FirstOrDefault(u => u.Name == deserializedRaid.CreatedBy.Name);
+                                if (user != null)
+                                {
+                                    user.Points += pointsToAdd;
+                                    await context.SaveChangesAsync();
+                                    message += $" Points: {pointsToAdd}";
+                                }
+                            }
                         }
                     
                     //Delete raids from redis
