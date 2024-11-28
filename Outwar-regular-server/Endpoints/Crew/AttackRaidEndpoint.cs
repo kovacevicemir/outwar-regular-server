@@ -59,16 +59,6 @@ public static class AttackRaidEndpoint
                 if(deserializedRaid.HpLeft <= 0)
                 {
                     using (var client = new HttpClient()){
-                        // var god = new God()
-                        // {
-                        //     Name = "Rancid",
-                        //     LevelRequirement = 21,
-                        //     Attack = 10,
-                        //     Hp = 50000,
-                        //     Drops = ["Blood-Soaked Moccasins", "Ring of Hatred", "Blade of Dark Power"],
-                        //     DropsChance = [15, 15, 15]
-                        // };
-                    
                         var dropBags = DetermineDrops(god);
                         
                             if (dropBags.Count > 0)

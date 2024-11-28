@@ -2,68 +2,68 @@
   {
     "id": 1,
     "name": "Shadow Path",
-    "monsters": ["Acidic Primate", "Aracnite"],
-    "npcs": ["NPC 1"]
+    "monsters": ["Acidic Primate", "Acidic Spider"],
+    "npcs": ["Casino Manager"]
   },
   {
     "id": 2,
     "name": "Training Grounds",
-    "monsters": ["Agony Knight"],
-    "npcs": ["NPC 2"]
+    "monsters": ["Addicted Doctor","Acidic Spider"],
+    "npcs": []
   },
   {
     "id": 3,
     "name": "Wastelands",
-    "monsters": ["Diseased Jaxalo", "Enraged Grizzly"],
-    "npcs": ["CASINO MANAGER"]
+    "monsters": ["Addicted Doctor", "Aefron","Acidic Spider"],
+    "npcs": []
   },
   {
     "id": 4,
     "name": "Diamond City Gates",
-    "monsters": ["Enforcer Captain", "Armored Battleborg"],
-    "npcs": ["NPC 4"]
+    "monsters": ["Agony Knight", "Agothyn the Mutant Warlord"],
+    "npcs": []
   },
   {
     "id": 5,
     "name": "Dusty Glass Tavern",
-    "monsters": ["Harmonic Sorcerer", "Blaze Wyvern"],
-    "npcs": ["NPC 5"]
+    "monsters": ["Alsayic Goliath", "Ambulance Driver","Ancient Deserter"],
+    "npcs": []
   },
   {
     "id": 6,
     "name": "Main Street",
-    "monsters": ["Beyalon", "Demon Ripper", "Famous Popstar"],
-    "npcs": ["NPC 6"]
+    "monsters": ["Apparitional Veteran", "Ambulance Driver", "Aracnite"],
+    "npcs": []
   },
   {
     "id": 7,
     "name": "Intersection Main/Angelio",
-    "monsters": ["Enraged Centaur", "Giant Mosquito"],
-    "npcs": ["NPC 7"]
+    "monsters": ["Aracnite", "Apparitional Veteran"],
+    "npcs": []
   },
   {
     "id": 8,
     "name": "Angelio Street",
-    "monsters": ["Blighted Soundchaser", "Feral Hydra"],
-    "npcs": ["NPC 8"]
+    "monsters": ["Aracnor", "Arcane Elemental Keeper"],
+    "npcs": []
   },
   {
     "id": 9,
     "name": "Dominic's Restaurant",
-    "monsters": ["Brainy Conspirator", "Blasphemous Creation"],
-    "npcs": ["NPC 9"]
+    "monsters": ["Arcane Elemental Keeper", "Armed Cannoneer"],
+    "npcs": []
   },
   {
     "id": 10,
     "name": "Rancid's Wasteland Camp",
     "monsters": ["Deathbringer", "Dorstox the Kinetic Slicer"],
-    "npcs": ["NPC 10"]
+    "npcs": []
   },
   {
     "id": 11,
     "name": "Broadway Street",
-    "monsters": ["Brash Triggerman", "Deluged Chaos Golem"],
-    "npcs": ["NPC 11"]
+    "monsters": ["Dorstox the Kinetic Slicer", "Armored Battleborg"],
+    "npcs": []
   },
   {
     "id": 12,

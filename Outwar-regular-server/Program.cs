@@ -59,10 +59,6 @@ app.UseCors("AllowAngularDev");
 //At this points start to add script or end to end testing API -> call APi -> call API--> validate...
 //Example: create user, add items, upgrade item, add quest, attack monster, finish quest, check exp, item reward etc.
 
-//shncdn & react create [simple & mobile] clean AF! 
-// ---- top bar----
-// |menu| action...
-
 //LESS FUNCTIONALITY AND FEATURES & MORE STRONG / STABLE AND NEAT CODE!
 
 
