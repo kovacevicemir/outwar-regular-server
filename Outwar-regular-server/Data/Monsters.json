@@ -329,10 +329,7 @@
     "Hp": 670,
     "Exp": 6,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -345,10 +342,7 @@
     "Hp": 700,
     "Exp": 7,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -361,10 +355,7 @@
     "Hp": 730,
     "Exp": 7,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -377,10 +368,7 @@
     "Hp": 760,
     "Exp": 7,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -393,10 +381,7 @@
     "Hp": 790,
     "Exp": 7,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -409,10 +394,7 @@
     "Hp": 820,
     "Exp": 15,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -425,10 +407,7 @@
     "Hp": 850,
     "Exp": 40,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -441,10 +420,7 @@
     "Hp": 880,
     "Exp": 10,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -457,10 +433,7 @@
     "Hp": 910,
     "Exp": 15,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -473,10 +446,7 @@
     "Hp": 940,
     "Exp": 17,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -489,10 +459,7 @@
     "Hp": 970,
     "Exp": 84,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -505,13 +472,16 @@
     "Hp": 1000,
     "Exp": 17,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": ["Spiked Helmet of the Cobalt","Breastplate of the Cobalt","Flail of the Cobalt","Tower Shield of the Cobalt","Sollerets of the Cobalt","Ring of the Cobalt","Belt of the Cobalt","Spiked Collar of the Cobalt"],
     "DropsChance": [
-      10,
-      20
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4
     ],
     "Id": 30
   },
@@ -521,10 +491,7 @@
     "Hp": 1030,
     "Exp": 90,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -537,10 +504,7 @@
     "Hp": 1060,
     "Exp": 26,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -553,10 +517,7 @@
     "Hp": 1090,
     "Exp": 18,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -569,10 +530,7 @@
     "Hp": 1120,
     "Exp": 93,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -585,10 +543,7 @@
     "Hp": 1150,
     "Exp": 66,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -601,10 +556,7 @@
     "Hp": 1180,
     "Exp": 55,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -617,10 +569,7 @@
     "Hp": 1210,
     "Exp": 37,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -633,10 +582,7 @@
     "Hp": 1240,
     "Exp": 57,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -649,10 +595,7 @@
     "Hp": 1270,
     "Exp": 65,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -665,10 +608,7 @@
     "Hp": 1300,
     "Exp": 70,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -681,10 +621,7 @@
     "Hp": 1330,
     "Exp": 10,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -697,13 +634,16 @@
     "Hp": 1360,
     "Exp": 76,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": ["Beanie of Extremity","Hoodie of Extremity","Truck-tool of Extremity","Board of Extremity","Skate Shoes of Extremity","Ball Barring of Extremity","Strap of Extremity","Glowing Chain of Extremity"],
     "DropsChance": [
-      10,
-      20
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4
     ],
     "Id": 42
   },
@@ -713,10 +653,7 @@
     "Hp": 1390,
     "Exp": 50,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -729,10 +666,7 @@
     "Hp": 1420,
     "Exp": 69,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -745,10 +679,7 @@
     "Hp": 1450,
     "Exp": 48,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -761,10 +692,7 @@
     "Hp": 1480,
     "Exp": 55,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -777,10 +705,7 @@
     "Hp": 1510,
     "Exp": 36,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -793,10 +718,7 @@
     "Hp": 1540,
     "Exp": 37,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -809,10 +731,7 @@
     "Hp": 1570,
     "Exp": 86,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -825,10 +744,7 @@
     "Hp": 1600,
     "Exp": 20,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -841,10 +757,7 @@
     "Hp": 1630,
     "Exp": 60,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -857,10 +770,7 @@
     "Hp": 1660,
     "Exp": 71,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -873,10 +783,7 @@
     "Hp": 1690,
     "Exp": 90,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -889,10 +796,7 @@
     "Hp": 1720,
     "Exp": 51,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -905,10 +809,7 @@
     "Hp": 1750,
     "Exp": 7,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -921,13 +822,16 @@
     "Hp": 1780,
     "Exp": 12,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": ["Fedora of the Gangland","Trench Coat of the Gangland","Piano Wire of the Gangland","Shield of the Gangland","Wing Tips of the Gangland","Ring of the Gangland","Waistband of the Gangland","Pendant of the Gangland"],
     "DropsChance": [
-      10,
-      20
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4
     ],
     "Id": 56
   },
@@ -937,10 +841,7 @@
     "Hp": 1810,
     "Exp": 20,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -953,10 +854,7 @@
     "Hp": 1840,
     "Exp": 40,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -970,12 +868,24 @@
     "Exp": 5,
     "Rage": 1,
     "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
+      "Octave Helmet",
+      "Octave Breastplate",
+      "Octave Machine Gun",
+      "Octave Energy Blade",
+      "Octave Boots",
+      "Octave Ring",
+      "Octave Belt",
+      "Octave Energy Collar"
     ],
     "DropsChance": [
-      10,
-      20
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4
     ],
     "Id": 59
   },
@@ -985,10 +895,7 @@
     "Hp": 1900,
     "Exp": 28,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -1001,10 +908,7 @@
     "Hp": 1930,
     "Exp": 64,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -1017,10 +921,7 @@
     "Hp": 1960,
     "Exp": 15,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -1033,10 +934,7 @@
     "Hp": 1990,
     "Exp": 69,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -1049,10 +947,7 @@
     "Hp": 2020,
     "Exp": 56,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -1065,10 +960,7 @@
     "Hp": 2050,
     "Exp": 81,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -1081,10 +973,7 @@
     "Hp": 2080,
     "Exp": 11,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -1097,10 +986,7 @@
     "Hp": 2110,
     "Exp": 19,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -1114,12 +1000,24 @@
     "Exp": 67,
     "Rage": 1,
     "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
+      "Headband of Symphony",
+      "Robe of Symphony",
+      "Guitar of Symphony",
+      "Shield of Symphony",
+      "Shoes of Symphony",
+      "Ring of Symphony",
+      "Sash of Symphony",
+      "Charm of Symphony"
     ],
     "DropsChance": [
-      10,
-      20
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4
     ],
     "Id": 68
   },
@@ -1129,10 +1027,7 @@
     "Hp": 2170,
     "Exp": 43,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -1145,10 +1040,7 @@
     "Hp": 2200,
     "Exp": 59,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -1161,10 +1053,7 @@
     "Hp": 2230,
     "Exp": 38,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -1177,10 +1066,7 @@
     "Hp": 2260,
     "Exp": 93,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -1193,10 +1079,7 @@
     "Hp": 2290,
     "Exp": 38,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -1209,10 +1092,7 @@
     "Hp": 2320,
     "Exp": 43,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -1225,10 +1105,7 @@
     "Hp": 2350,
     "Exp": 23,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -1241,10 +1118,7 @@
     "Hp": 2380,
     "Exp": 96,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -1257,10 +1131,7 @@
     "Hp": 2410,
     "Exp": 15,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -1273,10 +1144,7 @@
     "Hp": 2440,
     "Exp": 30,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -1289,10 +1157,7 @@
     "Hp": 2470,
     "Exp": 30,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -1305,10 +1170,7 @@
     "Hp": 2500,
     "Exp": 85,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -1321,10 +1183,7 @@
     "Hp": 2530,
     "Exp": 70,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -1337,10 +1196,7 @@
     "Hp": 2560,
     "Exp": 17,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -1353,10 +1209,7 @@
     "Hp": 2590,
     "Exp": 34,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -1369,10 +1222,7 @@
     "Hp": 2620,
     "Exp": 88,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -1385,10 +1235,7 @@
     "Hp": 2650,
     "Exp": 55,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -1401,10 +1248,7 @@
     "Hp": 2680,
     "Exp": 68,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -1417,10 +1261,7 @@
     "Hp": 2710,
     "Exp": 60,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -1433,10 +1274,7 @@
     "Hp": 2740,
     "Exp": 44,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -1449,10 +1287,7 @@
     "Hp": 2770,
     "Exp": 95,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -1465,10 +1300,7 @@
     "Hp": 2800,
     "Exp": 11,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -1481,10 +1313,7 @@
     "Hp": 2830,
     "Exp": 29,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -1497,10 +1326,7 @@
     "Hp": 2860,
     "Exp": 1,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -1513,10 +1339,7 @@
     "Hp": 2890,
     "Exp": 29,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -1529,10 +1352,7 @@
     "Hp": 2920,
     "Exp": 79,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -1545,10 +1365,7 @@
     "Hp": 2950,
     "Exp": 98,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -1561,10 +1378,7 @@
     "Hp": 2980,
     "Exp": 42,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -1577,10 +1391,7 @@
     "Hp": 3010,
     "Exp": 75,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -1593,10 +1404,7 @@
     "Hp": 3040,
     "Exp": 32,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -1609,10 +1417,7 @@
     "Hp": 3070,
     "Exp": 69,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -1625,10 +1430,7 @@
     "Hp": 3100,
     "Exp": 45,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -1641,10 +1443,7 @@
     "Hp": 3130,
     "Exp": 44,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -1657,10 +1456,7 @@
     "Hp": 3160,
     "Exp": 4,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -1673,10 +1469,7 @@
     "Hp": 3190,
     "Exp": 68,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -1689,10 +1482,7 @@
     "Hp": 3220,
     "Exp": 55,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -1705,10 +1495,7 @@
     "Hp": 3250,
     "Exp": 94,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -1721,10 +1508,7 @@
     "Hp": 3280,
     "Exp": 82,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -1737,10 +1521,7 @@
     "Hp": 3310,
     "Exp": 21,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -1753,10 +1534,7 @@
     "Hp": 3340,
     "Exp": 74,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -1769,10 +1547,7 @@
     "Hp": 3370,
     "Exp": 98,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -1785,10 +1560,7 @@
     "Hp": 3400,
     "Exp": 92,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -1801,10 +1573,7 @@
     "Hp": 3430,
     "Exp": 23,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -1817,10 +1586,7 @@
     "Hp": 3460,
     "Exp": 10,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -1833,10 +1599,7 @@
     "Hp": 3490,
     "Exp": 35,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -1849,10 +1612,7 @@
     "Hp": 3520,
     "Exp": 33,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -1865,10 +1625,7 @@
     "Hp": 3550,
     "Exp": 5,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -1881,10 +1638,7 @@
     "Hp": 3580,
     "Exp": 71,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -1897,10 +1651,7 @@
     "Hp": 3610,
     "Exp": 33,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -1913,10 +1664,7 @@
     "Hp": 3640,
     "Exp": 28,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -1929,10 +1677,7 @@
     "Hp": 3670,
     "Exp": 40,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -1945,10 +1690,7 @@
     "Hp": 3700,
     "Exp": 41,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -1961,10 +1703,7 @@
     "Hp": 3730,
     "Exp": 63,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -1977,10 +1716,7 @@
     "Hp": 3760,
     "Exp": 16,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20
@@ -1993,10 +1729,7 @@
     "Hp": 3790,
     "Exp": 50,
     "Rage": 1,
-    "Drops": [
-      "Precision Glove of Champions",
-      "Title Belt of Champions"
-    ],
+    "Drops": [],
     "DropsChance": [
       10,
       20

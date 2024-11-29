@@ -2,455 +2,789 @@
   {
     "id": 1,
     "name": "Shadow Path",
-    "monsters": ["Acidic Primate", "Acidic Spider"],
-    "npcs": ["Casino Manager"]
+    "monsters": [
+      "Acidic Primate",
+      "Acidic Spider"
+    ],
+    "npcs": [
+      "Casino Manager"
+    ]
   },
   {
     "id": 2,
     "name": "Training Grounds",
-    "monsters": ["Addicted Doctor","Acidic Spider"],
+    "monsters": [
+      "Addicted Doctor",
+      "Acidic Spider"
+    ],
     "npcs": []
   },
   {
     "id": 3,
     "name": "Wastelands",
-    "monsters": ["Addicted Doctor", "Aefron","Acidic Spider"],
+    "monsters": [
+      "Addicted Doctor",
+      "Aefron",
+      "Acidic Spider"
+    ],
     "npcs": []
   },
   {
     "id": 4,
     "name": "Diamond City Gates",
-    "monsters": ["Agony Knight", "Agothyn the Mutant Warlord"],
+    "monsters": [
+      "Agony Knight",
+      "Agothyn the Mutant Warlord"
+    ],
     "npcs": []
   },
   {
     "id": 5,
     "name": "Dusty Glass Tavern",
-    "monsters": ["Alsayic Goliath", "Ambulance Driver","Ancient Deserter"],
+    "monsters": [
+      "Alsayic Goliath",
+      "Ambulance Driver",
+      "Ancient Deserter"
+    ],
     "npcs": []
   },
   {
     "id": 6,
     "name": "Main Street",
-    "monsters": ["Apparitional Veteran", "Ambulance Driver", "Aracnite"],
+    "monsters": [
+      "Apparitional Veteran",
+      "Ambulance Driver",
+      "Aracnite"
+    ],
     "npcs": []
   },
   {
     "id": 7,
     "name": "Intersection Main/Angelio",
-    "monsters": ["Aracnite", "Apparitional Veteran"],
+    "monsters": [
+      "Aracnite",
+      "Apparitional Veteran"
+    ],
     "npcs": []
   },
   {
     "id": 8,
     "name": "Angelio Street",
-    "monsters": ["Aracnor", "Arcane Elemental Keeper"],
+    "monsters": [
+      "Aracnor",
+      "Arcane Elemental Keeper"
+    ],
     "npcs": []
   },
   {
     "id": 9,
     "name": "Dominic's Restaurant",
-    "monsters": ["Arcane Elemental Keeper", "Armed Cannoneer"],
+    "monsters": [
+      "Arcane Elemental Keeper",
+      "Armed Cannoneer"
+    ],
     "npcs": []
   },
   {
     "id": 10,
     "name": "Rancid's Wasteland Camp",
-    "monsters": ["Deathbringer", "Dorstox the Kinetic Slicer"],
+    "monsters": [
+      "Deathbringer",
+      "Dorstox the Kinetic Slicer"
+    ],
     "npcs": []
   },
   {
     "id": 11,
     "name": "Broadway Street",
-    "monsters": ["Dorstox the Kinetic Slicer", "Armored Battleborg"],
+    "monsters": [
+      "Dorstox the Kinetic Slicer",
+      "Armored Battleborg"
+    ],
     "npcs": []
   },
   {
     "id": 12,
     "name": "Hospital Waiting Room",
-    "monsters": ["Demonic Spider"],
-    "npcs": ["NPC 12"]
+    "monsters": [
+      "Armored Spartan, Astral Necromancer, Astro Warden"
+    ],
+    "npcs": []
   },
   {
     "id": 13,
     "name": "Emergency Room",
-    "monsters": ["Disfigured Brute", "Blaze Wyvern"],
-    "npcs": ["NPC 13"]
+    "monsters": [
+      "Armored Spartan, Astral Necromancer, Astro Warden"
+    ],
+    "npcs": []
   },
   {
     "id": 14,
     "name": "Carmine Street",
-    "monsters": ["Arcane Elemental Keeper"],
-    "npcs": ["NPC 14"]
+    "monsters": [
+      "Arcane Elemental Keeper"
+    ],
+    "npcs": []
   },
   {
     "id": 15,
     "name": "City Hall",
-    "monsters": ["Gloombringer", "Arcane Elemental Keeper"],
-    "npcs": ["NPC 15"]
+    "monsters": [
+      "Avatar of Nar Zhul",
+      "Arcane Elemental Keeper"
+    ],
+    "npcs": []
   },
   {
     "id": 16,
     "name": "Beldam Street",
-    "monsters": ["Demon Ripper", "Deadly Spider"],
-    "npcs": ["NPC 16"]
+    "monsters": [
+      "Avatar of Nar Zhul",
+      "Deranged Ogre",
+      "Desert Lion",
+      "Devoted Evocator"
+    ],
+    "npcs": []
   },
   {
     "id": 17,
     "name": "The Foundry",
-    "monsters": ["Fiery Bull", "Battle Rat"],
-    "npcs": ["NPC 17"]
+    "monsters": [
+      "Avatar of Nar Zhul",
+      "Deranged Ogre",
+      "Desert Lion",
+      "Devoted Evocator"
+    ],
+    "npcs": []
   },
   {
     "id": 18,
     "name": "Blackheart's Bank",
-    "monsters": ["Barkangel", "Blinded Ghoul"],
-    "npcs": ["NPC 18"]
+    "monsters": [
+      "Diabolic Wraith",
+      "Dingo",
+      "Dirt Crawler",
+      "Diseased Jaxalo"
+    ],
+    "npcs": []
   },
   {
     "id": 19,
     "name": "DC Enforcers",
-    "monsters": ["DC Enforcer", "Dried Up Alien"],
-    "npcs": ["NPC 19"]
+    "monsters": [
+      "Diabolic Wraith",
+      "Dingo",
+      "Dirt Crawler",
+      "Diseased Jaxalo"
+    ],
+    "npcs": []
   },
   {
     "id": 20,
     "name": "Subway to Industrial Way",
-    "monsters": ["Blistered Swine", "Death Mollusk"],
-    "npcs": ["NPC 20"]
+    "monsters": [
+      "Diseased Kraw",
+      "Diseased Mongrel",
+      "Diseased Sandworm"
+    ],
+    "npcs": []
   },
   {
     "id": 21,
     "name": "Holy Cathedral",
-    "monsters": ["Hellbeast", "Blazed Humanoid"],
-    "npcs": ["NPC 21"]
+    "monsters": [
+      "Disfigured Brute",
+      "Disorderly Fiend"
+    ],
+    "npcs": []
   },
   {
     "id": 22,
     "name": "Soundweaver Academy",
-    "monsters": ["Enraged Warewolf", "Empowered Lich"],
-    "npcs": ["NPC 22"]
+    "monsters": [
+      "Disturbed Zombie",
+      "Dominic Saprano"
+    ],
+    "npcs": []
   },
   {
     "id": 23,
     "name": "Binding Avenue",
-    "monsters": ["Brute Fanatic", "Disorderly Fiend"],
-    "npcs": ["NPC 23"]
+    "monsters": [
+      "Disturbed Zombie",
+      "Dominic Saprano"
+    ],
+    "npcs": []
   },
   {
     "id": 24,
     "name": "Binding Drive",
-    "monsters": ["Disturbed Zombie", "Blinded Ghoul"],
-    "npcs": ["NPC 24"]
+    "monsters": [
+      "Dorstox the Kinetic Slicer",
+      "Dothraki Warrior",
+      "Dried Up Alien"
+    ],
+    "npcs": [
+    ]
   },
   {
     "id": 25,
     "name": "Anger Blvd",
-    "monsters": ["Diseased Sandworm", "Daemon Skeleton"],
-    "npcs": ["NPC 25"]
+    "monsters": [
+      "Dorstox the Kinetic Slicer",
+      "Dothraki Warrior",
+      "Dried Up Alien"
+    ],
+    "npcs": [
+    ]
   },
   {
     "id": 26,
     "name": "Reel Theatre",
-    "monsters": ["Blaze Wyvern", "Demon Ape"],
-    "npcs": ["NPC 26"]
+    "monsters": [
+      "Dorstox the Kinetic Slicer",
+      "Dothraki Warrior",
+      "Dried Up Alien",
+      "Duowolf",
+      "Dusk Imp",
+      "Earth Troll",
+      "Emblazed Serpent",
+      "Empowered Lich"
+    ],
+    "npcs": [
+    ]
   },
   {
     "id": 27,
     "name": "South Main Street",
-    "monsters": ["Fire Elemental Keeper", "Gnawing Hellbat"],
-    "npcs": ["NPC 27"]
+    "monsters": [
+      "Dorstox the Kinetic Slicer",
+      "Dothraki Warrior",
+      "Dried Up Alien",
+      "Duowolf",
+      "Dusk Imp",
+      "Earth Troll",
+      "Emblazed Serpent",
+      "Empowered Lich"
+    ],
+    "npcs": [
+      
+    ]
   },
   {
     "id": 28,
     "name": "40s and 9s",
-    "monsters": ["Demon Ripper", "Gloombringer", "Blazed Humanoid"],
-    "npcs": ["NPC 28"]
+    "monsters": [
+      "Enforcer Captain",
+      "Engulfed Undead",
+      "Enraged Centaur",
+      "Enraged Grizzly"
+    ],
+    "npcs": [
+      
+    ]
   },
   {
     "id": 29,
     "name": "S. Main St. Alley",
-    "monsters": ["Ghoul Elf", "Blistered Swine"],
-    "npcs": ["NPC 29"]
+    "monsters": [
+      "Enforcer Captain",
+      "Engulfed Undead",
+      "Enraged Centaur",
+      "Enraged Grizzly"
+    ],
+    "npcs": [
+    ]
   },
   {
     "id": 30,
     "name": "Diamond City Colesium",
-    "monsters": ["Dorstox the Kinetic Slicer", "Brash Triggerman"],
-    "npcs": ["NPC 30"]
+    "monsters": [
+      "Enraged Warewolf",
+      "Enthusiast",
+      "Enveloped Ibis",
+      "Ergon the Headhunter"
+    ],
+    "npcs": [
+      
+    ]
   },
   {
     "id": 31,
     "name": "Loomis Ave",
-    "monsters": ["Fiery Bull", "Giant Mosquito"],
-    "npcs": ["NPC 31"]
+    "monsters": [
+      "Ether Overseer",
+      "Baneful Battlemage",
+      "Banished Energy",
+      "Barkangel"
+    ],
+    "npcs": [
+      
+    ]
   },
   {
     "id": 32,
     "name": "Underground Casino",
-    "monsters": ["Enraged Grizzly", "Blasphemous Creation"],
-    "npcs": ["NPC 32"]
+    "monsters": [
+      "Ether Overseer",
+      "Baneful Battlemage",
+      "Banished Energy",
+      "Barkangel"
+    ],
+    "npcs": [
+    ]
   },
   {
     "id": 33,
     "name": "Red Light Square",
-    "monsters": ["Fiery Bull", "Enraged Centaur"],
-    "npcs": ["NPC 33"]
+    "monsters": [
+      "Ether Overseer",
+      "Baneful Battlemage",
+      "Banished Energy",
+      "Barkangel",
+      "Battle Rat",
+      "Bewildered Ghost",
+      "Beyalon",
+      "Bipedor"
+    ],
+    "npcs": [
+    ]
   },
   {
     "id": 34,
     "name": "Fat Tony's Night Club",
-    "monsters": ["Blightened Soundchaser", "Hellish Gnoll"],
-    "npcs": ["NPC 34"]
+    "monsters": [
+      "Ether Overseer",
+      "Baneful Battlemage",
+      "Banished Energy",
+      "Blackheart Security",
+      "Blacksmith of Agony",
+      "Blasphemous Creation",
+      "Blaze Wyvern"
+    ],
+    "npcs": [
+    ]
   },
   {
     "id": 35,
     "name": "Fight Arena",
-    "monsters": ["Centaur Shaman", "Gloombringer"],
-    "npcs": ["NPC 35"]
+    "monsters": [
+      "Blackheart Security",
+      "Blacksmith of Agony",
+      "Blasphemous Creation",
+      "Blaze Wyvern"
+    ],
+    "npcs": [
+    ]
   },
   {
     "id": 35,
     "name": "Fight Arena",
-    "monsters": ["Baneful Battlemage", "Hacksaw Nurse"],
-    "npcs": ["NPC 35"]
+    "monsters": [
+      "Blackheart Security",
+      "Blacksmith of Agony",
+      "Blasphemous Creation",
+      "Blaze Wyvern"
+    ],
+    "npcs": [
+    ]
   },
   {
     "id": 36,
     "name": "Parson's Lane",
-    "monsters": ["Demon Ripper", "Enraged Grizzly", "Dried Up Alien"],
-    "npcs": ["NPC 36"]
+    "monsters": [
+      "Blazed Humanoid",
+      "Blighted Soundchaser",
+      "Blinded Ghoul",
+      "Blistered Swine"
+    ],
+    "npcs": [
+      
+    ]
   },
   {
     "id": 37,
     "name": "Construction Site",
-    "monsters": ["Demolition Ogre", "Disorderly Fiend", "Ghoul Fiend"],
-    "npcs": ["NPC 37"]
+    "monsters": [
+      "Blazed Humanoid",
+      "Blighted Soundchaser",
+      "Blinded Ghoul",
+      "Blistered Swine"
+    ],
+    "npcs": [
+      
+    ]
   },
   {
     "id": 38,
     "name": "Industrial Way",
-    "monsters": ["Engulfed Undead", "Empowered Lich", "Feral Hydra"],
-    "npcs": ["NPC 38"]
+    "monsters": [
+      "Blood Drinker",
+      "Blood Leech",
+      "Blood Witch",
+      "Brainy Conspirator",
+      "Brash Triggerman"
+    ],
+    "npcs": [
+    ]
   },
   {
     "id": 39,
     "name": "Synge Destruction Area",
-    "monsters": ["Demon Ape", "Famous Popstar", "Fiery Bull"],
-    "npcs": ["NPC 39"]
+    "monsters": [
+      "Blood Drinker",
+      "Blood Leech",
+      "Blood Witch",
+      "Brainy Conspirator",
+      "Brash Triggerman"
+    ],
+    "npcs": [
+    ]
   },
   {
     "id": 40,
     "name": "Subway to West Broadway Street",
-    "monsters": ["Diabolic Wraith", "Blasphemous Creation", "Battle Rat"],
-    "npcs": ["NPC 40"]
+    "monsters": [
+      "Brute Fanatic",
+      "Cabal Knight",
+      "Carrion Vulture",
+      "Centaur Shaman",
+      "Champion of Nar Zhul"
+    ],
+    "npcs": [
+      
+    ]
   },
   {
     "id": 41,
     "name": "Morgan's Way",
-    "monsters": ["Feral Hydra", "Flame Goliath"],
-    "npcs": ["NPC 41"]
+    "monsters": [
+      "Brute Fanatic",
+      "Cabal Knight",
+      "Carrion Vulture",
+      "Centaur Shaman",
+      "Champion of Nar Zhul"
+    ],
+    "npcs": [
+      
+    ]
   },
   {
     "id": 42,
     "name": "The Bowery",
-    "monsters": ["Darkseeded Rockstar", "Brash Triggerman", "Blaze Wyvern"],
-    "npcs": ["NPC 42"]
+    "monsters": [
+      "Daemon Skeleton",
+      "Dark Seeded Rockstar",
+      "Darkened Battler",
+      "Darksteel Soldier",
+      "DC Enforcer"
+    ],
+    "npcs": [
+    ]
   },
   {
     "id": 43,
     "name": "Chuggers Palace Bar",
     "monsters": [
-      "Blinded Ghoul",
-      "Blighted Soundchaser",
-      "Blacksmith of Agony"
+      "Daemon Skeleton",
+      "Dark Seeded Rockstar",
+      "Darkened Battler",
+      "Darksteel Soldier",
+      "DC Enforcer"
     ],
-    "npcs": ["NPC 43"]
+    "npcs": [
+    ]
   },
   {
     "id": 44,
     "name": "Subway Trains",
-    "monsters": ["Deathbringer", "Demon Ripper", "Blaze Wyvern"],
-    "npcs": ["NPC 44"]
+    "monsters": [
+      "Deadly Spider",
+      "Death Mollusk",
+      "Deathbringer"
+    ],
+    "npcs": [
+    ]
   },
   {
     "id": 45,
     "name": "TechSound Drive",
-    "monsters": ["Fiery Bull", "Flare Whelp"],
-    "npcs": ["NPC 45"]
+    "monsters": [
+      "Deluged Chaos Golem",
+      "Demi Warrior",
+      "Demolition Ogre",
+      "Demon Ape",
+      "Demon Ripper"
+    ],
+    "npcs": [
+    ]
   },
   {
     "id": 46,
     "name": "Sound Laboratory",
-    "monsters": ["Brainy Conspirator", "Ghoul Elf", "Enraged Centaur"],
-    "npcs": ["NPC 46"]
+    "monsters": [
+      "Deluged Chaos Golem",
+      "Demi Warrior",
+      "Demolition Ogre",
+      "Demon Ape",
+      "Demon Ripper"
+    ],
+    "npcs": [
+    ]
   },
   {
     "id": 47,
     "name": "Concert Hall",
-    "monsters": ["Blazed Humanoid", "Demon Ripper", "Death Mollusk"],
-    "npcs": ["NPC 47"]
+    "monsters": [
+      "Demonic Spider",
+      "Demopod",
+      "Deranged Ghoul"
+    ],
+    "npcs": [
+      
+    ]
   },
   {
     "id": 48,
     "name": "Nihilim Road",
-    "monsters": ["Devoted Evocator", "Demon Ripper", "Ghoul Fiend"],
-    "npcs": ["NPC 48"]
+    "monsters": [
+      "Demonic Spider",
+      "Demopod",
+      "Deranged Ghoul"
+    ],
+    "npcs": [
+      
+    ]
   },
   {
     "id": 49,
     "name": "Cement Block Company",
-    "monsters": ["Diabolic Wraith", "Blasphemous Creation", "Demon Ripper"],
-    "npcs": ["NPC 49"]
+    "monsters": [
+      "Hacksaw Nurse",
+      "Handy Giant",
+      "Hardened Criminal"
+    ],
+    "npcs": [
+    ]
   },
   {
     "id": 50,
     "name": "Popular Street",
-    "monsters": ["Banished Energy", "Enraged Grizzly"],
-    "npcs": ["NPC 50"]
+    "monsters": [
+      "Hacksaw Nurse",
+      "Handy Giant",
+      "Hardened Criminal"
+    ],
+    "npcs": [
+    ]
   },
   {
     "id": 51,
     "name": "Statue of Terrance",
-    "monsters": ["Agony Knight", "Demon Ripper"],
-    "npcs": ["NPC 51"]
+    "monsters": [
+      "Harmonic Sorcerer",
+      "Hate Weaver",
+      "Haunted Elemental"
+    ],
+    "npcs": [
+    ]
   },
   {
     "id": 52,
     "name": "Hall of Fame",
-    "monsters": ["Banished Energy", "Blaze Wyvern"],
-    "npcs": ["NPC 52"]
+    "monsters": [
+      "Headhunter Rider",
+      "Heat Hound",
+      "Heinous Hag"
+    ],
+    "npcs": [
+    ]
   },
   {
     "id": 53,
     "name": "The Drunken Clam",
-    "monsters": ["Blighted Soundchaser", "Enraged Centaur"],
-    "npcs": ["NPC 53"]
+    "monsters": [
+      "Hellbeast",
+      "Hellish Gnoll",
+      "Ghoul Elf"
+    ],
+    "npcs": [
+     
+    ]
   },
   {
     "id": 54,
     "name": "Tremolo Way",
-    "monsters": ["Blinded Ghoul", "Blaze Wyvern", "Brash Triggerman"],
-    "npcs": ["NPC 54"]
+    "monsters": [
+      "Ghoul Fiend",
+      "Ghoulish Drake"
+    ],
+    "npcs": [
+      
+    ]
   },
   {
     "id": 55,
     "name": "Warehouse",
-    "monsters": ["Feral Hydra", "Brainy Conspirator"],
-    "npcs": ["NPC 55"]
+    "monsters": [
+      "Giant Mosquito",
+      "Gigantic Dust Mite"
+    ],
+    "npcs": [
+      
+    ]
   },
   {
     "id": 56,
     "name": "Docks",
-    "monsters": ["Diabolic Wraith", "Disfigured Brute"],
-    "npcs": ["NPC 56"]
+    "monsters": [
+      "Gloombringer",
+      "Glorious Demon"
+    ],
+    "npcs": [
+    ]
   },
   {
     "id": 57,
     "name": "Pier 1 Rallis",
-    "monsters": ["Demon Ripper", "Disorderly Fiend"],
-    "npcs": ["NPC 57"]
+    "monsters": [
+      "Gnathsomold",
+      "Gnawing Hellbat"
+    ],
+    "npcs": [
+    ]
   },
   {
     "id": 58,
     "name": "Sunken Boat",
-    "monsters": ["Famous Popstar", "Devoted Evocator"],
-    "npcs": ["NPC 58"]
+    "monsters": [
+      "Goilkun",
+      "Factioned Warrior"
+    ],
+    "npcs": [
+    ]
   },
   {
     "id": 59,
     "name": "Boat House",
-    "monsters": ["Disfigured Brute", "Demon Ripper"],
-    "npcs": ["NPC 59"]
+    "monsters": [
+      "Famous Popstar",
+      "Fantasm"
+    ],
+    "npcs": [
+    ]
   },
   {
     "id": 60,
     "name": "Pier 2 Rallis",
-    "monsters": ["Demon Ape", "Dried Up Alien"],
-    "npcs": ["NPC 60"]
+    "monsters": [
+      "Fattened Owl",
+      "Feral Hydra"
+    ],
+    "npcs": [
+    ]
   },
   {
     "id": 61,
     "name": "Pier 3 Rallis",
-    "monsters": ["Ghoul Fiend", "Disorderly Fiend"],
-    "npcs": ["NPC 61"]
+    "monsters": [
+      "Fiery Bull",
+      "Fire Elemental Keeper"
+    ],
+    "npcs": [
+    ]
   },
   {
     "id": 62,
     "name": "Gunsmoke's Boat",
-    "monsters": ["Brainy Conspirator", "Flare Whelp"],
-    "npcs": ["NPC 62"]
+    "monsters": [
+      "Flame Goliath",
+      "Flare Whelp"
+    ],
+    "npcs": [
+    ]
   },
   {
     "id": 63,
     "name": "Transport Boat/Rallis W",
-    "monsters": ["Diabolic Wraith", "Demon Ripper"],
-    "npcs": ["NPC 63"]
+    "monsters": [
+      "Forgotten Warrior"
+    ],
+    "npcs": [
+    ]
   },
   {
     "id": 64,
     "name": "Pier 1 Stizzy",
-    "monsters": ["Enraged Grizzly", "Fiery Bull"],
-    "npcs": ["NPC 64"]
+    "monsters": [],
+    "npcs": [
+    ]
   },
   {
     "id": 65,
     "name": "Docks",
-    "monsters": ["Disorderly Fiend", "Feral Hydra"],
-    "npcs": ["NPC 65"]
+    "monsters": [],
+    "npcs": [
+      "NPC 65"
+    ]
   },
   {
     "id": 66,
     "name": "Hard Iron Salon",
-    "monsters": ["Banished Energy", "Blazed Humanoid"],
-    "npcs": ["NPC 66"]
+    "monsters": [],
+    "npcs": [
+      "NPC 66"
+    ]
   },
   {
     "id": 67,
     "name": "Pier 2 Stizzy",
-    "monsters": ["Blaze Wyvern", "Disfigured Brute"],
-    "npcs": ["NPC 67"]
+    "monsters": [],
+    "npcs": [
+    ]
   },
   {
     "id": 68,
     "name": "Iron Edge Street",
-    "monsters": ["Enraged Centaur", "Blinded Ghoul"],
-    "npcs": ["NPC 68"]
+    "monsters": [],
+    "npcs": [
+    ]
   },
   {
     "id": 69,
     "name": "Sunny's Park",
-    "monsters": ["Famous Popstar", "Ghoul Elf"],
-    "npcs": ["NPC 69"]
+    "monsters": [],
+    "npcs": []
   },
   {
     "id": 70,
     "name": "East Rock Shore",
-    "monsters": ["Blaze Wyvern", "Fiery Bull"],
-    "npcs": ["NPC 70"]
+    "monsters": [],
+    "npcs": []
   },
   {
     "id": 71,
     "name": "Cabbage Hill",
-    "monsters": ["Blasphemous Creation", "Enraged Grizzly"],
-    "npcs": ["NPC 71"]
+    "monsters": [],
+    "npcs": []
   },
   {
     "id": 72,
     "name": "Dockside Lounge",
-    "monsters": ["Disfigured Brute", "Feral Hydra"],
-    "npcs": ["NPC 72"]
+    "monsters": [],
+    "npcs": []
   },
   {
     "id": 73,
     "name": "Tidal Bay",
-    "monsters": ["Diabolic Wraith", "Blaze Wyvern"],
-    "npcs": ["NPC 73"]
+    "monsters": [],
+    "npcs": []
   },
   {
     "id": 74,
     "name": "Foggy Shore",
-    "monsters": ["Blazed Humanoid", "Brainy Conspirator"],
-    "npcs": ["NPC 74"]
+    "monsters": [],
+    "npcs": []
   }
 ]
