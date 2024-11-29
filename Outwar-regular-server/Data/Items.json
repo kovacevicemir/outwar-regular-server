@@ -816,7 +816,7 @@
   },
   {
     "Name": "Mask of Confusion",
-    "Stats": [0, 200, 0, 30, 30, 0, 0, 0],
+    "Stats": [0, 225, 300, 35, 35, 0, 0, 0],
     "SetBonus": [0, 0],
     "UpgradeLevel": 0,
     "Type": "head"

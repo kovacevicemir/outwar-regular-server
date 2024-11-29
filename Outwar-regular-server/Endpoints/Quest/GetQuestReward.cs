@@ -31,11 +31,15 @@ public static class GetQuestRewardEndpoint
                {
                    return Results.BadRequest("This quest is already completed & reward is claimed");
                }
+               
 
                var isQuestDone = AreProgressValid(quest.Requirements, quest.Progress);
+               
+               var message = $"Quest completed! {quest.Exp} Exp ";
+
                if (isQuestDone)
                {
-                   user.Experience = user.Experience + quest.Exp;
+                   user.Experience += quest.Exp;
                    using (var client = new HttpClient())
                    {
                        foreach (var questItemRewardName in quest.ItemRewardNames)
@@ -43,6 +47,7 @@ public static class GetQuestRewardEndpoint
                            var addItemToUserUrl =
                                $"https://localhost:44338/add-item-to-user?username={user.Name}&itemName={questItemRewardName}";
                            await client.PostAsync(addItemToUserUrl, null);
+                           message += $", {questItemRewardName}";
                            //This is returning 500 for some reason - even when it works...
                            // if (!response.IsSuccessStatusCode)
                            // {
@@ -50,13 +55,17 @@ public static class GetQuestRewardEndpoint
                            // }
                        }
                    }
+                   
+                   //Update quest reward - yes
+                   quest.GotReward = 1;
+                   await context.SaveChangesAsync();
                }
-               
-               //Update quest reward - yes
-               quest.GotReward = 1;
-               await context.SaveChangesAsync();
-               
-               return Results.Ok($"Quest reward completed for user:{user.Name}");
+               else
+               {
+                   message = "You need to complete quest first!";
+               }
+
+               return Results.Ok(message);
             })
             .WithName("GetQuestReward")
             .WithOpenApi();

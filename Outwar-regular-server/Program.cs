@@ -86,6 +86,7 @@ app.MapStartQuestEndpoint();
 app.MapGetAllUserQuestsEndpoint();
 app.MapAddQuestProgressEndpoint();
 app.MapGetQuestRewardEndpoint();
+app.MapGetSingleQuestEndpoint();
 
 //World api's
 app.MapChangePlayerLocation();
