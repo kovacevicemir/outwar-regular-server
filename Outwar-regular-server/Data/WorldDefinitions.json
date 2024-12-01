@@ -197,7 +197,7 @@
       "Disfigured Brute",
       "Disorderly Fiend"
     ],
-    "npcs": []
+    "npcs": ["Zug Zug Legacy"]
   },
   {
     "id": 22,
@@ -542,7 +542,7 @@
       "Deranged Ghoul"
     ],
     "npcs": [
-      
+      "Goverment Official"
     ]
   },
   {

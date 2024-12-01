@@ -62,6 +62,42 @@ app.UseCors("AllowAngularDev");
 //LESS FUNCTIONALITY AND FEATURES & MORE STRONG / STABLE AND NEAT CODE!
 
 
+//Run rage & exp timer task
+var timer = new Timer(async _ =>
+{
+    using (var scope = app.Services.CreateScope())
+    {
+        var context = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+
+        // Fetch all users and their equipped items
+        var users = context.Users.Include(u => u.Items).ToList();
+
+        foreach (var user in users)
+        {
+            // Fetch equipped items
+            var equippedItems = user.Items
+                .Where(item => user.EquipedItemsId.Contains(item.Id))
+                .ToList();
+
+            // Calculate sums for exp/hour, rage/hour, and max rage/hour
+            var expPerHour = equippedItems.Sum(item => item.Stats[4]);
+            var ragePerHour = equippedItems.Sum(item => item.Stats[3]) + 10;
+            var maxRagePerHour = equippedItems.Sum(item => item.Stats[2]) + 2000;
+
+            // Update user's experience
+            user.Experience += expPerHour;
+
+            // Calculate the new rage, ensuring it doesn't exceed max rage or user's rage cap
+            var newRage = user.Rage + ragePerHour;
+            user.Rage = Math.Min(newRage, maxRagePerHour);
+        }
+
+        // Save changes to the database
+        await context.SaveChangesAsync();
+    }
+}, null, TimeSpan.Zero, TimeSpan.FromMinutes(60));
+
+
 
 //User api's
 app.MapCreateUser();

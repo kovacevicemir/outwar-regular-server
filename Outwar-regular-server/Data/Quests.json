@@ -7,5 +7,41 @@
     "Progress": [0,0],
     "ItemRewardNames": ["Roman Ring"],
     "Exp": 100
+  },
+  {
+    "Name": "Goverment Official",
+    "Description": "Would you like to work for Goverment? Kill 5 Corrupted DC Enforcers...",
+    "MonsterIds": [80],
+    "Requirements": [5],
+    "Progress": [0],
+    "ItemRewardNames": [
+      "Government Issued Hat",
+      "Government Issued Blazer",
+      "Government Issued .45",
+      "Government Issued ID Badge",
+      "Government Issued Shoes",
+      "Government Issued Ring",
+      "Government Issued Belt",
+      "Government Issued Necktie"
+    ],
+    "Exp": 5000
+  },
+  {
+    "Name": "Zug Zug Legacy",
+    "Description": "Do you remember Zug-Zug? Kill 10 Baneful Battlemage and I will refresh your memory",
+    "MonsterIds": [51],
+    "Requirements": [10],
+    "Progress": [0],
+    "ItemRewardNames": [
+      "Vertebrae Amulet of Osteology",
+      "Skeletal Arm of Osteology",
+      "Rib-Cage of Osteology",
+      "Carpal Shield of Osteology",
+      "Pelvis Bone of Osteology",
+      "Phalange Ring of Osteology",
+      "Skeletal Boots of Osteology",
+      "Ancient Skull of Osteology"
+    ],
+    "Exp": 3000
   }
 ]

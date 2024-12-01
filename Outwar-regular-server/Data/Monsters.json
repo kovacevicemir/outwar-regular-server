@@ -1352,10 +1352,12 @@
     "Hp": 2920,
     "Exp": 79,
     "Rage": 1,
-    "Drops": [],
+    "Drops": ["Head-Gear of Champions","Silken Shroud of Champions", "Precision Glove of Champions", "Power Glove of Champions"],
     "DropsChance": [
-      10,
-      20
+      2,
+      2,
+      2,
+      2
     ],
     "Id": 94
   },
@@ -1378,10 +1380,10 @@
     "Hp": 2980,
     "Exp": 42,
     "Rage": 1,
-    "Drops": [],
+    "Drops": ["Sneakers of Champions","Medical Tape of Champions","Title Belt of Champions","Sweaty Towel of Champions"],
     "DropsChance": [
-      10,
-      20
+      2,
+      2
     ],
     "Id": 96
   },
@@ -1391,10 +1393,12 @@
     "Hp": 3010,
     "Exp": 75,
     "Rage": 1,
-    "Drops": [],
+    "Drops": ["Shades of the Elements","Armor of the Elements","Sword of the Elements","Shield of the Elements"],
     "DropsChance": [
-      10,
-      20
+      1,
+      1,
+      1,
+      1
     ],
     "Id": 97
   },
@@ -1430,10 +1434,12 @@
     "Hp": 3100,
     "Exp": 45,
     "Rage": 1,
-    "Drops": [],
+    "Drops": ["Sollerets of the Elements","Ring of the Elements","Girdle of the Elements","Choker of the Elements"],
     "DropsChance": [
-      10,
-      20
+      1,
+      1,
+      1,
+      1
     ],
     "Id": 100
   },
@@ -1599,10 +1605,25 @@
     "Hp": 3490,
     "Exp": 35,
     "Rage": 1,
-    "Drops": [],
+    "Drops": [
+      "Face Guard of Decay",
+      "Breastplate of Decay",
+      "Obsidian Dagger of Decay",
+      "Skull Shield of Decay",
+      "Sollerets of Decay",
+      "Bloodstone Ring of Decay",
+      "Studded Belt of Decay",
+      "Tooth Necklace of Decay"
+    ],
     "DropsChance": [
-      10,
-      20
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
     ],
     "Id": 113
   },
@@ -1690,10 +1711,14 @@
     "Hp": 3700,
     "Exp": 41,
     "Rage": 1,
-    "Drops": [],
+    "Drops": ["Noc Hood of Shadows","Noc Uniform of Shadows","Noc Sword of Shadows","Noc Shuko of Shadows","Noc Tabi Boots of Shadows","Noc Star-ring of Shadows"],
     "DropsChance": [
-      10,
-      20
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
     ],
     "Id": 120
   },

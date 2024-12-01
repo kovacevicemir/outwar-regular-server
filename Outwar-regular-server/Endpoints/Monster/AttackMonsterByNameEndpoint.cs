@@ -42,16 +42,29 @@ public static class AttackMonsterByNameEndpoint
                 }
 
                 var message = $"{monster.Name} is killed! Exp: {monster.Exp}";
+                
+                var user = await context.Users
+                    .FirstOrDefaultAsync(u => u.Name == username);
+                if (user == null)
+                {
+                    return Results.NotFound($"User {username} not found.");
+                }
+                
+                //Check rage
+                if (user.Rage <= monster.Rage)
+                {
+                    return Results.BadRequest("You dont have enough rage to attack this monster!");
+                }
+                else
+                {
+                    user.Rage -= monster.Rage;
+                    await context.SaveChangesAsync();
+                }
+
 
                 // call increase Exp endpoint here && call quest progress TODO
                 using (var client = new HttpClient())
                 {
-                    var user = await context.Users
-                        .FirstOrDefaultAsync(u => u.Name == username);
-                    if (user == null)
-                    {
-                        return Results.NotFound($"User {username} not found.");
-                    }
 
                     var increaseExpUrl = $"https://localhost:44338/increase-exp?username={user.Name}&exp={monster.Exp}";
                     var response = await client.PostAsync(increaseExpUrl, null);

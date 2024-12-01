@@ -1023,5 +1023,33 @@
     "SetBonus": [0, 0],
     "UpgradeLevel": 0,
     "Type": "armor"
+  },
+  {
+    "Name": "Sacred Blade of the Order",
+    "Stats": [350, 0, 1000, 125, 125, 15, 15, 0],
+    "SetBonus": [0, 0],
+    "UpgradeLevel": 0,
+    "Type": "weapon"
+  },
+  {
+    "Name": "Bracer of Life",
+    "Stats": [160, 0, 1200, 75, 75, 15, 7, 5],
+    "SetBonus": [500, 0],
+    "UpgradeLevel": 0,
+    "Type": "shield"
+  },
+  {
+    "Name": "Bracer of Death",
+    "Stats": [160, 0, 1000, 75, 75, 20, 7, 0],
+    "SetBonus": [500, 0],
+    "UpgradeLevel": 0,
+    "Type": "weapon"
+  },
+  {
+    "Name": "Dead Eye",
+    "Stats": [185, 0, 0, 0, 0, 0, 10, 0],
+    "SetBonus": [500, 0],
+    "UpgradeLevel": 0,
+    "Type": "weapon"
   }
 ]
