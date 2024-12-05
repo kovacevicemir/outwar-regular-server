@@ -1,0 +1,14 @@
+﻿[
+  {
+    "Name": "Empower",
+    "Description": "You absorb a jolt of energy, making you stronger and raising your ATK by",
+    "LevelValues": [50,100,150,200,250,300,350,400,450,500],
+    "Attribute": "Attack"
+  },
+  {
+    "Name": "Stealth",
+    "Description": "You become quieter, tougher, and hard to see. Your HP is raised by",
+    "LevelValues": [40,80,120,200,250,300,400,525,675,800],
+    "Attribute": "Hp"
+  }
+]

@@ -56,8 +56,16 @@ public static class IncreaseExpEndpoint
                     {
                         user.Level += 1;
                         isLevelUp = true;
+                        
+                        //Add skill point - only add if needed...
+                        if (experienceList[user.Level].SkillPoints > nextLevel.SkillPoints)
+                        {
+                            user.SkillPoints += 1;
+                        }
                     }
                 }
+                
+                
                 
                 // if (experienceList.TryGetValue(user.Level + 1, out int expNeededForLevel) && user.Experience >= expNeededForLevel)
                 // {

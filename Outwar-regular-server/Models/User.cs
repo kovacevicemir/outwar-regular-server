@@ -16,6 +16,8 @@ public class User
     public int Experience { get; set; } = 0;
     public int RagePerHour { get; set; } = 10;
     public int Rage { get; set; } = 2000;
+
+    public int SkillPoints { get; set; } = 0;
     
     // Represent some kind of coordinates in world
     public int[] Location { get; set; } = new int[2] { 4, 0 };
@@ -30,6 +32,10 @@ public class User
     public ICollection<Quest> Quests { get; set; }
     
     public string? CrewName { get; set; }
-
     public int Points { get; set; } = 0;
+    
+    //Level |   0    |   0    |
+    //Index |   0    |   1    |  
+    //Name  | Empower|Stealth |
+    public int[] Skills { get; set; } = new int[2];
 }

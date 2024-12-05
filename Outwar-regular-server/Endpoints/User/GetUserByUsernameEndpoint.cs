@@ -35,6 +35,8 @@ public static class GetUserByUsernameEndpoint
                     user.Rage,
                     user.RagePerHour,
                     user.Experience,
+                    user.Skills,
+                    user.SkillPoints,
                     user.Items,
                     user.EquipedItemsId,
                     user.Location,

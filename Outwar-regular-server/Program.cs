@@ -131,10 +131,16 @@ app.MapChangePlayerLocation();
 app.MapCreateCrewEndpoint();
 app.MapGetCrewEndpoint();
 
-//Redis api's ---REDIS---
+//Crew api's ---REDIS---
 app.MapCreateRaidEndpoint();
 app.MapGetRaidDetailsEndpoint();
 app.MapAttackRaidEndpoint();
 app.MapCrewRaidsEndpoint();
+
+//Skill api's
+app.MapIncreaseSkillLevelEndpoint();
+app.MapCastSkillEndpoint();
+app.MapGetAllActiveSkillsEndpoint();
+
 
 app.Run();
