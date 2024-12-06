@@ -62,7 +62,7 @@ public static class CastSkillEndpoint
                         return Results.BadRequest($"Skill {skillName} is not trained yet!");                        
                     }
                     
-                    var bonusValue = skillDefinition.LevelValues[userSkillLevel];
+                    var bonusValue = skillDefinition.LevelValues[userSkillLevel - 1];
                     
                     // Cast a buff
                     buffManager.CastBuff(userName, skillName, bonusValue, TimeSpan.FromHours(24));
