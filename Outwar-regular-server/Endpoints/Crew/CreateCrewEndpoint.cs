@@ -28,6 +28,8 @@ public static class CreateCrewEndpoint
             };
 
             context.Crews.Add(newCrew);
+            
+            user.CrewName = newCrew.Name;
 
             // Save changes to the database
             await context.SaveChangesAsync();

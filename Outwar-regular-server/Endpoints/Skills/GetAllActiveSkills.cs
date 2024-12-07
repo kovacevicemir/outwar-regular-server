@@ -23,11 +23,11 @@ public static class GetAllActiveSkillsEndpoint
                     var activeBuffs = buffManager.GetActiveBuffs(userName);
 
                     // Filter out buffs with a duration less than 23 hours
-                    var filteredBuffs = activeBuffs
-                        .Where(buff => buff.Value.TimeRemaining >= TimeSpan.FromHours(23));
+                    // var filteredBuffs = activeBuffs
+                    //     .Where(buff => buff.Value.TimeRemaining >= TimeSpan.FromHours(23));
 
                     // Transform the dictionary into a list of anonymous objects
-                    var buffsList = filteredBuffs.Select(buff => new
+                    var buffsList = activeBuffs.Select(buff => new
                     {
                         SkillName = buff.Key,
                         Duration = buff.Value.TimeRemaining.ToString("hh\\:mm\\:ss"), // Format the TimeSpan
