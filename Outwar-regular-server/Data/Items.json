@@ -1048,7 +1048,7 @@
   {
     "Name": "Dead Eye",
     "Stats": [185, 0, 0, 0, 0, 0, 10, 0],
-    "SetBonus": [500, 0],
+    "SetBonus": [0, 0],
     "UpgradeLevel": 0,
     "Type": "weapon"
   }

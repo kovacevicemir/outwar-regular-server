@@ -108,6 +108,7 @@ app.MapGetRanking();
 
 //Item api's
 app.MapAddItemToUserEndpoint();
+app.MapBuyShopItemEndpoint();
 app.MapDeleteItemFromUserEndpoint();
 app.MapUpgradeItemLevelByItemId();
 app.MapEquipItemEndpoint();

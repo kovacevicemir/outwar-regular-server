@@ -1383,6 +1383,8 @@
     "Drops": ["Sneakers of Champions","Medical Tape of Champions","Title Belt of Champions","Sweaty Towel of Champions"],
     "DropsChance": [
       2,
+      2,
+      2,
       2
     ],
     "Id": 96
