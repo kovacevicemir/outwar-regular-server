@@ -20,7 +20,7 @@ public static class CastSkillEndpoint
                 {
                     if (!skillsLoaded)
                     {
-                        var jsonFilePath = @"Data\Skills.json";
+                        var jsonFilePath = Path.Combine( "Data", "Skills.json");
                         try
                         {
                             using var stream = new FileStream(jsonFilePath, FileMode.Open, FileAccess.Read);

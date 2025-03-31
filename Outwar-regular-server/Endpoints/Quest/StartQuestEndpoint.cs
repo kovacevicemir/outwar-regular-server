@@ -18,7 +18,7 @@ public static class StartQuestEndpoint
                 // Load quests only once
                 if (!questsLoaded)
                 {
-                    var jsonFilePath = @"Data\Quests.json";
+                    var jsonFilePath = Path.Combine( "Data", "Quests.json");
                     try
                     {
                         using var stream = new FileStream(jsonFilePath, FileMode.Open, FileAccess.Read);

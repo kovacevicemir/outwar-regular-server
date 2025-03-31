@@ -11,14 +11,14 @@ public static class AttackRaidEndpoint
 {
     private static List<God>? gods;
     private static bool godsLoaded = false;
-    public static IEndpointRouteBuilder MapAttackRaidEndpoint(this IEndpointRouteBuilder app)
+    public static IEndpointRouteBuilder MapAttackRaidEndpoint(this IEndpointRouteBuilder app, IConfiguration config)
     {
         app.MapPost("/attack-raid", async (AppDbContext context, IConnectionMultiplexer redis, string crewName, string raidName) =>
             {
                 
                 if (!godsLoaded)
                 {
-                    var jsonFilePath = @"Data\Gods.json";
+                    var jsonFilePath = Path.Combine( "Data", "Gods.json");
                     try
                     {
                         using var stream = new FileStream(jsonFilePath, FileMode.Open, FileAccess.Read);
@@ -66,7 +66,7 @@ public static class AttackRaidEndpoint
                                 var tasks = dropBags.Select(item =>
                                 {
                                     // Add items to player asynchronously
-                                    var addItemUrl = $"https://localhost:44338/add-item-to-user?username={deserializedRaid.CreatedBy.Name}&itemName={item}";
+                                    var addItemUrl = $"{config["BaseUrl:BackendUrl"]}/add-item-to-user?username={deserializedRaid.CreatedBy.Name}&itemName={item}";
                                     return client.PostAsync(addItemUrl, null); // Returns a Task
                                 });
                                 
@@ -88,7 +88,7 @@ public static class AttackRaidEndpoint
                                     message += $" Points: {pointsToAdd}";
                                 }
                             }
-                        }
+                    }
                     
                     //Delete raids from redis
                     var isDeleted = await db.KeyDeleteAsync($"raid-{crewName}-{raidName}");
@@ -101,7 +101,7 @@ public static class AttackRaidEndpoint
                     await db.StringSetAsync($"raid-{crewName}-{raidName}", jsonRaid);
                 }
 
-            return Results.Ok(message);
+                return Results.Ok(message);
             })
             .WithName("AttackRaid")
             .WithOpenApi();

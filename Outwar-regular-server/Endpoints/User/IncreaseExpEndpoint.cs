@@ -16,7 +16,8 @@ public static class IncreaseExpEndpoint
                 // Load experience list only once
                 if (!experienceListLoaded)
                 {
-                    var jsonFilePath = @"Data\experienceList.json";
+                    var jsonFilePath = Path.Combine( "Data", "experienceList.json");
+                    
                     try
                     {
                         using var stream = new FileStream(jsonFilePath, FileMode.Open, FileAccess.Read);

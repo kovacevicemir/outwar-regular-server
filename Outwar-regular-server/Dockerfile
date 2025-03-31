@@ -1,23 +1,26 @@
-﻿FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
-USER $APP_UID
+﻿# Use a smaller base image for runtime
+FROM mcr.microsoft.com/dotnet/aspnet:8.0-alpine AS runtime
 WORKDIR /app
-EXPOSE 8080
-EXPOSE 8081
+EXPOSE 11399
 
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
-ARG BUILD_CONFIGURATION=Release
+# Use a smaller SDK image for building
+FROM mcr.microsoft.com/dotnet/sdk:8.0-alpine AS build
 WORKDIR /src
-COPY ["Outwar-regular-server/Outwar-regular-server.csproj", "Outwar-regular-server/"]
-RUN dotnet restore "Outwar-regular-server/Outwar-regular-server.csproj"
+
+# Copy only project file first (to cache dependencies)
+COPY Outwar-regular-server/Outwar-regular-server.csproj ./
+RUN dotnet restore Outwar-regular-server.csproj
+
+# Copy the rest of the project and build
 COPY . .
-WORKDIR "/src/Outwar-regular-server"
-RUN dotnet build "Outwar-regular-server.csproj" -c $BUILD_CONFIGURATION -o /app/build
+RUN dotnet publish -c Release -o /app /p:UseAppHost=false
 
-FROM build AS publish
-ARG BUILD_CONFIGURATION=Release
-RUN dotnet publish "Outwar-regular-server.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
-
-FROM base AS final
+# Final runtime image
+FROM runtime AS final
 WORKDIR /app
-COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "Outwar-regular-server.dll"]
+COPY --from=build /app .
+
+# Ensure Data folder is copied if it's missing  Explicitly copy the Data folder to the app directory
+COPY Outwar-regular-server/Data/ /app/Data/
+
+CMD ["dotnet", "Outwar-regular-server.dll"]

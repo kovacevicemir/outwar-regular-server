@@ -1,16 +1,12 @@
 ﻿services:
-#  outwar-regular-server:
-#    image: outwar-regular-server
-#    build:
-#      context: .
-#      dockerfile: Outwar-regular-server/Dockerfile
-
-  db:
+  
+  postgre-db-container:
     image: postgres:17.0
     restart: always
     shm_size: 128mb
     environment:
       POSTGRES_PASSWORD: admin
+      POSTGRES_DB: outwar-db
     ports:
       - "5432:5432"
   
@@ -19,3 +15,21 @@
     restart: always
     ports:
       - "6379:6379"
+    volumes:
+      - /path/to/redis.conf:/tmp/redis.conf
+    command: [ "redis-server", "/tmp/redis.conf" ]
+        
+  backend:
+    image: outwar-backend
+    build:
+      context: .
+      dockerfile: Outwar-regular-server/Dockerfile
+    restart: always
+    depends_on:
+      - postgre-db-container
+      - redis
+    environment:
+      - ASPNETCORE_URLS=http://+:11399
+      - ASPNETCORE_ENVIRONMENT=Production
+    ports:
+      - "11399:11399"

@@ -7,7 +7,7 @@ namespace Outwar_regular_server.Endpoints.Items;
 
 public static class GetQuestRewardEndpoint
 {
-    public static IEndpointRouteBuilder MapGetQuestRewardEndpoint(this IEndpointRouteBuilder app)
+    public static IEndpointRouteBuilder MapGetQuestRewardEndpoint(this IEndpointRouteBuilder app, IConfiguration config)
     {
         app.MapPost("/get-quest-reward", async (AppDbContext context, string username, string questName) =>
             {
@@ -19,53 +19,53 @@ public static class GetQuestRewardEndpoint
                     return Results.NotFound($"User {username} not found.");
                 }
 
-               //Find all quests with this monsterIds and that are not finished
-               var quest = user.Quests.FirstOrDefault(q => q.Name == questName);
-               if (quest == null)
-               {
-                   return Results.NotFound($"quest {questName} not found.");
-               }
+                //Find all quests with this monsterIds and that are not finished
+                var quest = user.Quests.FirstOrDefault(q => q.Name == questName);
+                if (quest == null)
+                {
+                    return Results.NotFound($"quest {questName} not found.");
+                }
                
-               //Check if already got reward
-               if (quest.GotReward == 1)
-               {
-                   return Results.BadRequest("This quest is already completed & reward is claimed");
-               }
+                //Check if already got reward
+                if (quest.GotReward == 1)
+                {
+                    return Results.BadRequest("This quest is already completed & reward is claimed");
+                }
                
 
-               var isQuestDone = AreProgressValid(quest.Requirements, quest.Progress);
+                var isQuestDone = AreProgressValid(quest.Requirements, quest.Progress);
                
-               var message = $"Quest completed! {quest.Exp} Exp ";
+                var message = $"Quest completed! {quest.Exp} Exp ";
 
-               if (isQuestDone)
-               {
-                   user.Experience += quest.Exp;
-                   using (var client = new HttpClient())
-                   {
-                       foreach (var questItemRewardName in quest.ItemRewardNames)
-                       {
-                           var addItemToUserUrl =
-                               $"https://localhost:44338/add-item-to-user?username={user.Name}&itemName={questItemRewardName}";
-                           await client.PostAsync(addItemToUserUrl, null);
-                           message += $", {questItemRewardName}";
-                           //This is returning 500 for some reason - even when it works...
-                           // if (!response.IsSuccessStatusCode)
-                           // {
-                           //     return Results.BadRequest("Failed to add quest reward item to user");
-                           // }
-                       }
-                   }
+                if (isQuestDone)
+                {
+                    user.Experience += quest.Exp;
+                    using (var client = new HttpClient())
+                    {
+                        foreach (var questItemRewardName in quest.ItemRewardNames)
+                        {
+                            var addItemToUserUrl =
+                                $"{config["BaseUrl:BackendUrl"]}/add-item-to-user?username={user.Name}&itemName={questItemRewardName}";
+                            await client.PostAsync(addItemToUserUrl, null);
+                            message += $", {questItemRewardName}";
+                            //This is returning 500 for some reason - even when it works...
+                            // if (!response.IsSuccessStatusCode)
+                            // {
+                            //     return Results.BadRequest("Failed to add quest reward item to user");
+                            // }
+                        }
+                    }
                    
-                   //Update quest reward - yes
-                   quest.GotReward = 1;
-                   await context.SaveChangesAsync();
-               }
-               else
-               {
-                   message = "You need to complete quest first!";
-               }
+                    //Update quest reward - yes
+                    quest.GotReward = 1;
+                    await context.SaveChangesAsync();
+                }
+                else
+                {
+                    message = "You need to complete quest first!";
+                }
 
-               return Results.Ok(message);
+                return Results.Ok(message);
             })
             .WithName("GetQuestReward")
             .WithOpenApi();

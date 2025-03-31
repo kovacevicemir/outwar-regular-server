@@ -34,7 +34,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+// used for https... removed to make is simple for now
+//app.UseHttpsRedirection();
 
 // Use the CORS policy
 app.UseCors("AllowAngularDev");
@@ -97,7 +98,8 @@ var timer = new Timer(async _ =>
     }
 }, null, TimeSpan.Zero, TimeSpan.FromMinutes(60));
 
-
+//Server health api's
+app.MapGetServerHealth();
 
 //User api's
 app.MapCreateUser();
@@ -116,13 +118,13 @@ app.MapUnequipItemEndpoint();
 app.MapGetUserLocation();
 
 //Monster api's
-app.MapAttackMonsterByName();
+app.MapAttackMonsterByName(builder.Configuration);
 
 //Quest api's
 app.MapStartQuestEndpoint();
 app.MapGetAllUserQuestsEndpoint();
 app.MapAddQuestProgressEndpoint();
-app.MapGetQuestRewardEndpoint();
+app.MapGetQuestRewardEndpoint(builder.Configuration);
 app.MapGetSingleQuestEndpoint();
 
 //World api's
@@ -135,7 +137,7 @@ app.MapGetCrewEndpoint();
 //Crew api's ---REDIS---
 app.MapCreateRaidEndpoint();
 app.MapGetRaidDetailsEndpoint();
-app.MapAttackRaidEndpoint();
+app.MapAttackRaidEndpoint(builder.Configuration);
 app.MapCrewRaidsEndpoint();
 
 //Skill api's

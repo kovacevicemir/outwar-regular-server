@@ -16,7 +16,8 @@ public static class AddItemToUserEndpoint
                 // Load items only once
             if (!itemsLoaded)
             {
-                var jsonFilePath = @"Data\Items.json";
+                var jsonFilePath = Path.Combine("Data", "Items.json");
+                
                 try
                 {
                     using var stream = new FileStream(jsonFilePath, FileMode.Open, FileAccess.Read);

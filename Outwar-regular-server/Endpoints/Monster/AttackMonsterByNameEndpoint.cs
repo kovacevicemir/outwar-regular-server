@@ -10,13 +10,13 @@ public static class AttackMonsterByNameEndpoint
     private static List<Monster>? monsters;
     private static bool monstersLoaded = false; // Flag to indicate if monsters have been loaded
 
-    public static IEndpointRouteBuilder MapAttackMonsterByName(this IEndpointRouteBuilder app)
+    public static IEndpointRouteBuilder MapAttackMonsterByName(this IEndpointRouteBuilder app, IConfiguration config)
     {
         app.MapPost("/attack-monster-by-name", async (AppDbContext context, string monsterName, string username) =>
             {
                 if (!monstersLoaded)
                 {
-                    var jsonFilePath = @"Data\Monsters.json";
+                    var jsonFilePath = Path.Combine( "Data", "Monsters.json");
                     try
                     {
                         using var stream = new FileStream(jsonFilePath, FileMode.Open, FileAccess.Read);
@@ -42,7 +42,7 @@ public static class AttackMonsterByNameEndpoint
                 }
 
                 var message = $"{monster.Name} is killed! Exp: {monster.Exp}";
-                
+
                 var user = await context.Users
                     .FirstOrDefaultAsync(u => u.Name == username);
                 if (user == null)
@@ -65,8 +65,7 @@ public static class AttackMonsterByNameEndpoint
                 // call increase Exp endpoint here && call quest progress TODO
                 using (var client = new HttpClient())
                 {
-
-                    var increaseExpUrl = $"https://localhost:44338/increase-exp?username={user.Name}&exp={monster.Exp}";
+                    var increaseExpUrl = $"{config["BaseUrl:BackendUrl"]}/increase-exp?username={user.Name}&exp={monster.Exp}";
                     var response = await client.PostAsync(increaseExpUrl, null);
 
                     if (!response.IsSuccessStatusCode)
@@ -81,7 +80,7 @@ public static class AttackMonsterByNameEndpoint
                         {
                             // Add items to player asynchronously
                             var addItemUrl =
-                                $"https://localhost:44338/add-item-to-user?username={username}&itemName={item}";
+                                $"{config["BaseUrl:BackendUrl"]}/add-item-to-user?username={username}&itemName={item}";
                             return client.PostAsync(addItemUrl, null); // Returns a Task
                         });
 
@@ -93,7 +92,7 @@ public static class AttackMonsterByNameEndpoint
                     
                     // Quest progress: check if kille monster is part of any player quests
                     var questProgressUrl =
-                        $"https://localhost:44338/add-quest-progress?username=test1&monsterId={monster.Id}";
+                        $"{config["BaseUrl:BackendUrl"]}/add-quest-progress?username=test1&monsterId={monster.Id}";
                     await client.PostAsync(questProgressUrl, null);
                 }
 
