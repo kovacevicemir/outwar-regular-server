@@ -33,3 +33,14 @@
       - ASPNETCORE_ENVIRONMENT=Production
     ports:
       - "11399:11399"
+        
+  frontend:
+    image: emirkovacevic/outwar-micro-x:latest
+    restart: always
+    ports:
+      - "4201:80"
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        PRODUCTION: ${PRODUCTION}

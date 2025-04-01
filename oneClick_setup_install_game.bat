@@ -50,7 +50,7 @@ echo.
 REM Display final message with user prompt
 echo.
 echo.
-echo Game is now up and running. You can visit http://localhost:4200 to play the game.
+echo Game is now up and running. You can visit http://localhost:4201 to play the game.
 echo.
 
 REM Wait for user input (will show the "don't press anything" message, and wait for user to press a key)
