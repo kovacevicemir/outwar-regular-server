@@ -66,7 +66,7 @@ public static class BuyShopItemEndpoint
 
             if (user.Points < itemWorth)
             {
-                return Results.Ok("You do not have enough points.");
+                return Results.BadRequest("You do not have enough points.");
             }
 
 

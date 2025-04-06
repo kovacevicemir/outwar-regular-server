@@ -1,16 +1,12 @@
-﻿using System;
-using System.IO;
-using Microsoft.AspNetCore.Hosting;
+﻿using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.VisualStudio.TestPlatform.TestHost;
 using Npgsql;
 using Respawn;
 using Outwar_regular_server.Data;
-using System.Data.Common;
 
 // The purpose of WebApplicationFactory is to set up a test server that can run your application in an in-memory environment
 // during testing. It allows you to simulate requests to your app without needing to spin up an actual web server.
@@ -18,7 +14,7 @@ using System.Data.Common;
 // which includes things like creating an in-memory HTTP client and wiring up services for your app (like DbContext, logging, etc.).
 public class TestApplicationFactory : WebApplicationFactory<Program>
 {
-    public string ConnectionString { get; private set; }
+    public string ConnectionString { get; private set; } = "Host=localhost;Port=5433;Username=postgres;Password=admin;Database=outwar-db-test";
     private NpgsqlConnection _connection;
     private Respawner _respawner;
 
@@ -32,7 +28,7 @@ public class TestApplicationFactory : WebApplicationFactory<Program>
             .AddJsonFile($"appsettings.{environment}.json", optional: true, reloadOnChange: true)
             .Build();
 
-        ConnectionString = configuration.GetConnectionString("PostgresTestDb");
+        //ConnectionString = configuration.GetConnectionString("PostgresTestDb"); Some bug here... TODO -fix
 
         //Init Respawner - lib for reseting db state: Calling it here because it required connections string
         InitRespawnerAsync().GetAwaiter().GetResult();

@@ -1,7 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Outwar_regular_server.Data;
-using Outwar_regular_server.Endpoints;
 
 public class TestSetup : IAsyncLifetime
 {

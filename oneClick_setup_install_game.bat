@@ -25,8 +25,12 @@ echo.
 dotnet ef database update
 echo.
 
+echo Running EF database update for testing database...
+timeout /t 7
+dotnet ef database update --connection "Host=127.0.0.1;Port=5433;Database=outwar-db-test;Username=postgres;Password=admin;"
+
 REM Wait for a few seconds to ensure the database update is completed
-timeout /t 5
+timeout /t 7
 echo.
 
 REM Make POST request to create the user

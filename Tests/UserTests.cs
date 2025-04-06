@@ -1,8 +1,6 @@
 using Newtonsoft.Json;
-using Npgsql;
 using Outwar_regular_server.Data;
 using Outwar_regular_server.Models;
-using Respawn;
 using System.Text;
 
 [Collection("Sequential Database Tests")]
@@ -32,6 +30,43 @@ public class UserTests : IClassFixture<TestSetup>
 
         var exists = _dbContext.Users.Any(u => u.Name == username);
         Assert.True(exists);
+    }
+
+    [Fact]
+    public async Task IncreaseUserExp_Works()
+    {
+        await _factory.ResetDatabaseAsync();
+
+        var username = "testUser";
+        var exp = 100;
+        var content = new StringContent($"\"{username}\"", Encoding.UTF8, "application/json");
+
+        var response = await _client.PostAsync("/create-user?username=" + username, content);
+        response.EnsureSuccessStatusCode();
+
+        var increaseExpRes = await _client.PostAsync($"/increase-exp?username={username}&exp={exp}", content);
+        increaseExpRes.EnsureSuccessStatusCode();
+
+        var userInDb = _dbContext.Users.FirstOrDefault(u => u.Name == username);
+        Assert.True(userInDb.Experience == 100);
+    }
+
+    [Fact]
+    public async Task UserRanking_Works()
+    {
+        await _factory.ResetDatabaseAsync();
+
+        var username = "testUser";
+        var content = new StringContent($"\"{username}\"", Encoding.UTF8, "application/json");
+
+        var response = await _client.PostAsync("/create-user?username=" + username, content);
+        response.EnsureSuccessStatusCode();
+
+        var rankingRes = await _client.GetAsync($"/get-ranking");
+        rankingRes.EnsureSuccessStatusCode();
+
+        var rankingData = await rankingRes.Content.ReadAsStringAsync();
+        Assert.False(string.IsNullOrEmpty(rankingData), "Ranking data should not be empty.");
     }
 
     [Fact]

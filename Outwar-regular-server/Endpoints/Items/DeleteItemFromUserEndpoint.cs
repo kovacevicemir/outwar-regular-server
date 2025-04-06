@@ -25,6 +25,7 @@ public static class DeleteItemFromUserEndpoint
         
                 // Remove the item from the user's Items collection
                 user.Items.Remove(itemToRemove);
+                context.Items.Remove(itemToRemove); //Remove item from item table manually... for some reason cascade delete does not work
 
                 // Save changes to the database
                 await context.SaveChangesAsync();
