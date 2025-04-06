@@ -9,6 +9,16 @@
       POSTGRES_DB: outwar-db
     ports:
       - "5432:5432"
+
+  postgre-db-test:
+    image: postgres:17.0
+    restart: always
+    shm_size: 128mb
+    environment:
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: outwar-db-test
+    ports:
+      - "5433:5432"
   
   redis:
     image: redis:7
@@ -20,7 +30,7 @@
     command: [ "redis-server", "/tmp/redis.conf" ]
         
   backend:
-    image: outwar-backend
+    image: emirkovacevic/backend:latest
     build:
       context: .
       dockerfile: Outwar-regular-server/Dockerfile

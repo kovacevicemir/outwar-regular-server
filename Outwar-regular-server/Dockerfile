@@ -8,7 +8,7 @@ FROM mcr.microsoft.com/dotnet/sdk:8.0-alpine AS build
 WORKDIR /src
 
 # Copy only project file first (to cache dependencies)
-COPY Outwar-regular-server/Outwar-regular-server.csproj ./
+COPY Outwar-regular-server.csproj ./
 RUN dotnet restore Outwar-regular-server.csproj
 
 # Copy the rest of the project and build
@@ -19,8 +19,5 @@ RUN dotnet publish -c Release -o /app /p:UseAppHost=false
 FROM runtime AS final
 WORKDIR /app
 COPY --from=build /app .
-
-# Ensure Data folder is copied if it's missing  Explicitly copy the Data folder to the app directory
-COPY Outwar-regular-server/Data/ /app/Data/
 
 CMD ["dotnet", "Outwar-regular-server.dll"]
