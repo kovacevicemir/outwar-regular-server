@@ -12,7 +12,7 @@ public static class GetSingleQuestEndpoint
         app.MapGet("/get-single-quest", async (AppDbContext context, string username, string questName) =>
             {
                 var user = await context.Users
-                    .Include(u => u.Quests) // Eagerly load the user's Items collection
+                    .Include(u => u.Quests) // Eagerly load the Quests collection
                     .FirstOrDefaultAsync(u => u.Name == username);
                 if (user == null)
                 {

@@ -44,10 +44,10 @@ public static class StartQuestEndpoint
                     return Results.BadRequest("Quest already started by this user.");
                 }
                 
-                // Verify items list is loaded and not empty
+                // Verify quest list is loaded and not empty
                 if (quests == null || !quests.Any())
                 {
-                    return Results.NotFound("Items not found or the file is empty.");
+                    return Results.NotFound("Quests not found or the file is empty.");
                 }
                 
                 var questToBeAdded = quests.FirstOrDefault(q => q.Name == questName);

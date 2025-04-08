@@ -29,9 +29,9 @@
   {
     "Name": "Zug Zug Legacy",
     "Description": "Do you remember Zug-Zug? Kill 10 Baneful Battlemage and I will refresh your memory",
-    "MonsterIds": [51],
-    "Requirements": [10],
-    "Progress": [0],
+    "MonsterIds": [ 51 ],
+    "Requirements": [ 10 ],
+    "Progress": [ 0 ],
     "ItemRewardNames": [
       "Vertebrae Amulet of Osteology",
       "Skeletal Arm of Osteology",
@@ -43,5 +43,16 @@
       "Ancient Skull of Osteology"
     ],
     "Exp": 3000
+  },
+  {
+    "Name": "testquest",
+    "Description": "test",
+    "MonsterIds": [ 51 ],
+    "Requirements": [ 777 ],
+    "Progress": [ 0 ],
+    "ItemRewardNames": [
+      "Ancient Skull of Osteology"
+    ],
+    "Exp": 1
   }
 ]

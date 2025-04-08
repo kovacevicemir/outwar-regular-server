@@ -56,6 +56,34 @@ echo.
 echo.
 echo Game is now up and running. You can visit http://localhost:4201 to play the game.
 echo.
+echo.
+
+REM Ask user if they want to run tests
+echo.
+set /p runTests=Do you want to run tests to ensure the game works properly? (y/n): 
+
+IF /I "%runTests%"=="y" (
+    echo.
+    echo Running tests...
+    echo.
+
+    REM Navigate to the test project folder (adjust path if needed)
+    cd ..\Tests
+
+    REM Run the tests
+    dotnet test -v detailed
+
+    echo.
+    echo Tests finished running.
+) ELSE (
+    echo.
+    echo Skipping tests.
+)
+
+REM Display final message with user prompt
+echo.
+echo.
+echo Game is now up and running. You can visit http://localhost:4201 to play the game.
 
 REM Wait for user input (will show the "don't press anything" message, and wait for user to press a key)
 pause >nul
