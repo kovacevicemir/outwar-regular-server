@@ -15,7 +15,14 @@ public static class CreateCrewEndpoint
             var user = await context.Users.FirstOrDefaultAsync(u => u.Id == crewLeaderId);
             if (user == null)
             {
-                return Results.NotFound($"User {crewLeaderId} not found.");
+                return Results.NotFound($"Creating crew, crewLeaderId (userId) {crewLeaderId} not found.");
+            }
+
+            // Check if crew name already exists
+            var crewNameExists = await context.Crews.Where(c => c.Name == crewName).FirstOrDefaultAsync(); 
+            if(crewNameExists is not null)
+            {
+                    return Results.BadRequest($"Crew {crewName} already exists!");
             }
 
             var newCrew = new Crew()
