@@ -36,9 +36,7 @@ public class MonsterTests : IClassFixture<TestSetup>
 
         var user = await _dbContext.Users.Include(u => u.Items).FirstOrDefaultAsync(u => u.Name == username);
 
-        // This will fail because increase exp (probably using localhost vs inmemory url) - bug
-        // However there is separate test for increasing the exp in UserTests. There is add item test as well in case of drop.
-        //Assert.True(user.Experience > 0); 
+        Assert.True(user.Experience > 0);
         Assert.True(user.Rage < 2000);
     }
 }

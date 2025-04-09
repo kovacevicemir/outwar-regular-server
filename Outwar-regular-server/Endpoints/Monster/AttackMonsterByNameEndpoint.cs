@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Outwar_regular_server.Data;
 using Outwar_regular_server.Models;
+using Outwar_regular_server.Services;
 
 namespace Outwar_regular_server.Endpoints.User;
 
@@ -12,7 +13,7 @@ public static class AttackMonsterByNameEndpoint
 
     public static IEndpointRouteBuilder MapAttackMonsterByName(this IEndpointRouteBuilder app, IConfiguration config)
     {
-        app.MapPost("/attack-monster-by-name", async (AppDbContext context, string monsterName, string username) =>
+        app.MapPost("/attack-monster-by-name", async (AppDbContext context, IUserService userService, IItemService itemService, string monsterName, string username) =>
             {
                 if (!monstersLoaded)
                 {
@@ -65,10 +66,9 @@ public static class AttackMonsterByNameEndpoint
                 // call increase Exp endpoint here && call quest progress TODO
                 using (var client = new HttpClient())
                 {
-                    var increaseExpUrl = $"{config["BaseUrl:BackendUrl"]}/increase-exp?username={user.Name}&exp={monster.Exp}";
-                    var response = await client.PostAsync(increaseExpUrl, null);
+                    var response = await userService.IncreaseExpAsync(user.Name, monster.Exp);
 
-                    if (!response.IsSuccessStatusCode)
+                    if (response is IStatusCodeHttpResult status && status.StatusCode != 200)
                     {
                         return Results.BadRequest("Error requesting increase-exp inside AttackMonsterByName endpoint.");
                     }
@@ -78,10 +78,7 @@ public static class AttackMonsterByNameEndpoint
                     {
                         var tasks = dropBags.Select(item =>
                         {
-                            // Add items to player asynchronously
-                            var addItemUrl =
-                                $"{config["BaseUrl:BackendUrl"]}/add-item-to-user?username={username}&itemName={item}";
-                            return client.PostAsync(addItemUrl, null); // Returns a Task
+                            return itemService.AddItemToUser(username, item);
                         });
 
                         // Await all the tasks to be completed
@@ -90,7 +87,7 @@ public static class AttackMonsterByNameEndpoint
                         message += $" Drops: {string.Join(", ", dropBags)}";
                     }
                     
-                    // Quest progress: check if kille monster is part of any player quests
+                    // Quest progress: check if killed monster is part of any player quests
                     var questProgressUrl =
                         $"{config["BaseUrl:BackendUrl"]}/add-quest-progress?username=test1&monsterId={monster.Id}";
                     await client.PostAsync(questProgressUrl, null);
