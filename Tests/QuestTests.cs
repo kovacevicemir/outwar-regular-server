@@ -53,6 +53,31 @@ public class QuestTests : IClassFixture<TestSetup>
     }
 
     [Fact]
+    public async Task AddQuestProgress_Works()
+    {
+        await _factory.ResetDatabaseAsync();
+
+        var username = "testUser4";
+        var questName = "Casino Manager";
+        var monsterId = 1; //this is should be id of Acidic Primate monster which is part of casino manager quest
+        var content = new StringContent($"\"{username}\"", Encoding.UTF8, "application/json");
+
+        var response = await _client.PostAsync("/create-user?username=" + username, content);
+        response.EnsureSuccessStatusCode();
+
+        var startQuestResponse = await _client.PostAsync($"/start-quest?username={username}&questName={questName}", content);
+        startQuestResponse.EnsureSuccessStatusCode();
+
+        var addQuestProgress = await _client.PostAsync($"/add-quest-progress?&username={username}&monsterId={monsterId}", content);
+        addQuestProgress.EnsureSuccessStatusCode();
+
+        var user = await _dbContext.Users.Include(u => u.Quests).Where(u => u.Name == username).FirstOrDefaultAsync();
+        var quest = user.Quests.FirstOrDefault();
+        var questProgress = quest.Progress.First();
+        Assert.True(questProgress > 0);
+    }
+
+    [Fact]
     public async Task StartQuestAgain_Fails()
     {
         await _factory.ResetDatabaseAsync();

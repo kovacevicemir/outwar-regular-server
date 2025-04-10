@@ -31,6 +31,7 @@ public class TestSetup : IAsyncLifetime
 
     public async Task DisposeAsync()
     {
+        Client?.Dispose();
         await Task.CompletedTask;
     }
 }

@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Outwar_regular_server.Data;
 using Outwar_regular_server.Models;
+using Outwar_regular_server.Services;
 
 namespace Outwar_regular_server.Endpoints.Items;
 
@@ -9,44 +10,9 @@ public static class AddQuestProgressEndpoint
 {
     public static IEndpointRouteBuilder MapAddQuestProgressEndpoint(this IEndpointRouteBuilder app)
     {
-        app.MapPost("/add-quest-progress", async (AppDbContext context, string username, int monsterId) =>
+        app.MapPost("/add-quest-progress", async (AppDbContext context, IQuestService questService, string username, int monsterId) =>
             {
-                var user = await context.Users
-                    .Include(u => u.Quests) // Eagerly load the user's Items collection
-                    .FirstOrDefaultAsync(u => u.Name == username);
-                if (user == null)
-                {
-                    return Results.NotFound($"User {username} not found.");
-                }
-
-               //Find all quests with this monsterIds and that are not finished
-               var questsToUpdate = user.Quests.Where(quest => quest.MonsterIds.Contains(monsterId) && quest.Status == 0).ToList();
-               
-               //Loop through each quest and update progress
-               foreach (var quest in questsToUpdate)
-               {
-                   // Convert MonsterIds (ICollection<int>) to List<int> so we can use indexof
-                   var monsterIdsList = quest.MonsterIds.ToList();
-                   // Find the index of the monsterId in the list
-                   var progressIndex = monsterIdsList.IndexOf(monsterId);
-                   if (progressIndex != -1)
-                   {
-                       var progressList = quest.Progress.ToList(); //convert to list so we can use list[index]
-                       progressList[progressIndex] = progressList[progressIndex] + 1;
-                       quest.Progress = progressList;
-                   }
-                   
-                   //Check if quest is finished
-                   var isQuestDone = AreProgressValid(quest.Requirements, quest.Progress);
-                   if (isQuestDone)
-                   {
-                       quest.Status = 1;
-                   }
-               }
-                
-               await context.SaveChangesAsync();
-
-               return Results.Ok($"Quest progress updated for user:{user.Name}");
+               await questService.AddQuestProgress(username, monsterId);
             })
             .WithName("AddQuestProgress")
             .WithOpenApi();

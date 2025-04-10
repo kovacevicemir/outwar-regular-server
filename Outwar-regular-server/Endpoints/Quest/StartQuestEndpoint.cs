@@ -32,7 +32,7 @@ public static class StartQuestEndpoint
                 }
             
                 var user = await context.Users
-                    .Include(u => u.Quests) // Eagerly load the user's Items collection
+                    .Include(u => u.Quests) // Eagerly load the user's Quests collection
                     .FirstOrDefaultAsync(u => u.Name == username);
                 if (user == null)
                 {

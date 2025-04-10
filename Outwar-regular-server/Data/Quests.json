@@ -47,7 +47,7 @@
   {
     "Name": "testquest",
     "Description": "test",
-    "MonsterIds": [ 51 ],
+    "MonsterIds": [ 1,2 ],
     "Requirements": [ 777 ],
     "Progress": [ 0 ],
     "ItemRewardNames": [

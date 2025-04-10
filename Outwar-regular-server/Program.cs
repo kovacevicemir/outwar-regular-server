@@ -18,6 +18,7 @@ builder.Services.AddSingleton<IConnectionMultiplexer>(sp =>
 //Add Services
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IItemService, ItemService>();
+builder.Services.AddScoped<IQuestService, QuestService>();
 
 // Add CORS policy
 builder.Services.AddCors(options =>
