@@ -1,8 +1,7 @@
 ﻿using System.Text.Json;
-using Microsoft.AspNetCore.Http.HttpResults;
-using Microsoft.EntityFrameworkCore;
 using Outwar_regular_server.Data;
 using Outwar_regular_server.Models;
+using Outwar_regular_server.Services;
 using StackExchange.Redis;
 
 namespace Outwar_regular_server.Endpoints.Items;
@@ -13,7 +12,7 @@ public static class AttackRaidEndpoint
     private static bool godsLoaded = false;
     public static IEndpointRouteBuilder MapAttackRaidEndpoint(this IEndpointRouteBuilder app, IConfiguration config)
     {
-        app.MapPost("/attack-raid", async (AppDbContext context, IConnectionMultiplexer redis, string crewName, string raidName) =>
+        app.MapPost("/attack-raid", async (AppDbContext context, IItemService itemService, IConnectionMultiplexer redis, string crewName, string raidName) =>
             {
                 
                 if (!godsLoaded)
@@ -58,37 +57,36 @@ public static class AttackRaidEndpoint
                 // Check if raid is done - hardcoded for now Rancid
                 if(deserializedRaid.HpLeft <= 0)
                 {
-                    using (var client = new HttpClient()){
                         var dropBags = DetermineDrops(god);
                         
-                            if (dropBags.Count > 0)
+                        if (dropBags.Count > 0)
+                        {
+                            var tasks = dropBags.Select(item =>
                             {
-                                var tasks = dropBags.Select(item =>
-                                {
-                                    // Add items to player asynchronously
-                                    var addItemUrl = $"{config["BaseUrl:BackendUrl"]}/add-item-to-user?username={deserializedRaid.CreatedBy.Name}&itemName={item}";
-                                    return client.PostAsync(addItemUrl, null); // Returns a Task
-                                });
+                                // Add items to player asynchronously
+                                //var addItemUrl = $"{config["BaseUrl:BackendUrl"]}/add-item-to-user?username={deserializedRaid.CreatedBy.Name}&itemName={item}";
+                                //return client.PostAsync(addItemUrl, null); // Returns a Task
+                                return itemService.AddItemToUser(deserializedRaid.CreatedBy.Name, item);
+                            });
                                 
-                                // Await all the tasks to be completed
-                                await Task.WhenAll(tasks);
+                            // Await all the tasks to be completed
+                            await Task.WhenAll(tasks);
                             
-                                message += $" Drops: {string.Join(", ", dropBags)}";
-                            }
-                            else //Reward some points to user who created raid - if no drops
-                            {
-                                Random rnd = new Random();
-                                var pointsToAdd = rnd.Next(1, 10); 
+                            message += $" Drops: {string.Join(", ", dropBags)}";
+                        }
+                        else //Reward some points to user who created raid - if no drops
+                        {
+                            Random rnd = new Random();
+                            var pointsToAdd = rnd.Next(1, 10); 
                                 
-                                var user = context.Users.FirstOrDefault(u => u.Name == deserializedRaid.CreatedBy.Name);
-                                if (user != null)
-                                {
-                                    user.Points += pointsToAdd;
-                                    await context.SaveChangesAsync();
-                                    message += $" Points: {pointsToAdd}";
-                                }
+                            var user = context.Users.FirstOrDefault(u => u.Name == deserializedRaid.CreatedBy.Name);
+                            if (user != null)
+                            {
+                                user.Points += pointsToAdd;
+                                await context.SaveChangesAsync();
+                                message += $" Points: {pointsToAdd}";
                             }
-                    }
+                        }
                     
                     //Delete raids from redis
                     var isDeleted = await db.KeyDeleteAsync($"raid-{crewName}-{raidName}");
@@ -109,22 +107,22 @@ public static class AttackRaidEndpoint
         return app;
     }
     
-    public static List<string> DetermineDrops(God monster)
+    public static List<string> DetermineDrops(God god)
     {
         var dropBag = new List<string>();
 
         // Ensure we have valid data for Drops and DropsChance
-        if (monster.Drops == null || monster.DropsChance == null || monster.Drops.Count != monster.DropsChance.Count)
+        if (god.Drops == null || god.DropsChance == null || god.Drops.Count != god.DropsChance.Count)
         {
             Console.WriteLine("Invalid data: Drops and DropsChance must be of the same length.");
             return dropBag;
         }
 
         // Loop over each drop and corresponding chance
-        for (int i = 0; i < monster.Drops.Count; i++)
+        for (int i = 0; i < god.Drops.Count; i++)
         {
-            var dropChance = monster.DropsChance[i];
-            var dropItem = monster.Drops[i];
+            var dropChance = god.DropsChance[i];
+            var dropItem = god.Drops[i];
 
             // Generate a random number between 1 and 100
             var randomNumber = new Random().Next(1, 101);  // Random number between 1 and 100

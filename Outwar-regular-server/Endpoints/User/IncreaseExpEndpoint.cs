@@ -65,14 +65,6 @@ public static class IncreaseExpEndpoint
                         }
                     }
                 }
-                
-                
-                
-                // if (experienceList.TryGetValue(user.Level + 1, out int expNeededForLevel) && user.Experience >= expNeededForLevel)
-                // {
-                //     user.Level += 1;
-                //     isLevelUp = true;
-                // }
 
                 await context.SaveChangesAsync();
 

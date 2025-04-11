@@ -1,6 +1,4 @@
 ﻿using Outwar_regular_server.Data;
-using Outwar_regular_server.Models;
-using System.Text.Json;
 using Microsoft.EntityFrameworkCore;
 
 namespace Outwar_regular_server.Services

@@ -25,7 +25,7 @@ public static class UpgradeItemEndpoint
 
                 if (itemToUpgrade.UpgradeLevel > 2)
                 {
-                    return Results.BadRequest("Item is already maximum upgrade level.");
+                    return Results.Ok("Item is already maximum upgrade level.");
                 }
 
                 var pointsNeeded = 0;
@@ -44,7 +44,7 @@ public static class UpgradeItemEndpoint
 
                 if (user.Points < pointsNeeded)
                 {
-                    return Results.BadRequest("Not enough points.");
+                    return Results.Ok("Not enough points.");
                 }
 
 
@@ -73,11 +73,10 @@ public static class UpgradeItemEndpoint
                 user.Items.Add(itemToUpgrade);
                 user.Points -= pointsNeeded;
 
-                // Save changes to the database
                 await context.SaveChangesAsync();
 
                 return Results.Ok(
-                    $"Item with ID {itemId} - {itemToUpgrade.Name} successfully upgraded lvl-{itemToUpgrade.UpgradeLevel} for user {username}.");
+                    $"{itemToUpgrade.Name} successfully upgraded to level {itemToUpgrade.UpgradeLevel}!");
             })
             .WithName("UpgradeItemByItemId")
             .WithOpenApi();

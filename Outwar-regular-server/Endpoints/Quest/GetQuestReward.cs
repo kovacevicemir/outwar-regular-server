@@ -1,7 +1,6 @@
-﻿using System.Text.Json;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Outwar_regular_server.Data;
-using Outwar_regular_server.Models;
+using Outwar_regular_server.Services;
 
 namespace Outwar_regular_server.Endpoints.Items;
 
@@ -9,7 +8,7 @@ public static class GetQuestRewardEndpoint
 {
     public static IEndpointRouteBuilder MapGetQuestRewardEndpoint(this IEndpointRouteBuilder app, IConfiguration config)
     {
-        app.MapPost("/get-quest-reward", async (AppDbContext context, string username, string questName) =>
+        app.MapPost("/get-quest-reward", async (AppDbContext context, IItemService itemService, string username, string questName) =>
             {
                 var user = await context.Users
                     .Include(u => u.Quests) // Eagerly load the user's Items collection
@@ -40,22 +39,18 @@ public static class GetQuestRewardEndpoint
                 if (isQuestDone)
                 {
                     user.Experience += quest.Exp;
-                    using (var client = new HttpClient())
-                    {
+
                         foreach (var questItemRewardName in quest.ItemRewardNames)
                         {
-                            var addItemToUserUrl =
-                                $"{config["BaseUrl:BackendUrl"]}/add-item-to-user?username={user.Name}&itemName={questItemRewardName}";
-                            await client.PostAsync(addItemToUserUrl, null);
+                            await itemService.AddItemToUser(user.Name, questItemRewardName);
                             message += $", {questItemRewardName}";
-                            //This is returning 500 for some reason - even when it works...
+                            //This is returning 500 for some reason - even when it works... [this should not ever happen because now we are using services]
                             // if (!response.IsSuccessStatusCode)
                             // {
                             //     return Results.BadRequest("Failed to add quest reward item to user");
                             // }
                         }
-                    }
-                   
+
                     //Update quest reward - yes
                     quest.GotReward = 1;
                     await context.SaveChangesAsync();

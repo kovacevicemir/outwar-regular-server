@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Outwar_regular_server.Data;
 using Outwar_regular_server.Endpoints.Items;
+using Outwar_regular_server.Endpoints.ServerHealth;
 using Outwar_regular_server.Endpoints.User;
 using Outwar_regular_server.Services;
 using StackExchange.Redis;

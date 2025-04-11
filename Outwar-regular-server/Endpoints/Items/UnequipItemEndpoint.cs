@@ -1,7 +1,5 @@
-﻿using System.Text.Json;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Outwar_regular_server.Data;
-using Outwar_regular_server.Models;
 
 namespace Outwar_regular_server.Endpoints.Items;
 

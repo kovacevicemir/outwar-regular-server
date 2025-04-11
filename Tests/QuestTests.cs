@@ -93,7 +93,8 @@ public class QuestTests : IClassFixture<TestSetup>
         startQuestResponse.EnsureSuccessStatusCode();
 
         var startQuestResponse2 = await _client.PostAsync($"/start-quest?username={username}&questName={questName}", content);
-        Assert.Equal(System.Net.HttpStatusCode.BadRequest, startQuestResponse2.StatusCode);
+        var data = await startQuestResponse2.Content.ReadAsStringAsync();
+        Assert.True(data.Contains("Quest already started by this user."));
     }
 
     [Fact]

@@ -41,7 +41,7 @@ public static class StartQuestEndpoint
 
                 if (user.Quests.Any(q => q.Name == questName))
                 {
-                    return Results.BadRequest("Quest already started by this user.");
+                    return Results.Ok("Quest already started by this user.");
                 }
                 
                 // Verify quest list is loaded and not empty

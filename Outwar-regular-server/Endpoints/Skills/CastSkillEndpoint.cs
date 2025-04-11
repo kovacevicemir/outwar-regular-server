@@ -59,7 +59,7 @@ public static class CastSkillEndpoint
                     var userSkillLevel = user.Skills[skillIndex];
                     if (userSkillLevel == 0)
                     {
-                        return Results.BadRequest($"Skill {skillName} is not trained yet!");                        
+                        return Results.Ok($"Skill {skillName} is not trained yet!");                        
                     }
                     
                     var bonusValue = skillDefinition.LevelValues[userSkillLevel - 1];

@@ -13,7 +13,6 @@ public static class BuyShopItemEndpoint
     {
         app.MapPost("/buy-item-from-shop", async (AppDbContext context, string username, string itemName) =>
             { 
-                // Load items only once
             if (!itemsLoaded)
             {
                 var jsonFilePath = Path.Combine( "Data", "Items.json");
@@ -66,7 +65,7 @@ public static class BuyShopItemEndpoint
 
             if (user.Points < itemWorth)
             {
-                return Results.BadRequest("You do not have enough points.");
+                return Results.Ok("You do not have enough points.");
             }
 
 
@@ -86,7 +85,6 @@ public static class BuyShopItemEndpoint
             user.Items.Add(newItem);
             user.Points -= itemWorth;
 
-            // Save changes to the database
             await context.SaveChangesAsync();
 
             return Results.Ok($"Item {findItem.Name} purchased successfully!");

@@ -41,7 +41,7 @@ public static class IncreaseSkillLevelEndpoint
                     //Check if enough sp
                     if (user.SkillPoints < 1)
                     {
-                        return Results.BadRequest($"User {userName} needs a skill points.");
+                        return Results.Ok($"You dont have enough skill points to upgrade this skill.");
                     }
                     
                     

@@ -63,32 +63,28 @@ public static class AttackMonsterByNameEndpoint
                 }
 
 
-                // call increase Exp endpoint here && call quest progress TODO
-                using (var client = new HttpClient())
+                var response = await userService.IncreaseExpAsync(user.Name, monster.Exp);
+
+                if (response is IStatusCodeHttpResult status && status.StatusCode != 200)
                 {
-                    var response = await userService.IncreaseExpAsync(user.Name, monster.Exp);
-
-                    if (response is IStatusCodeHttpResult status && status.StatusCode != 200)
-                    {
-                        return Results.BadRequest("Error requesting increase-exp inside AttackMonsterByName endpoint.");
-                    }
-
-                    var dropBags = DetermineDrops(monster);
-                    if (dropBags.Count > 0)
-                    {
-                        var tasks = dropBags.Select(item =>
-                        {
-                            return itemService.AddItemToUser(username, item);
-                        });
-
-                        // Await all the tasks to be completed
-                        await Task.WhenAll(tasks);
-
-                        message += $" Drops: {string.Join(", ", dropBags)}";
-                    }
-
-                    await questService.AddQuestProgress(username, monster.Id);
+                    return Results.BadRequest("Error requesting increase-exp inside AttackMonsterByName endpoint.");
                 }
+
+                var dropBags = DetermineDrops(monster);
+                if (dropBags.Count > 0)
+                {
+                    var tasks = dropBags.Select(item =>
+                    {
+                        return itemService.AddItemToUser(username, item);
+                    });
+
+                    // Await all the tasks to be completed
+                    await Task.WhenAll(tasks);
+
+                    message += $" Drops: {string.Join(", ", dropBags)}";
+                }
+
+                await questService.AddQuestProgress(username, monster.Id);
 
                 return Results.Ok(message);
             })
