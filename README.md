@@ -29,6 +29,16 @@ UserService.. we can increase exp right there.
 ### Docker
 Everything is running in docker. Main docker-compose file can be found in /Solution Item/docker-compose.yml -image: outwar-regular-server -image: postgres:17.0 (more about access, setup pgadmin, backup etc in further readings) Connection to postgres is stored in appsettings.json as connection string.
 
+1. Build the image
+docker build -t emirkovacevic/backend:latest .
+
+2. Login to Docker Hub
+docker login
+You’ll be prompted for your Docker Hub username and password.
+
+3. Push the image to Docker Hub
+docker push emirkovacevic/backend:latest
+
 ### Entity framework
 Entity framework uses code first approach. Main entry point for settings is AppDbContext.cs file and all models are in Models folder.
 
