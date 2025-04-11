@@ -58,7 +58,7 @@ public class QuestTests : IClassFixture<TestSetup>
         await _factory.ResetDatabaseAsync();
 
         var username = "testUser4";
-        var questName = "Casino Manager";
+        var questName = "testquest";
         var monsterId = 1; //this is should be id of Acidic Primate monster which is part of casino manager quest
         var content = new StringContent($"\"{username}\"", Encoding.UTF8, "application/json");
 

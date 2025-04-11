@@ -13,7 +13,7 @@ public static class AttackMonsterByNameEndpoint
 
     public static IEndpointRouteBuilder MapAttackMonsterByName(this IEndpointRouteBuilder app, IConfiguration config)
     {
-        app.MapPost("/attack-monster-by-name", async (AppDbContext context, IUserService userService, IItemService itemService, string monsterName, string username) =>
+        app.MapPost("/attack-monster-by-name", async (AppDbContext context, IUserService userService, IItemService itemService, IQuestService questService, string monsterName, string username) =>
             {
                 if (!monstersLoaded)
                 {
@@ -86,11 +86,8 @@ public static class AttackMonsterByNameEndpoint
 
                         message += $" Drops: {string.Join(", ", dropBags)}";
                     }
-                    
-                    // Quest progress: check if killed monster is part of any player quests
-                    var questProgressUrl =
-                        $"{config["BaseUrl:BackendUrl"]}/add-quest-progress?username=test1&monsterId={monster.Id}";
-                    await client.PostAsync(questProgressUrl, null);
+
+                    await questService.AddQuestProgress(username, monster.Id);
                 }
 
                 return Results.Ok(message);

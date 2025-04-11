@@ -19,6 +19,13 @@ should include all API's and logic for the following actions:
 * CRUD Game (Level, rage, stats, ranking and similar)
 * And more...
 
+### Services
+ItemService, QuestService, UserService.. can be used to access common logic such as IncreasePlayerExp...
+Not all logic (from endpoints) is moved to separate services yet, because services were added in later stages. Ideally all endpoints logic,
+should belong to coresponding service, and then service should be used to do things. Services are great if we need to access and do things
+from other endpoints eg. After killing monster, we need to increase exp which basically belongs to User endpoints.. but now since its moved to 
+UserService.. we can increase exp right there.
+
 ### Docker
 Everything is running in docker. Main docker-compose file can be found in /Solution Item/docker-compose.yml -image: outwar-regular-server -image: postgres:17.0 (more about access, setup pgadmin, backup etc in further readings) Connection to postgres is stored in appsettings.json as connection string.
 
