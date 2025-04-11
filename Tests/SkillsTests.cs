@@ -73,7 +73,7 @@ public class SkillsTests : IClassFixture<TestSetup>
         response.EnsureSuccessStatusCode();
 
         var increaseSkillResponse = await _client.PostAsync($"/increase-skill-level?username={username}&skillName={skillName}", content);
-        Assert.Equal(System.Net.HttpStatusCode.BadRequest, increaseSkillResponse.StatusCode);
+        increaseSkillResponse.EnsureSuccessStatusCode();
 
         using var freshScope = _factory.Services.CreateScope();
         var freshDb = freshScope.ServiceProvider.GetRequiredService<AppDbContext>();
