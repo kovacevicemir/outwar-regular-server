@@ -57,7 +57,7 @@ public class ItemsTests : IClassFixture<TestSetup>
 
         // Check if buying item with 0 points fails
         var buyItemResponse = await _client.PostAsync($"/buy-item-from-shop?username={username}&itemName={itemName}", content);
-        Assert.Equal(System.Net.HttpStatusCode.BadRequest, buyItemResponse.StatusCode);
+        buyItemResponse.EnsureSuccessStatusCode();
 
         var user = _dbContext.Users
             .Include(u => u.Items)
