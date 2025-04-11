@@ -14,6 +14,12 @@ namespace Outwar_regular_server.Services
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
+            // Initial delay of 5 minutes before the loop starts
+            // This prevents backend crash, because in order to run this tables needs to exists in db
+            // Since docker compose first created db container than backend but it takes some time for
+            // migrations to run this fails before that happens - so add delay (its not too important anyway)
+            await Task.Delay(TimeSpan.FromMinutes(5), stoppingToken);
+
             while (!stoppingToken.IsCancellationRequested)
             {
                 using (var scope = _serviceProvider.CreateScope())
