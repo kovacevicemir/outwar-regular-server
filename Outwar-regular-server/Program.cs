@@ -3,6 +3,7 @@ using Outwar_regular_server.Data;
 using Outwar_regular_server.Endpoints.Items;
 using Outwar_regular_server.Endpoints.ServerHealth;
 using Outwar_regular_server.Endpoints.User;
+using Outwar_regular_server.Endpoints.Wiki;
 using Outwar_regular_server.Services;
 using StackExchange.Redis;
 
@@ -117,6 +118,9 @@ app.MapCrewRaidsEndpoint();
 app.MapIncreaseSkillLevelEndpoint();
 app.MapCastSkillEndpoint();
 app.MapGetAllActiveSkillsEndpoint();
+
+//Wiki api's
+app.MapGetDropListEndpoint();
 
 
 app.Run();

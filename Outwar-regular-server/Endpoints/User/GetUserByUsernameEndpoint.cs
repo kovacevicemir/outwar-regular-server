@@ -3,7 +3,7 @@ using Outwar_regular_server.Data;
 
 namespace Outwar_regular_server.Endpoints.User;
 
-public static class GetUserByUsernameEndpoint
+public static class GetDropListEndpoint
 {
     public static IEndpointRouteBuilder MapGetUserByUsername(this IEndpointRouteBuilder app)
     {
