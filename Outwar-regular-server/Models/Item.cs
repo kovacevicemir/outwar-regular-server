@@ -22,4 +22,6 @@ public class Item
     
     public int UpgradeLevel { get; set; } = 0;
     public string Type { get; set; }
+
+    public bool Locked { get; set; } = false;
 }

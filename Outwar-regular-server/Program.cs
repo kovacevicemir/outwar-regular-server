@@ -90,6 +90,8 @@ app.MapUpgradeItemLevelByItemId();
 app.MapEquipItemEndpoint();
 app.MapUnequipItemEndpoint();
 app.MapGetUserLocation();
+app.MapDeleteAllFromInventoryEndpoint();
+app.MapLockItemToUserEndpoint();
 
 //Monster api's
 app.MapAttackMonsterByName(builder.Configuration);

@@ -227,4 +227,35 @@ public class ItemsTests : IClassFixture<TestSetup>
         Assert.True(upgradedItem.UpgradeLevel > 0);
         Assert.True(upgradedItem.Stats[1] > 15); //Default stat[1] for Construction Hat is 15... if upgraded should be higher
     }
+
+    [Fact]
+    public async Task LockToggle_Item_Works()
+    {
+        await _factory.ResetDatabaseAsync();
+
+        var username = "testUser";
+        var itemName = "Construction Hat";
+        var content = new StringContent($"\"{username}\"", Encoding.UTF8, "application/json");
+
+        var response = await _client.PostAsync("/create-user?username=" + username, content);
+        response.EnsureSuccessStatusCode();
+
+        var addItemresponse = await _client.PostAsync($"/add-item-to-user?username={username}&itemName={itemName}", content);
+        addItemresponse.EnsureSuccessStatusCode();
+
+        var user = _dbContext.Users
+            .Include(u => u.Items)
+            .FirstOrDefault(u => u.Name == username);
+
+        var item = user.Items.FirstOrDefault(i => i.Name == itemName);
+
+        var lockItemResponse = await _client.PostAsync($"/lock-item-toggle?itemId={item.Id}", content);
+        var itemRefetch1 = user.Items.FirstOrDefault(i => i.Name == itemName);
+
+        var lockItemResponse2 = await _client.PostAsync($"/lock-item-toggle?itemId={item.Id}", content);
+        var itemRefetch2 = user.Items.FirstOrDefault(i => i.Name == itemName);
+
+        Assert.True(itemRefetch1.Locked == true);
+        Assert.True(itemRefetch2.Locked == false);
+    }
 }
