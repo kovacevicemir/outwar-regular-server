@@ -250,10 +250,24 @@ public class ItemsTests : IClassFixture<TestSetup>
         var item = user.Items.FirstOrDefault(i => i.Name == itemName);
 
         var lockItemResponse = await _client.PostAsync($"/lock-item-toggle?itemId={item.Id}", content);
-        var itemRefetch1 = user.Items.FirstOrDefault(i => i.Name == itemName);
+        using var freshScope = _factory.Services.CreateScope();
+        var freshDb = freshScope.ServiceProvider.GetRequiredService<AppDbContext>();
+
+        var userRefetch = freshDb.Users
+            .Include(u => u.Items)
+            .FirstOrDefault(u => u.Name == username);
+        var itemRefetch1 = userRefetch.Items.FirstOrDefault(i => i.Name == itemName);
+
+        await freshDb.SaveChangesAsync();
 
         var lockItemResponse2 = await _client.PostAsync($"/lock-item-toggle?itemId={item.Id}", content);
-        var itemRefetch2 = user.Items.FirstOrDefault(i => i.Name == itemName);
+        using var freshScope2 = _factory.Services.CreateScope();
+        var freshDb2 = freshScope2.ServiceProvider.GetRequiredService<AppDbContext>();
+
+        var userRefetch2 = freshDb2.Users
+            .Include(u => u.Items)
+            .FirstOrDefault(u => u.Name == username);
+        var itemRefetch2 = userRefetch2.Items.FirstOrDefault(i => i.Name == itemName);
 
         Assert.True(itemRefetch1.Locked == true);
         Assert.True(itemRefetch2.Locked == false);
