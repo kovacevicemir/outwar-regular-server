@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Outwar_regular_server.Data;
 
-namespace Outwar_regular_server.Endpoints.User;
+namespace Outwar_regular_server.Endpoints;
 
 public static class ChangeUserLocationEndpoint
 {
