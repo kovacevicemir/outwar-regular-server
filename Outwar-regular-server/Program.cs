@@ -22,6 +22,7 @@ builder.Services.AddSingleton<IConnectionMultiplexer>(sp =>
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IItemService, ItemService>();
 builder.Services.AddScoped<IQuestService, QuestService>();
+builder.Services.AddScoped<ISkillService, SkillService>();
 builder.Services.AddHostedService<RageAndExpTimerService>(); //Run rage & exp timer task
 
 // Add CORS policy
@@ -120,7 +121,7 @@ app.MapCrewRaidsEndpoint();
 //Skill api's
 app.MapIncreaseSkillLevelEndpoint();
 app.MapCastSkillEndpoint();
-app.MapGetAllActiveSkillsEndpoint();
+app.MapGetAllActiveSkillsEndpoint(builder.Configuration);
 
 //Wiki api's
 app.MapGetDropListEndpoint();

@@ -1,4 +1,6 @@
-﻿using System.Text.Json;
+﻿using System.Linq.Expressions;
+using System.Text.Json;
+using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using Outwar_regular_server.Data;
 using Outwar_regular_server.Models;
@@ -14,7 +16,7 @@ public static class AttackMonsterByNameEndpoint
 
     public static IEndpointRouteBuilder MapAttackMonsterByName(this IEndpointRouteBuilder app, IConfiguration config)
     {
-        app.MapPost("/attack-monster-by-name", async (AppDbContext context, IUserService userService, IItemService itemService, IQuestService questService, string monsterName, string username) =>
+        app.MapPost("/attack-monster-by-name", async (AppDbContext context, IUserService userService, IItemService itemService, IQuestService questService, ISkillService skillService, string monsterName, string username) =>
             {
                 if (!monstersLoaded)
                 {
@@ -65,7 +67,7 @@ public static class AttackMonsterByNameEndpoint
                 }
 
                 //Generate Fight
-                var fightOutcome = GenerateFightOutcome(user, monster);
+                var fightOutcome = GenerateFightOutcome(user, monster, skillService);
 
                 if(fightOutcome.Win == false)
                 {
@@ -136,7 +138,7 @@ public static class AttackMonsterByNameEndpoint
         return dropBag;
     }
 
-    public static FightOutcome GenerateFightOutcome(User user, Monster monsterInput)
+    public static FightOutcome GenerateFightOutcome(User user, Monster monsterInput, ISkillService skillService)
     {
         var monster = monsterInput.MonsterDeepClone();
 
@@ -154,8 +156,8 @@ public static class AttackMonsterByNameEndpoint
         //   0   | 1 |   2   |  3 | 4 |   5   |    6   |  7  
         // attack|hp |maxRage|rage|exp|rampage|critical|block
         var equipedItems = user.Items
-    .Where(item => user.EquipedItemsId.Contains(item.Id))
-    .ToList();
+        .Where(item => user.EquipedItemsId.Contains(item.Id))
+        .ToList();
 
         foreach (var item in equipedItems)
         {
@@ -166,7 +168,22 @@ public static class AttackMonsterByNameEndpoint
             totalRampage += item.Stats[5] | 0;
         }
 
-        //Add skills if any casted? - do it later cbf...
+        //Add skills if any casted?
+        var activeSkills = skillService.GetAllActiveSkills(user.Name);
+        foreach (var activeSkill in activeSkills)
+        {
+            switch (activeSkill.SkillName)
+            {
+                case "Empower":
+                    totalAttack += activeSkill.Bonus;
+                    break;
+                case "Stealth":
+                    totalHp += activeSkill.Bonus;
+                    break;
+                default:
+                    break;
+            }
+        }
 
         var fightOutcome = new FightOutcome();
         fightOutcome.PlayerHpLeft.Add(totalHp); //Add starting hp log
@@ -178,7 +195,6 @@ public static class AttackMonsterByNameEndpoint
 
             var critDamage = 0; //just place holder if it happens
 
-            //Is crit?
             var isCrit = IsLuck(totalCrit);
             if (isCrit)
             {
@@ -187,17 +203,19 @@ public static class AttackMonsterByNameEndpoint
 
             if (critDamage != 0)
             {
-                var newMonsterHp = monster.Hp - critDamage;
+                var playerAttackDamage = critDamage + _random.Next(0, 10);
+                var newMonsterHp = monster.Hp - playerAttackDamage;
                 monster.Hp = newMonsterHp;
                 fightOutcome.MonsterHpLeft.Add(newMonsterHp < 0 ? 0 : newMonsterHp); //check if hp is bellow 0, if so return 0 it makes more sense for ui
-                fightOutcome.PlayerAttacks.Add(critDamage * -1); // Critical hit is representent by negative number
+                fightOutcome.PlayerAttacks.Add(playerAttackDamage * -1); // Critical hit is representent by negative number
             }
             else
             {
-                var newMonsterHp = monster.Hp - totalAttack;
+                var playerAttackDamage = totalAttack + _random.Next(0, 10);
+                var newMonsterHp = monster.Hp - playerAttackDamage;
                 monster.Hp = newMonsterHp;
                 fightOutcome.MonsterHpLeft.Add(newMonsterHp < 0 ? 0 : newMonsterHp); //check if hp is bellow 0, if so return 0 it makes more sense for ui
-                fightOutcome.PlayerAttacks.Add(totalAttack);
+                fightOutcome.PlayerAttacks.Add(playerAttackDamage);
             }
 
             
@@ -218,17 +236,18 @@ public static class AttackMonsterByNameEndpoint
             }
             else
             {
-                var newTotalHp = totalHp - monster.Attack;
+                var monsterAttack = monster.Attack + _random.Next(0, 10);
+                var newTotalHp = totalHp - monsterAttack;
                 totalHp = newTotalHp;
                 fightOutcome.PlayerHpLeft.Add(newTotalHp < 0 ? 0 : newTotalHp); //check if hp is bellow 0, if so return 0 it makes more sense for ui
-                fightOutcome.MonsterAttacks.Add(monster.Attack);
+                fightOutcome.MonsterAttacks.Add(monsterAttack );
             }
 
             if (totalHp <= 0)
             {
                 isFightDone = true;
                 fightOutcome.Win = false;
-                fightOutcome.Message = "You lost the fight!";
+                fightOutcome.Message = "You lost the fight!"; //if this value changes, frontend needs to change as well
             }
         }
 
@@ -240,8 +259,7 @@ public static class AttackMonsterByNameEndpoint
         return _random.Next(0, 100) < luckPercentage;
     }
     
-    //Increase dmg by 50% if crit...
-    public static int IncreaseBy50Percent(int value)
+    public static int IncreaseBy50Percent(int value) //Increase dmg by 50% if crit...
     {
         return (int)Math.Round(value * 1.5);
     }

@@ -43,7 +43,8 @@ public static class CastSkillEndpoint
                     if (!targetSkillPair.Equals(default(KeyValuePair<string, (int, TimeSpan)>)))
                     {
                         var expirationTime = targetSkillPair.Value.Item2; // Access the TimeSpan (ExpirationTime)
-                        return Results.Ok($"Skill {skillName} is already in use. Cooldown time is {expirationTime}");
+                        string readableTime = $"{expirationTime.Hours}h {expirationTime.Minutes}m";
+                        return Results.Ok($"Skill {skillName} is already in use. Cooldown time is {readableTime}");
                     }
                     
                     // Find the user in the database

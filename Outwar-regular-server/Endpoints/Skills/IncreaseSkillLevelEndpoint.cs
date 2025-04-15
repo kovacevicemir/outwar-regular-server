@@ -55,7 +55,7 @@ public static class IncreaseSkillLevelEndpoint
                     //Check if skill is already level 10
                     if (user.Skills[skillIndex] > 9)
                     {
-                        return Results.BadRequest($"{skillName} is already max level!");
+                        return Results.Ok($"{skillName} is already max level!");
                     }
                     
                     user.Skills[skillIndex] += 1;
