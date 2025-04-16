@@ -58,7 +58,7 @@ public static class AttackMonsterByNameEndpoint
                 //Check rage
                 if (user.Rage <= monster.Rage)
                 {
-                    return Results.BadRequest("You dont have enough rage to attack this monster!");
+                    return Results.Ok("You dont have enough rage to attack this monster!");
                 }
                 else
                 {

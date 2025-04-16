@@ -117,49 +117,49 @@
 
   {
     "Name": "Battle Helmet of Dissimulation",
-    "Stats": [0, 30, 0, 15, 5, 0, 2, 0],
+    "Stats": [0, 40, 0, 15, 5, 0, 2, 0],
     "SetBonus": [30, 55],
     "UpgradeLevel": 0,
     "Type": "head"
   },{
   "Name": "Bullet Proof Vest of Dissimulation",
-  "Stats": [0, 55, 150, 15, 7, 0, 0, 0],
+  "Stats": [0, 60, 150, 15, 8, 0, 0, 0],
   "SetBonus": [30, 55],
   "UpgradeLevel": 0,
   "Type": "armor"
 },{
   "Name": "Rifle of Dissimulation",
-  "Stats": [25, 0, 0, 10, 0, 1, 3, 0],
+  "Stats": [35, 0, 0, 12, 0, 1, 3, 0],
   "SetBonus": [30, 55],
   "UpgradeLevel": 0,
   "Type": "weapon"
 },{
   "Name": "Sandbag of Dissimulation",
-  "Stats": [0, 40, 0, 8, 8, 0, 0, 4],
+  "Stats": [0, 45, 0, 8, 8, 0, 0, 4],
   "SetBonus": [30, 55],
   "UpgradeLevel": 0,
   "Type": "shield"
 },{
   "Name": "Army Boots of Dissimulation",
-  "Stats": [0, 30, 75, 10, 5, 0, 2, 0],
+  "Stats": [0, 35, 75, 10, 5, 0, 2, 0],
   "SetBonus": [30, 55],
   "UpgradeLevel": 0,
   "Type": "shoes"
 },{
   "Name": "Ring of Dissimulation",
-  "Stats": [0, 20, 100, 0, 0, 0, 2, 0],
+  "Stats": [0, 27, 100, 0, 0, 0, 2, 0],
   "SetBonus": [30, 55],
   "UpgradeLevel": 0,
   "Type": "ring"
 },{
   "Name": "Army Belt of Dissimulation",
-  "Stats": [0, 20, 0, 5, 0, 0, 1, 0],
+  "Stats": [0, 25, 0, 5, 0, 0, 1, 0],
   "SetBonus": [30, 55],
   "UpgradeLevel": 0,
   "Type": "belt"
 },{
   "Name": "Dog-Tag of Dissimulation",
-  "Stats": [0, 20, 50, 5, 0, 0, 1, 0],
+  "Stats": [0, 25, 50, 5, 0, 0, 1, 0],
   "SetBonus": [30, 55],
   "UpgradeLevel": 0,
   "Type": "neck"
@@ -225,49 +225,49 @@
   {
     "Name": "Spiked Helmet of the Cobalt",
     "Stats": [0, 50, 0, 6, 5, 0, 0, 0],
-    "SetBonus": [10, 50],
+    "SetBonus": [30, 70],
     "UpgradeLevel": 0,
     "Type": "head"
   },{
   "Name": "Breastplate of the Cobalt",
-  "Stats": [0, 55, 200, 10, 10, 1, 0, 0],
-  "SetBonus": [10, 50],
+  "Stats": [0, 65, 200, 10, 10, 1, 0, 0],
+  "SetBonus": [30, 70],
   "UpgradeLevel": 0,
   "Type": "armor"
 },{
   "Name": "Flail of the Cobalt",
-  "Stats": [40, 0, 0, 8, 1, 1, 0, 0],
-  "SetBonus": [10, 50],
+  "Stats": [45, 0, 0, 8, 1, 1, 0, 0],
+  "SetBonus": [30, 70],
   "UpgradeLevel": 0,
   "Type": "weapon"
 },{
   "Name": "Tower Shield of the Cobalt",
-  "Stats": [0, 50, 0, 5, 4, 0, 0, 4],
-  "SetBonus": [10, 50],
+  "Stats": [0, 55, 0, 5, 4, 0, 0, 4],
+  "SetBonus": [30, 70],
   "UpgradeLevel": 0,
   "Type": "shield"
 },{
   "Name": "Sollerets of the Cobalt",
   "Stats": [0, 50, 0, 10, 5, 0, 2, 0],
-  "SetBonus": [10, 50],
+  "SetBonus": [30, 70],
   "UpgradeLevel": 0,
   "Type": "shoes"
 },{
   "Name": "Ring of the Cobalt",
   "Stats": [0, 0, 100, 0, 6, 0, 1, 0],
-  "SetBonus": [10, 50],
+  "SetBonus": [30, 70],
   "UpgradeLevel": 0,
   "Type": "ring"
 },{
   "Name": "Belt of the Cobalt",
   "Stats": [0, 50, 0, 5, 0, 0, 0, 0],
-  "SetBonus": [10, 50],
+  "SetBonus": [30, 70],
   "UpgradeLevel": 0,
   "Type": "belt"
 },{
   "Name": "Spiked Collar of the Cobalt",
   "Stats": [0, 50, 50, 5, 0, 0, 2, 0],
-  "SetBonus": [10, 50],
+  "SetBonus": [30, 70],
   "UpgradeLevel": 0,
   "Type": "neck"
 },
@@ -275,49 +275,49 @@
   {
     "Name": "Beanie of Extremity",
     "Stats": [0, 75, 200, 7, 0, 1, 0, 0],
-    "SetBonus": [15, 75],
+    "SetBonus": [30, 75],
     "UpgradeLevel": 0,
     "Type": "head"
   },{
   "Name": "Hoodie of Extremity",
   "Stats": [0, 75, 0, 10, 13, 1, 3, 0],
-  "SetBonus": [15, 75],
+  "SetBonus": [30, 75],
   "UpgradeLevel": 0,
   "Type": "armor"
 },{
   "Name": "Truck-tool of Extremity",
   "Stats": [45, 0, 0, 15, 1, 3, 3, 0],
-  "SetBonus": [15, 75],
+  "SetBonus": [30, 75],
   "UpgradeLevel": 0,
   "Type": "weapon"
 },{
   "Name": "Board of Extremity",
   "Stats": [0, 70, 0, 5, 12, 3, 0, 5],
-  "SetBonus": [15, 75],
+  "SetBonus": [30, 75],
   "UpgradeLevel": 0,
   "Type": "shield"
 },{
   "Name": "Skate Shoes of Extremity",
   "Stats": [0, 70, 0, 15, 7, 0, 1, 0],
-  "SetBonus": [15, 75],
+  "SetBonus": [30, 75],
   "UpgradeLevel": 0,
   "Type": "shoes"
 },{
   "Name": "Ball Barring of Extremity",
   "Stats": [0, 0, 150, 0, 9, 0, 5, 0],
-  "SetBonus": [15, 75],
+  "SetBonus": [30, 75],
   "UpgradeLevel": 0,
   "Type": "ring"
 },{
   "Name": "Strap of Extremity",
   "Stats": [0, 70, 0, 15, 0, 2, 2, 0],
-  "SetBonus": [15, 75],
+  "SetBonus": [30, 75],
   "UpgradeLevel": 0,
   "Type": "belt"
 },{
   "Name": "Glowing Chain of Extremity",
   "Stats": [0, 70, 0, 0, 11, 2, 2, 0],
-  "SetBonus": [15, 75],
+  "SetBonus": [30, 75],
   "UpgradeLevel": 0,
   "Type": "neck"
 },
