@@ -85,6 +85,9 @@ public static class AttackRaidEndpoint
                     return Results.Ok("There is no single raid member with enough rage (50) to attack!");
                 }
 
+                // Set hp left
+                god.Hp = deserializedRaid.HpLeft;
+
                 var raidOutcome = GenerateFightOutcome(deserializedRaid.CreatedBy, god ,skillService);
 
                 deserializedRaid.HpLeft = raidOutcome.MonsterHpLeft[raidOutcome.MonsterHpLeft.Count-1]; //Get last digit in godHpLeft log
@@ -280,7 +283,7 @@ public static class AttackRaidEndpoint
                 fightOutcome.Win = false;
                 fightOutcome.Message = "You lost the fight!"; //if this value changes, frontend needs to change as well
             }
-        }
+        } 
 
         return fightOutcome;
     }
