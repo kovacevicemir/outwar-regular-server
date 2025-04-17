@@ -47,3 +47,15 @@ Structure is simple: all endpoints are in Endpoints folder separated by entity, 
 
 ### Connection strings
 Connection strings are stored in appsettings.json and this one is used in case of docker (or prod) automatically, while appsettings.Development.json are used for local and debugging
+
+### Redis (how to connect quick)
+right click on container or (actions 3 dots) and connect via terminal
+type redis-cli this should connect to it in cli context
+now you can do something like KEYS * this should give all existing keys
+Or even better:
+
+first: redis-cli
+
+for i in $(redis-cli KEYS '*'); do echo $i; redis-cli GET $i; done (this will list key-value pairs)
+
+flushall (deletes everything)

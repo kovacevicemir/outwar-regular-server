@@ -1,4 +1,6 @@
-﻿using System.Text.Json;
+﻿using System;
+using System.Text.Json;
+using Microsoft.EntityFrameworkCore;
 using Outwar_regular_server.Data;
 using Outwar_regular_server.Models;
 using Outwar_regular_server.Services;
@@ -10,9 +12,10 @@ public static class AttackRaidEndpoint
 {
     private static List<God>? gods;
     private static bool godsLoaded = false;
+    private static readonly Random _random = new Random();
     public static IEndpointRouteBuilder MapAttackRaidEndpoint(this IEndpointRouteBuilder app, IConfiguration config)
     {
-        app.MapPost("/attack-raid", async (AppDbContext context, IItemService itemService, IConnectionMultiplexer redis, string crewName, string raidName) =>
+        app.MapPost("/attack-raid", async (AppDbContext context, IItemService itemService, ISkillService skillService, IConnectionMultiplexer redis, string crewName, string raidName) =>
             {
                 
                 if (!godsLoaded)
@@ -50,11 +53,45 @@ public static class AttackRaidEndpoint
             
                 var deserializedRaid = JsonSerializer.Deserialize<Raid>(jsonValue);
 
-                deserializedRaid.HpLeft = deserializedRaid.HpLeft - 10000; //decrease 10k hp hard coded... to do later
+                //Decrease rage for raid members
+                var membersToRemove = new List<User>();
 
-                var message = $"Attack {raidName} done! ";
+                foreach (var raidMember in deserializedRaid.RaidMembers)
+                {
+                    var raidMembFromDb = await context.Users.Where(u => u.Id == raidMember.Id).SingleOrDefaultAsync();
+                    if (raidMembFromDb == null)
+                    {
+                        return Results.BadRequest("User does not exists! Inside AttackRaid Decreasing rage.");
+                    }
 
-                // Check if raid is done - hardcoded for now Rancid
+                    if (raidMembFromDb.Rage < 50)
+                    {
+                        membersToRemove.Add(raidMember); // Mark for removal
+                    }
+                    else
+                    {
+                        raidMembFromDb.Rage -= 50;
+                        await context.SaveChangesAsync();
+                    }
+                }
+
+                //Check if raid members? If nobody have enough rage - its expected to raidMembers to be empty
+                foreach (var member in membersToRemove)
+                {
+                    deserializedRaid.RaidMembers.Remove(member);
+                }
+                if (deserializedRaid.RaidMembers.Count == 0)
+                {
+                    return Results.Ok("There is no single raid member with enough rage (50) to attack!");
+                }
+
+                var raidOutcome = GenerateFightOutcome(deserializedRaid.CreatedBy, god ,skillService);
+
+                deserializedRaid.HpLeft = raidOutcome.MonsterHpLeft[raidOutcome.MonsterHpLeft.Count-1]; //Get last digit in godHpLeft log
+
+                var message = $"Attack {raidName} done! {raidOutcome.Message}";
+
+                // Check if raid is done
                 if(deserializedRaid.HpLeft <= 0)
                 {
                         var dropBags = DetermineDrops(god);
@@ -63,9 +100,6 @@ public static class AttackRaidEndpoint
                         {
                             var tasks = dropBags.Select(item =>
                             {
-                                // Add items to player asynchronously
-                                //var addItemUrl = $"{config["BaseUrl:BackendUrl"]}/add-item-to-user?username={deserializedRaid.CreatedBy.Name}&itemName={item}";
-                                //return client.PostAsync(addItemUrl, null); // Returns a Task
                                 return itemService.AddItemToUser(deserializedRaid.CreatedBy.Name, item);
                             });
                                 
@@ -88,9 +122,7 @@ public static class AttackRaidEndpoint
                             }
                         }
                     
-                    //Delete raids from redis
                     var isDeleted = await db.KeyDeleteAsync($"raid-{crewName}-{raidName}");
-                    Console.WriteLine(isDeleted);
                 }
                 else
                 {
@@ -135,5 +167,141 @@ public static class AttackRaidEndpoint
         }
 
         return dropBag;
+    }
+
+    public static RaidOutcome GenerateFightOutcome(User user, God godInput, ISkillService skillService)
+    {
+        var monster = godInput.GodDeepClone();
+
+        // Helper variables
+        var isFightDone = false;
+
+        // Default stats
+        var totalAttack = 10;
+        var totalHp = 100;
+        var totalCrit = 0;
+        var totalBlock = 0;
+        var totalRampage = 0;
+
+        // Calculate total stats for user
+        //   0   | 1 |   2   |  3 | 4 |   5   |    6   |  7  
+        // attack|hp |maxRage|rage|exp|rampage|critical|block
+        var equipedItems = user.Items
+        .Where(item => user.EquipedItemsId.Contains(item.Id))
+        .ToList();
+
+        foreach (var item in equipedItems)
+        {
+            totalAttack += item.Stats[0] | 0;
+            totalHp += item.Stats[1] | 0;
+            totalCrit += item.Stats[6] | 0;
+            totalBlock += item.Stats[7] | 0;
+            totalRampage += item.Stats[5] | 0;
+        }
+
+        //Add skills if any casted?
+        var activeSkills = skillService.GetAllActiveSkills(user.Name);
+        foreach (var activeSkill in activeSkills)
+        {
+            switch (activeSkill.SkillName)
+            {
+                case "Empower":
+                    totalAttack += activeSkill.Bonus;
+                    break;
+                case "Stealth":
+                    totalHp += activeSkill.Bonus;
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        var fightOutcome = new RaidOutcome();
+        fightOutcome.PlayerHpLeft.Add(totalHp); //Add starting hp log
+        fightOutcome.MonsterHpLeft.Add(monster.Hp); //Add starting hp log
+
+        while (isFightDone == false)
+        {
+            // [Player attack]
+
+            var critDamage = 0; //just place holder if it happens
+
+            var isCrit = IsLuck(totalCrit);
+            if (isCrit)
+            {
+                critDamage = IncreaseBy50Percent(totalAttack);
+            }
+
+            if (critDamage != 0)
+            {
+                var playerAttackDamage = critDamage + _random.Next(0, 10);
+                var newMonsterHp = monster.Hp - playerAttackDamage;
+                monster.Hp = newMonsterHp;
+                fightOutcome.MonsterHpLeft.Add(newMonsterHp < 0 ? 0 : newMonsterHp); //check if hp is bellow 0, if so return 0 it makes more sense for ui
+                fightOutcome.PlayerAttacks.Add(playerAttackDamage * -1); // Critical hit is representent by negative number
+            }
+            else
+            {
+                var playerAttackDamage = totalAttack + _random.Next(0, 10);
+                var newMonsterHp = monster.Hp - playerAttackDamage;
+                monster.Hp = newMonsterHp;
+                fightOutcome.MonsterHpLeft.Add(newMonsterHp < 0 ? 0 : newMonsterHp); //check if hp is bellow 0, if so return 0 it makes more sense for ui
+                fightOutcome.PlayerAttacks.Add(playerAttackDamage);
+            }
+
+
+            if (monster.Hp <= 0)
+            {
+                isFightDone = true;
+                fightOutcome.Win = true;
+            }
+
+            // [God attack]
+
+            var isBlock = IsLuck(totalBlock); //Check if player blocks monster attack
+
+            if (isBlock)
+            {
+                fightOutcome.PlayerHpLeft.Add(totalHp); //It remains the same if attack is blocked
+                fightOutcome.MonsterAttacks.Add(-1); // -1 represents blocked attack, since only player can block it its fine...
+            }
+            else
+            {
+                var monsterAttack = monster.Attack + _random.Next(0, 10);
+                var newTotalHp = totalHp - monsterAttack;
+                totalHp = newTotalHp;
+                fightOutcome.PlayerHpLeft.Add(newTotalHp < 0 ? 0 : newTotalHp); //check if hp is bellow 0, if so return 0 it makes more sense for ui
+                fightOutcome.MonsterAttacks.Add(monsterAttack);
+            }
+
+            if (totalHp <= 0)
+            {
+                isFightDone = true;
+                fightOutcome.Win = false;
+                fightOutcome.Message = "You lost the fight!"; //if this value changes, frontend needs to change as well
+            }
+        }
+
+        return fightOutcome;
+    }
+
+    public static bool IsLuck(int luckPercentage)
+    {
+        return _random.Next(0, 100) < luckPercentage;
+    }
+
+    public static int IncreaseBy50Percent(int value) //Increase dmg by 50% if crit...
+    {
+        return (int)Math.Round(value * 1.5);
+    }
+
+    public class RaidOutcome
+    {
+        public string Message { get; set; } = string.Empty;
+        public List<int> PlayerAttacks { get; set; } = new List<int>();
+        public List<int> MonsterAttacks { get; set; } = new List<int>();
+        public List<int> PlayerHpLeft { get; set; } = new List<int>();
+        public List<int> MonsterHpLeft { get; set; } = new List<int>();
+        public bool Win { get; set; } = false;
     }
 }
