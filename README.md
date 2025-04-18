@@ -1,4 +1,7 @@
-﻿## Outwar backend
+﻿Outwar-X is a replica of the famous Outwar game, inspired by old-school items and the Diamond City map.
+This project is created purely for non-profit, fun, and study purposes.
+
+## Outwar backend
 Outwar-regular-server is the main server.
 
 ### How to run (production)
