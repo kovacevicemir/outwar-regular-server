@@ -202,7 +202,7 @@
   },
   {
     "Name": "Phalange Ring of Osteology",
-    "Stats": [0, 0, 0, 0, 14, 14, 0, 0],
+    "Stats": [0, 0, 0, 0, 14, 4, 0, 0],
     "SetBonus": [28, 170],
     "UpgradeLevel": 0,
     "Type": "ring"
